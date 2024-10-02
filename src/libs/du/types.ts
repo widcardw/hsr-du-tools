@@ -39,7 +39,7 @@ interface Blessing extends Buff {
   desc: [string, string]
   effects: Array<BlessingExtra>
   /** （手动）相关增益 */
-  rel: Array<GainType>
+  rel: Set<GainType>
 }
 
 interface BlessingEquation extends Buff {
@@ -52,7 +52,7 @@ interface BlessingEquation extends Buff {
   desc: string
   effects: Array<BlessingExtra>
   /** （手动）相关增益 */
-  rel: Array<GainType>
+  rel: Set<GainType>
   /** 方程等级 */
   er: BlessingEquationEr
   /** 方程所需祝福数量 */

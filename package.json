@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@kobalte/core": "^0.13.6",
+    "@solid-primitives/storage": "^4.2.1",
     "@solidjs/router": "^0.14.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "cmdk-solid": "^1.1.0",
     "solid-js": "^1.8.20",
     "tailwind-merge": "^2.5.2",
     "unocss-preset-animations": "^1.1.0"

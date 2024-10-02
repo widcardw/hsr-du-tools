@@ -23,6 +23,18 @@ const PATH_MAP: Record<Path, string> = {
   [Path.Mage]: '智识',
 }
 
+const PATH_ICON_MAP: Record<Path, string> = {
+  [Path.Knight]: '/IconProfessionKnightMiddle.png',
+  [Path.Memory]: '/IconProfessionMemoryMiddle.png',
+  [Path.Warlock]: '/IconProfessionWarlockMiddle.png',
+  [Path.Pirest]: '/IconProfessionPirestMiddle.png',
+  [Path.Rogue]: '/IconProfessionRogueMiddle.png',
+  [Path.Warrior]: '/IconProfessionWarriorMiddle.png',
+  [Path.Joy]: '/IconProfessionJoyMiddle.png',
+  [Path.Propagation]: '/IconProfessionPropagationMiddle.png',
+  [Path.Mage]: '/IconProfessionMageMiddle.png',
+}
+
 // 命途特殊效果
 enum BlessingExtra {
   BasicDmg = 61000500, // 基础伤害
@@ -59,6 +71,8 @@ enum GainType {
   ENERGY_Charge = 11, // 充能
   DMG_RESIST = 12, // 受到伤害降低
   DoT_By_Char = 13, // 角色持续伤害
+  AdditionalDmg = 14, // 附加倍率
+  ResistStrike = 15, // 抗性穿透
 
   MON_ATK_DEC = 50, // 敌方攻击
   MON_DEF_DEC = 51, // 敌方防御
@@ -93,6 +107,14 @@ enum GainType {
   SporeDmg = 120, // 孢子伤害
   SporeMul = 121, // 孢子倍率
   AddWeakness = 122, // 添加弱点
+  Grit = 123, // 战意
+  DewDropCharge = 124, // 珠露充能
+  CounterAtk = 125, // 反击
+  BeHit = 126, // 被击
+  Kill = 127, // 击杀
+  HitWeak = 128, // 回味
+  Break = 129, // 中枢链接
+  Point = 130, // 战技点
 }
 
 enum Side {
@@ -101,7 +123,7 @@ enum Side {
 }
 
 const GAIN_MAP: Record<GainType, [Side, string]> = {
-  [GainType.None]: [Side.Self ,'无'],
+  [GainType.None]: [Side.Self, '无'],
   [GainType.ATK]: [Side.Self, '攻击'],
   [GainType.DEF]: [Side.Self, '防御'],
   [GainType.HEAL]: [Side.Self, '生命'],
@@ -114,16 +136,18 @@ const GAIN_MAP: Record<GainType, [Side, string]> = {
   [GainType.EFFECT_HIT_RATE]: [Side.Self, '效果命中'],
   [GainType.ENERGY_Charge]: [Side.Self, '充能'],
   [GainType.DMG_RESIST]: [Side.Self, '受到伤害降低'],
-  [GainType.DoT_By_Char]: [Side.Self, '持续伤害'],
+  [GainType.DoT_By_Char]: [Side.Self, '角色持续伤害'],
+  [GainType.AdditionalDmg]: [Side.Self, '附加倍率'],
+  [GainType.ResistStrike]: [Side.Self, '抗性穿透'],
 
-  [GainType.MON_ATK_DEC]: [Side.Enemy, '攻击'],
-  [GainType.MON_DEF_DEC]: [Side.Enemy, '防御'],
-  [GainType.MON_SPD_DEC]: [Side.Enemy, '速度'],
-  [GainType.MON_RESISTANCE_DEC]: [Side.Enemy, '效果抵抗'],
-  [GainType.MON_DMG_DEC]: [Side.Enemy, '伤害'],
-  [GainType.MON_VUL_INC]: [Side.Enemy, '受到伤害提高'],
-  [GainType.MON_in_NEG_EFFECT]: [Side.Enemy, '陷入负面'],
-  [GainType.MON_EFF_HIT_RATE_DEC]: [Side.Enemy, '效果命中'],
+  [GainType.MON_ATK_DEC]: [Side.Enemy, '攻击降低'],
+  [GainType.MON_DEF_DEC]: [Side.Enemy, '防御降低'],
+  [GainType.MON_SPD_DEC]: [Side.Enemy, '速度降低'],
+  [GainType.MON_RESISTANCE_DEC]: [Side.Enemy, '效果抵抗降低'],
+  [GainType.MON_DMG_DEC]: [Side.Enemy, '伤害降低'],
+  [GainType.MON_VUL_INC]: [Side.Enemy, '易伤'],
+  [GainType.MON_in_NEG_EFFECT]: [Side.Enemy, '负面状态'],
+  [GainType.MON_EFF_HIT_RATE_DEC]: [Side.Enemy, '效果命中降低'],
   [GainType.MON_FREEZE_RES_DEC]: [Side.Enemy, '冻结抗性'],
 
   [GainType.QuakeDmg]: [Side.Self, '反震伤害'],
@@ -139,7 +163,7 @@ const GAIN_MAP: Record<GainType, [Side, string]> = {
   [GainType.Healing]: [Side.Self, '治疗量'],
   [GainType.DewDropDmg]: [Side.Self, '珠露伤害'],
   [GainType.CutToughness]: [Side.Self, '削韧'],
-  [GainType.Freeze]: [Side.Self, '冻结'],
+  [GainType.Freeze]: [Side.Enemy, '冻结'],
   [GainType.Suspicion]: [Side.Self, '怀疑'],
   [GainType.BreakEfficiency]: [Side.Self, '击破效率'],
   [GainType.DoT_Vulnerability]: [Side.Self, '持续伤害易伤'],
@@ -148,10 +172,21 @@ const GAIN_MAP: Record<GainType, [Side, string]> = {
   [GainType.SuccessiveAction]: [Side.Self, '连续行动'],
   [GainType.SporeDmg]: [Side.Self, '孢子伤害'],
   [GainType.SporeMul]: [Side.Self, '孢子倍率'],
-  [GainType.AddWeakness]: [Side.Self, '添加弱点'],
+  [GainType.AddWeakness]: [Side.Enemy, '添加弱点'],
+  [GainType.Grit]: [Side.Self, '战意'],
+  [GainType.DewDropCharge]: [Side.Self, '珠露充能'],
+  [GainType.CounterAtk]: [Side.Self, '反击'],
+  [GainType.BeHit]: [Side.Self, '被击'],
+  [GainType.Kill]: [Side.Self, '击杀'],
+  [GainType.HitWeak]: [Side.Self, '攻击破弱目标'],
+  [GainType.Break]: [Side.Self, '击破'],
+  [GainType.Point]: [Side.Self, '战技点'],
 }
 
-const BLESSING_EXTRA_MAP: Record<BlessingExtra, {name: string, desc: string }> = {
+const BLESSING_EXTRA_MAP: Record<
+  BlessingExtra,
+  { name: string; desc: string }
+> = {
   61000500: {
     name: '基础伤害',
     desc: '敌方目标等级、阈值协议越高，造成的基础伤害越高。',
@@ -218,4 +253,12 @@ const BLESSING_EXTRA_MAP: Record<BlessingExtra, {name: string, desc: string }> =
   },
 }
 
-export { Path, BlessingExtra, GainType, GAIN_MAP, BLESSING_EXTRA_MAP, PATH_MAP }
+export {
+  Path,
+  BlessingExtra,
+  GainType,
+  GAIN_MAP,
+  BLESSING_EXTRA_MAP,
+  PATH_MAP,
+  PATH_ICON_MAP,
+}

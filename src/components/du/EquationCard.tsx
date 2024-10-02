@@ -1,9 +1,11 @@
 import { type BlessingEquation, BlessingEquationEr } from '@/libs/du/types'
 import clsx from 'clsx'
-import type { Component } from 'solid-js'
+import { type Component, For } from 'solid-js'
 
 import './scroll-bar.css'
 import './blessing-bg.css'
+import { GAIN_MAP, type GainType, PATH_ICON_MAP, type Path } from '@/libs/du/constants'
+import { Badge } from '../ui/badge'
 
 const Equation_BG_MAP = {
   [BlessingEquationEr.Gold]: 'blessing-gold',
@@ -12,7 +14,7 @@ const Equation_BG_MAP = {
   [BlessingEquationEr.Critical]: 'blessing-ultimate',
 }
 
-const EquationCard: Component<{ equation: BlessingEquation }> = (props) => {
+const EquationCard: Component<{ equation: BlessingEquation, hilitedTag?: Set<GainType> }> = (props) => {
   return (
     <div
       class={clsx(
@@ -23,23 +25,44 @@ const EquationCard: Component<{ equation: BlessingEquation }> = (props) => {
         'bg-background',
       )}
     >
-      <div
-        class={clsx(
-          'p-2 flex items-center justify-center',
-          Equation_BG_MAP[props.equation.er],
-        )}
-      >
+      <div class={clsx('p-2', Equation_BG_MAP[props.equation.er])}>
         <img
           src={`/equation${props.equation.icon}`}
           alt={props.equation.name}
-          class={clsx(props.equation.er === BlessingEquationEr.Critical ? 'w-40%': 'w-70%')}
+          class={clsx(
+            props.equation.er === BlessingEquationEr.Critical
+              ? 'w-40%'
+              : 'w-70%',
+            'mx-a block',
+          )}
         />
       </div>
       <div class={clsx('font-bold text-center')}>{props.equation.name}</div>
+      <div class="flex justify-center gap-1 items-center">
+        <For
+          each={Object.entries(props.equation.need).sort((a, b) => b[1] - a[1])}
+        >
+          {(it) => (
+            <>
+              <img
+                src={`/path${PATH_ICON_MAP[Number(it[0]) as Path]}`}
+                alt={it[0]}
+                class="w-6 h-6"
+              />
+              <span>{it[1]}</span>
+            </>
+          )}
+        </For>
+      </div>
       <div
         class={clsx('text-sm text-center', 'h-7rem of-y-auto')}
         innerHTML={props.equation.desc}
       />
+      <div class="space-x-1 space-y-1 text-center">
+        <For each={Array.from(props.equation.rel)}>
+          {(it) => <Badge variant={props.hilitedTag?.has(it) ? 'default' : 'secondary'} class="whitespace-nowrap">{GAIN_MAP[it][1]}</Badge>}
+        </For>
+      </div>
     </div>
   )
 }
