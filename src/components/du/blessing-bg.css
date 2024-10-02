@@ -1,0 +1,19 @@
+.blessing-blue {
+    background: linear-gradient(#40456D, #487ABC);
+}
+
+.blessing-gold {
+    background: linear-gradient(#936159, #C7A671);
+}
+
+.blessing-gray {
+    background: linear-gradient(#434553, #818186);
+}
+
+.blessing-ultimate {
+    background: linear-gradient(#93734C, #FFFFAA);
+}
+
+.blessing-purple {
+    background: linear-gradient(#444069, #9467CB);
+}
