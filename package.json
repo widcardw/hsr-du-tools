@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -22,7 +22,6 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
     "@solidjs/meta": "^0.29.4",
-    "@types/node": "^22.7.4",
     "typescript": "^5.5.3",
     "unocss": "^0.63.1",
     "vite": "^5.4.1",
