@@ -36,15 +36,16 @@ const GainSearchArea: Component<{
   onInterCountChange: (cnt: number) => void
 }> = (props) => {
   const [inputValue, setInputValue] = createSignal('')
+  const [inputRef, setInputRef] = createSignal<HTMLInputElement | null>(null)
   return (
     <>
       <div class="flex gap-2">
         <Command
           value={inputValue()}
-          onValueChange={setInputValue}
+          onValueChange={(v) => setInputValue(v)}
           class="rounded"
         >
-          <CommandInput placeholder="搜索标签" />
+          <CommandInput placeholder="搜索标签" class="text-foreground" ref={r => setInputRef(r)} />
           <CommandList class="max-h-200px">
             <CommandEmpty>未找到结果</CommandEmpty>
             <CommandGroup>
@@ -75,13 +76,29 @@ const GainSearchArea: Component<{
             class="w-8rem"
           >
             <NumberFieldGroup>
-              <NumberFieldDecrementTrigger class="bg-transparent text-foreground" aria-label="Decrement" />
+              <NumberFieldDecrementTrigger
+                class="bg-transparent text-foreground"
+                aria-label="Decrement"
+              />
               <NumberFieldInput class="bg-background text-foreground" />
-              <NumberFieldIncrementTrigger class="bg-transparent text-foreground" aria-label="Increment" />
+              <NumberFieldIncrementTrigger
+                class="bg-transparent text-foreground"
+                aria-label="Increment"
+              />
             </NumberFieldGroup>
           </NumberField>
         </div>
-        <Button class="w-6rem" variant="secondary" onClick={props.onClear}>
+        <Button
+          class="w-6rem"
+          variant="secondary"
+          onClick={() => {
+            setInputValue('')
+            const r = inputRef()
+            if (r) r.value = '' // 这里不会触发 onValueChange
+            props.onInterCountChange(1)
+            props.onClear()
+          }}
+        >
           清空
         </Button>
       </div>
