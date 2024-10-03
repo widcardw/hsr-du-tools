@@ -4,7 +4,14 @@ import { type Component, For } from 'solid-js'
 
 import './scroll-bar.css'
 import './blessing-bg.css'
-import { GAIN_MAP, type GainType, PATH_ICON_MAP, type Path } from '@/libs/du/constants'
+import './scrollable-tags.css'
+
+import {
+  GAIN_MAP,
+  type GainType,
+  PATH_ICON_MAP,
+  type Path,
+} from '@/libs/du/constants'
 import { Badge } from '../ui/badge'
 
 const Equation_BG_MAP = {
@@ -14,7 +21,10 @@ const Equation_BG_MAP = {
   [BlessingEquationEr.Critical]: 'blessing-ultimate',
 }
 
-const EquationCard: Component<{ equation: BlessingEquation, hilitedTag?: Set<GainType> }> = (props) => {
+const EquationCard: Component<{
+  equation: BlessingEquation
+  hilitedTag?: Set<GainType>
+}> = (props) => {
   return (
     <div
       class={clsx(
@@ -25,6 +35,7 @@ const EquationCard: Component<{ equation: BlessingEquation, hilitedTag?: Set<Gai
         'bg-background',
       )}
     >
+      {/* 方程图像 */}
       <div class={clsx('p-2', Equation_BG_MAP[props.equation.er])}>
         <img
           src={`/equation${props.equation.icon}`}
@@ -37,7 +48,9 @@ const EquationCard: Component<{ equation: BlessingEquation, hilitedTag?: Set<Gai
           )}
         />
       </div>
+      {/* 方程名称 */}
       <div class={clsx('font-bold text-center')}>{props.equation.name}</div>
+      {/* 所需祝福数量 */}
       <div class="flex justify-center gap-1 items-center">
         <For
           each={Object.entries(props.equation.need).sort((a, b) => b[1] - a[1])}
@@ -54,14 +67,30 @@ const EquationCard: Component<{ equation: BlessingEquation, hilitedTag?: Set<Gai
           )}
         </For>
       </div>
+      {/* 方程描述 */}
       <div
         class={clsx('text-sm text-center', 'h-7rem of-y-auto')}
         innerHTML={props.equation.desc}
       />
-      <div class="space-x-1 space-y-1 text-center">
-        <For each={Array.from(props.equation.rel)}>
-          {(it) => <Badge variant={props.hilitedTag?.has(it) ? 'default' : 'secondary'} class="whitespace-nowrap">{GAIN_MAP[it][1]}</Badge>}
-        </For>
+      {/* 相关 buff */}
+      <div class="tag-outer">
+        <div
+          class={clsx(
+            'space-x-1 of-x-auto whitespace-nowrap text-center',
+            'no-scroll-bar tag-container',
+          )}
+        >
+          <For each={Array.from(props.equation.rel)}>
+            {(it) => (
+              <Badge
+                variant={props.hilitedTag?.has(it) ? 'default' : 'secondary'}
+                class="whitespace-nowrap"
+              >
+                {GAIN_MAP[it][1]}
+              </Badge>
+            )}
+          </For>
+        </div>
       </div>
     </div>
   )

@@ -10,4 +10,5 @@ body {
 body {
   background: url('/bg.jpg') no-repeat center center;
   background-attachment: fixed;
+  color-scheme: light dark;
 }

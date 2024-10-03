@@ -18,3 +18,7 @@
 ::-webkit-scrollbar-track-piece {
   background-color: transparent;
 }
+
+.no-scroll-bar {
+  scrollbar-width: none;
+}

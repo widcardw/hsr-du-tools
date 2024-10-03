@@ -1,0 +1,14 @@
+.tag-outer {
+    position: relative; /* 使伪元素定位相对于容器 */
+}
+
+.tag-outer::after {
+    content: ""; /* 创建伪元素 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px; /* 遮罩宽度 */
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 0, 0) 0%, hsl(var(--background)) 100%); /* 渐变效果 */
+    pointer-events: none; /* 遮罩不干扰用户操作 */
+}

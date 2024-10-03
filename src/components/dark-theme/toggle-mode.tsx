@@ -7,9 +7,13 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { useColorMode } from '@kobalte/core'
 import type { DropdownMenuTriggerProps } from '@kobalte/core/dropdown-menu'
+import { createEffect } from 'solid-js'
 
 const ModeToggle = () => {
   const { setColorMode } = useColorMode()
+  createEffect(() => {
+    setColorMode('dark')
+  })
 
   return (
     <DropdownMenu placement="bottom-end">
