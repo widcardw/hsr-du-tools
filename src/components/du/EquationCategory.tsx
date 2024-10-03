@@ -13,7 +13,7 @@ const EquationCategory: Component<{ equations: BlessingEquation[] }> = (
         <div class="text-2xl font-bold text-center my-4">
           {PATH_MAP[props.equations[0].path]}
         </div>
-        <div class={clsx('grid', 'grid-cols-3 md:grid-cols-4', 'gap-2')}>
+        <div class={clsx('grid', 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4', 'gap-2')}>
           <For each={props.equations}>
             {(equation) => <EquationCard equation={equation} />}
           </For>

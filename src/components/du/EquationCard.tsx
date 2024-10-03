@@ -23,7 +23,7 @@ const Equation_BG_MAP = {
 
 const EquationCard: Component<{
   equation: BlessingEquation
-  hilitedTag?: Set<GainType>
+  hilitedTag?: GainType[]
 }> = (props) => {
   return (
     <div
@@ -83,7 +83,7 @@ const EquationCard: Component<{
           <For each={Array.from(props.equation.rel)}>
             {(it) => (
               <Badge
-                variant={props.hilitedTag?.has(it) ? 'default' : 'secondary'}
+                variant={props.hilitedTag?.includes(it) ? 'default' : 'secondary'}
                 class="whitespace-nowrap"
               >
                 {GAIN_MAP[it][1]}

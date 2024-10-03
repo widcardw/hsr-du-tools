@@ -17,7 +17,7 @@ const blessings: Array<Blessing> = [
       "角色受到攻击后，对攻击者造成等同于受到攻击前护盾量<color style='color:#f29e38;'> 420.0% </color>的【<u class='infou'>反震</u>】伤害。该伤害无法消灭敌方目标。",
     ],
     effects: [BlessingExtra.Quake],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615032,
@@ -31,7 +31,7 @@ const blessings: Array<Blessing> = [
       "角色获得特殊护盾，获得其他护盾时该护盾会增加获取护盾量<color style='color:#f29e38;'> 100.0% </color>的护盾量。超过角色生命上限<color style='color:#f29e38;'> 45.0% </color>的部分，会在角色回合开始时失去<color style='color:#f29e38;'> 85.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615040,
@@ -45,7 +45,7 @@ const blessings: Array<Blessing> = [
       "角色对敌方目标造成的【<u class='infou'>反震</u>】伤害提高<color style='color:#f29e38;'> 15.0% </color>，且同时会对其他敌方目标造成等同于主目标<color style='color:#f29e38;'> 30.0% </color>的【<u class='infou'>反震</u>】伤害。",
     ],
     effects: [BlessingExtra.Quake],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615041,
@@ -59,7 +59,7 @@ const blessings: Array<Blessing> = [
       "角色对敌方目标造成【<u class='infou'>反震</u>】时的伤害提高，提高数值等同于角色当前防御力的<color style='color:#f29e38;'> 120.0% </color>。",
     ],
     effects: [BlessingExtra.Quake],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615042,
@@ -73,7 +73,7 @@ const blessings: Array<Blessing> = [
       "持有护盾的角色提高等同于自身护盾量<color style='color:#f29e38;'> 60.0% </color>的攻击力，但不超过基础攻击力的<color style='color:#f29e38;'> 160.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615043,
@@ -87,7 +87,7 @@ const blessings: Array<Blessing> = [
       "回合结束时，角色获得能够抵消等同于自身生命上限<color style='color:#f29e38;'> 15.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615044,
@@ -101,7 +101,7 @@ const blessings: Array<Blessing> = [
       "获得护盾时，角色获得的护盾量提高<color style='color:#f29e38;'> 35.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615045,
@@ -115,7 +115,7 @@ const blessings: Array<Blessing> = [
       "角色为我方目标提供护盾时，使双方造成的伤害提高<color style='color:#f29e38;'> 30.0% </color>，最多叠加<color style='color:#f29e38;'> 5.0 </color>次，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615050,
@@ -129,7 +129,7 @@ const blessings: Array<Blessing> = [
       "角色防御力提高<color style='color:#f29e38;'> 30.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615051,
@@ -143,7 +143,7 @@ const blessings: Array<Blessing> = [
       "进入战斗时，角色获得能够抵消等同于自身生命上限<color style='color:#f29e38;'> 24.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615052,
@@ -157,7 +157,7 @@ const blessings: Array<Blessing> = [
       "角色受到攻击后，获得等同于本次攻击内损失的生命值<color style='color:#f29e38;'> 18.0% </color>的护盾，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615053,
@@ -171,7 +171,7 @@ const blessings: Array<Blessing> = [
       "角色击破敌方目标弱点后，获得能够抵消等同于自身生命上限<color style='color:#f29e38;'> 18.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 3.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615054,
@@ -185,7 +185,7 @@ const blessings: Array<Blessing> = [
       "持有护盾的角色受到的伤害降低<color style='color:#f29e38;'> 24.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615055,
@@ -199,7 +199,7 @@ const blessings: Array<Blessing> = [
       "角色获得护盾时，有<color style='color:#f29e38;'> 30.0% </color>固定概率解除1个自身的负面效果。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615056,
@@ -213,7 +213,7 @@ const blessings: Array<Blessing> = [
       "持有护盾的角色暴击伤害提高<color style='color:#f29e38;'> 45.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615057,
@@ -227,7 +227,7 @@ const blessings: Array<Blessing> = [
       "持有护盾的角色暴击率提高<color style='color:#f29e38;'> 24.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615130,
@@ -241,7 +241,7 @@ const blessings: Array<Blessing> = [
       "角色对陷入冻结状态下的敌方目标施放攻击后，有<color style='color:#f29e38;'> 100.0% </color>的基础概率使其陷入【<u class='infou'>离神</u>】状态，持续<color style='color:#f29e38;'> 1.0 </color>回合，并额外造成<color style='color:#f29e38;'> 20.0% </color>【<u class='infou'>离神</u>】解除时的伤害。",
     ],
     effects: [60000002],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615131,
@@ -255,7 +255,7 @@ const blessings: Array<Blessing> = [
       "角色击破敌方目标弱点后，有<color style='color:#f29e38;'> 100.0% </color>的基础概率使其陷入【<u class='infou'>离神</u>】状态，持续<color style='color:#f29e38;'> 1.0 </color>回合，该次效果无视敌方目标抵抗冻结状态的概率。",
     ],
     effects: [60000002],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615132,
@@ -269,7 +269,7 @@ const blessings: Array<Blessing> = [
       "敌方目标受到<color style='color:#f29e38;'> 5.0 </color>次攻击后，有<color style='color:#f29e38;'> 150.0% </color>基础概率陷入冻结状态，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615140,
@@ -283,7 +283,7 @@ const blessings: Array<Blessing> = [
       "陷入【<u class='infou'>离神</u>】状态的敌方目标受到的伤害提高<color style='color:#f29e38;'> 54.0% </color>。该效果在【<u class='infou'>离神</u>】状态被解除后仍会持续1回合。",
     ],
     effects: [60000002],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615141,
@@ -297,7 +297,7 @@ const blessings: Array<Blessing> = [
       "敌方目标的【<u class='infou'>离神</u>】状态被解除后，有<color style='color:#f29e38;'> 75.0% </color>的基础概率陷入冻结状态，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
     ],
     effects: [60000002],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615142,
@@ -311,7 +311,7 @@ const blessings: Array<Blessing> = [
       "冻结状态解除时，敌方目标造成的伤害降低<color style='color:#f29e38;'> 24.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615143,
@@ -325,7 +325,7 @@ const blessings: Array<Blessing> = [
       "角色对敌方目标施加冻结状态时，效果命中提高<color style='color:#f29e38;'> 45.0% </color>，使敌方目标陷入冻结状态后，造成的伤害提高<color style='color:#f29e38;'> 60.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615144,
@@ -339,7 +339,7 @@ const blessings: Array<Blessing> = [
       "角色施放终结技后，有<color style='color:#f29e38;'> 70.0% </color>的基础概率使不具有冰属性弱点的随机敌方单体获得冰属性弱点，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615145,
@@ -353,7 +353,7 @@ const blessings: Array<Blessing> = [
       "进入战斗时，每个敌方单体均有<color style='color:#f29e38;'> 150.0% </color>基础概率陷入冻结状态，并使其速度降低<color style='color:#f29e38;'> 30.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615150,
@@ -367,7 +367,7 @@ const blessings: Array<Blessing> = [
       "敌方目标抵抗冻结状态的概率降低<color style='color:#f29e38;'> 45.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615151,
@@ -381,7 +381,7 @@ const blessings: Array<Blessing> = [
       "角色的效果命中提高<color style='color:#f29e38;'> 24.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615152,
@@ -395,7 +395,7 @@ const blessings: Array<Blessing> = [
       "角色施放攻击后，若受到攻击的敌方目标当前生命值百分比首次小于<color style='color:#f29e38;'> 50.0% </color>，则有<color style='color:#f29e38;'> 100.0% </color>的基础概率使其陷入冻结状态，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615153,
@@ -409,7 +409,7 @@ const blessings: Array<Blessing> = [
       "角色对陷入冻结状态的敌方目标施放战技或终结技时，造成的伤害提高<color style='color:#f29e38;'> 54.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615154,
@@ -423,7 +423,7 @@ const blessings: Array<Blessing> = [
       "角色攻击冻结状态下的敌方目标后，造成等同于<color style='color:#f29e38;'> 60.0% </color>攻击力的附加伤害。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615155,
@@ -437,7 +437,7 @@ const blessings: Array<Blessing> = [
       "陷入冻结状态的敌方目标受到的伤害提高<color style='color:#f29e38;'> 24.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615156,
@@ -451,7 +451,7 @@ const blessings: Array<Blessing> = [
       "角色对敌方目标施加冻结状态后，自身恢复<color style='color:#f29e38;'> 12.0 </color>点能量，该效果每次行动只能触发1次。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615157,
@@ -465,7 +465,7 @@ const blessings: Array<Blessing> = [
       "敌方目标陷入的冻结状态解除后，护盾量最低的角色获得能够抵消等同于自身生命上限<color style='color:#f29e38;'> 45.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615230,
@@ -479,7 +479,7 @@ const blessings: Array<Blessing> = [
       "敌方目标每受到1次持续伤害，陷入<color style='color:#f29e38;'> 2.0 </color>层【<u class='infou'>怀疑</u>】效果。【<u class='infou'>怀疑</u>】首次达到 99 层后，提供的持续伤害易伤不再受层数影响，固定为<color style='color:#f29e38;'> 120.0% </color>。",
     ],
     effects: [60000012],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615231,
@@ -493,7 +493,7 @@ const blessings: Array<Blessing> = [
       "角色击破敌方目标弱点，或攻击处于弱点击破状态下的敌方目标后，分别使其陷入<color style='color:#f29e38;'> 24.0 </color>或<color style='color:#f29e38;'> 4.0 </color>层【<u class='infou'>怀疑</u>】效果。",
     ],
     effects: [60000012],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615232,
@@ -507,7 +507,7 @@ const blessings: Array<Blessing> = [
       "敌方目标回合开始时额外触发<color style='color:#f29e38;'> 1.0 </color>次持续伤害结算，使其当前承受的持续伤害状态立即产生相当于原伤害<color style='color:#f29e38;'> 135.0% </color>的伤害。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615240,
@@ -521,7 +521,7 @@ const blessings: Array<Blessing> = [
       "陷入【<u class='infou'>怀疑</u>】效果下的敌方目标被消灭时，使<color style='color:#f29e38;'> 2.0 </color>名随机其他敌方目标陷入等同于被消灭目标【<u class='infou'>怀疑</u>】层数的【<u class='infou'>怀疑</u>】效果。",
     ],
     effects: [60000012],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615241,
@@ -535,7 +535,7 @@ const blessings: Array<Blessing> = [
       "敌方目标陷入【<u class='infou'>怀疑</u>】效果时，陷入层数翻倍。",
     ],
     effects: [60000012],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615242,
@@ -549,7 +549,7 @@ const blessings: Array<Blessing> = [
       "敌方目标受到持续伤害后，造成的伤害降低<color style='color:#f29e38;'> 7.0% </color>，最多叠加<color style='color:#f29e38;'> 4.0 </color>次，持续至回合结束时。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615243,
@@ -563,7 +563,7 @@ const blessings: Array<Blessing> = [
       "角色的弱点击破效率提高<color style='color:#f29e38;'> 45.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615244,
@@ -577,7 +577,7 @@ const blessings: Array<Blessing> = [
       "角色击破敌方目标弱点时，对其他敌方目标造成一次等同于弱点击破伤害<color style='color:#f29e38;'> 210.0% </color>的击破伤害。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615245,
@@ -591,7 +591,7 @@ const blessings: Array<Blessing> = [
       "敌方目标受到攻击后，若处于持续伤害状态，随机触发1个持续伤害，造成等同于原持续伤害<color style='color:#f29e38;'> 150.0% </color>的伤害。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615250,
@@ -605,7 +605,7 @@ const blessings: Array<Blessing> = [
       "角色造成的持续伤害提高<color style='color:#f29e38;'> 36.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615251,
@@ -619,7 +619,7 @@ const blessings: Array<Blessing> = [
       "角色攻击力提高<color style='color:#f29e38;'> 27.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615252,
@@ -633,7 +633,7 @@ const blessings: Array<Blessing> = [
       "敌方目标效果抵抗降低<color style='color:#f29e38;'> 18.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615253,
@@ -647,7 +647,7 @@ const blessings: Array<Blessing> = [
       "敌方目标受到的持续伤害提高<color style='color:#f29e38;'> 15.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615254,
@@ -661,7 +661,7 @@ const blessings: Array<Blessing> = [
       "处于弱点击破状态下的敌方目标，防御力降低<color style='color:#f29e38;'> 20.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615255,
@@ -675,7 +675,7 @@ const blessings: Array<Blessing> = [
       "敌方目标每承受1个持续伤害状态，受到的伤害提高<color style='color:#f29e38;'> 4.0% </color>，该效果最多叠加<color style='color:#f29e38;'> 5.0 </color>层。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615256,
@@ -689,7 +689,7 @@ const blessings: Array<Blessing> = [
       "敌方目标每受到1次持续伤害，我方全体回复等同于各自<color style='color:#f29e38;'> 1.5% </color>生命上限的生命值。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615257,
@@ -703,7 +703,7 @@ const blessings: Array<Blessing> = [
       "敌方目标每受到1次持续伤害，我方随机目标恢复<color style='color:#f29e38;'> 3.0 </color>点能量，敌方目标每回合最多触发<color style='color:#f29e38;'> 20.0 </color>次该效果。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615330,
@@ -717,7 +717,7 @@ const blessings: Array<Blessing> = [
       "角色接受治疗时，对【<u class='infou'>珠露</u>】进行充能，充能值为回复量的<color style='color:#f29e38;'> 100.0% </color>。并使【<u class='infou'>珠露</u>】的伤害倍率提高原倍率的<color style='color:#f29e38;'> 40.0% </color>。",
     ],
     effects: [60000013],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615331,
@@ -731,7 +731,7 @@ const blessings: Array<Blessing> = [
       "角色回合开始时，对【<u class='infou'>珠露</u>】进行充能，充能值为自身生命上限的<color style='color:#f29e38;'> 70.0% </color>。",
     ],
     effects: [60000013],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615332,
@@ -745,7 +745,7 @@ const blessings: Array<Blessing> = [
       "角色生命上限提高<color style='color:#f29e38;'> 20.0% </color>，提供治疗时，接受治疗目标以外的我方目标会回复等同于回复量<color style='color:#f29e38;'> 35.0% </color>的生命值。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615340,
@@ -759,7 +759,7 @@ const blessings: Array<Blessing> = [
       "【<u class='infou'>珠露</u>】破裂时，会为角色回复等同于充能值<color style='color:#f29e38;'> 20.0% </color>的生命值，不超过角色生命上限的<color style='color:#f29e38;'> 24.0% </color>，不低于角色生命上限的<color style='color:#f29e38;'> 12.0% </color>。",
     ],
     effects: [60000013],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615341,
@@ -773,7 +773,7 @@ const blessings: Array<Blessing> = [
       "角色当前生命值等于自身生命上限时，对【<u class='infou'>珠露</u>】的充能效率提高<color style='color:#f29e38;'> 120.0% </color>。",
     ],
     effects: [60000013],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615342,
@@ -787,7 +787,7 @@ const blessings: Array<Blessing> = [
       "角色为我方目标提供治疗时，使我方全体攻击力提高<color style='color:#f29e38;'> 50.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615343,
@@ -801,7 +801,7 @@ const blessings: Array<Blessing> = [
       "角色施放攻击后，对受到攻击的敌方目标造成等同于自身生命上限<color style='color:#f29e38;'> 42.0% </color>的附加伤害。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615344,
@@ -815,7 +815,7 @@ const blessings: Array<Blessing> = [
       "当角色生命值回复至自身生命上限时，受到的伤害降低<color style='color:#f29e38;'> 30.0% </color>，效果抵抗提高<color style='color:#f29e38;'> 30.0% </color>，持续至受到攻击后。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615345,
@@ -829,7 +829,7 @@ const blessings: Array<Blessing> = [
       "角色接受我方目标提供的治疗后，会额外回复等同于回复量<color style='color:#f29e38;'> 45.0% </color>的生命值。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615350,
@@ -843,7 +843,7 @@ const blessings: Array<Blessing> = [
       "角色回复的生命值溢出时，生命上限提高<color style='color:#f29e38;'> 36.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615351,
@@ -857,7 +857,7 @@ const blessings: Array<Blessing> = [
       "角色的生命值回复量提高<color style='color:#f29e38;'> 18.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615352,
@@ -871,7 +871,7 @@ const blessings: Array<Blessing> = [
       "角色在战斗中生命值百分比首次小于<color style='color:#f29e38;'> 50.0% </color>时，回复等同于生命上限<color style='color:#f29e38;'> 45.0% </color>的生命值。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615353,
@@ -885,7 +885,7 @@ const blessings: Array<Blessing> = [
       "角色击破敌方目标弱点后，回复等同于生命上限<color style='color:#f29e38;'> 24.0% </color>的生命值。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615354,
@@ -899,7 +899,7 @@ const blessings: Array<Blessing> = [
       "角色接受治疗后，防御力提高<color style='color:#f29e38;'> 36.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615355,
@@ -913,7 +913,7 @@ const blessings: Array<Blessing> = [
       "角色提供治疗后，回复等同于自身生命上限<color style='color:#f29e38;'> 18.0% </color>的生命值，该效果每次行动只可触发1次。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615356,
@@ -927,7 +927,7 @@ const blessings: Array<Blessing> = [
       "角色接受治疗后，速度提高<color style='color:#f29e38;'> 15.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615357,
@@ -941,7 +941,7 @@ const blessings: Array<Blessing> = [
       "角色回复的生命值溢出时，有<color style='color:#f29e38;'> 25.0% </color>的固定概率解除1个自身的负面效果，该效果每回合最多触发<color style='color:#f29e38;'> 2.0 </color>次。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615430,
@@ -955,7 +955,7 @@ const blessings: Array<Blessing> = [
       "角色回合开始时，获得<color style='color:#f29e38;'> 1.0 </color>层【<u class='infou'>会心</u>】效果，并使【<u class='infou'>会心</u>】最高可叠加至<color style='color:#f29e38;'> 12.0 </color>层。",
     ],
     effects: [60000004],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615431,
@@ -969,7 +969,7 @@ const blessings: Array<Blessing> = [
       "角色消灭敌方目标后，自身行动提前 100% ，在下个回合开始时，获得<color style='color:#f29e38;'> 7.0 </color>层【<u class='infou'>会心</u>】效果。",
     ],
     effects: [60000004],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615432,
@@ -983,7 +983,7 @@ const blessings: Array<Blessing> = [
       "角色击破敌方目标弱点后，自身行动提前 100% ，并使造成的伤害提高<color style='color:#f29e38;'> 75.0% </color>，伤害提高效果最多叠加<color style='color:#f29e38;'> 2.0 </color>层，持续至受到攻击后。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615440,
@@ -997,7 +997,7 @@ const blessings: Array<Blessing> = [
       "当角色的暴击率大于 100% 时，若具有【<u class='infou'>会心</u>】效果，每溢出1%暴击率提高<color style='color:#f29e38;'> 3.0% </color>暴击伤害，暴击伤害最多提高<color style='color:#f29e38;'> 240.0% </color>。",
     ],
     effects: [60000004],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615441,
@@ -1011,7 +1011,7 @@ const blessings: Array<Blessing> = [
       "当任意我方目标施放追加攻击或终结技时，可以继承【<u class='infou'>会心</u>】效果，并使【<u class='infou'>会心</u>】层数提高<color style='color:#f29e38;'> 1.0 </color>层。",
     ],
     effects: [60000004],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615442,
@@ -1025,7 +1025,7 @@ const blessings: Array<Blessing> = [
       "相同角色连续行动时，攻击力提高<color style='color:#f29e38;'> 40.0% </color>，该效果最多叠加<color style='color:#f29e38;'> 2.0 </color>层，同时有<color style='color:#f29e38;'> 50.0% </color>的固定概率恢复1点战技点，该效果无法重复触发。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615443,
@@ -1039,7 +1039,7 @@ const blessings: Array<Blessing> = [
       "角色施放攻击后，受到伤害降低<color style='color:#f29e38;'> 12.0% </color>，该效果最多叠加<color style='color:#f29e38;'> 3.0 </color>层，持续至受到攻击后。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615444,
@@ -1053,7 +1053,7 @@ const blessings: Array<Blessing> = [
       "我方全体每经过<color style='color:#f29e38;'> 6.0 </color>个回合后，当前角色行动提前 100% ，该效果无法被相同角色连续触发。进入战斗时，视作已经过<color style='color:#f29e38;'> 5.0 </color>个回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615445,
@@ -1067,7 +1067,7 @@ const blessings: Array<Blessing> = [
       "角色消灭敌方目标后，我方全体回复等同于自身生命上限<color style='color:#f29e38;'> 45.0% </color>的生命值，并使攻击力提高<color style='color:#f29e38;'> 45.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615450,
@@ -1081,7 +1081,7 @@ const blessings: Array<Blessing> = [
       "角色速度提高<color style='color:#f29e38;'> 12.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615451,
@@ -1095,7 +1095,7 @@ const blessings: Array<Blessing> = [
       "角色暴击率提高<color style='color:#f29e38;'> 16.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615452,
@@ -1109,7 +1109,7 @@ const blessings: Array<Blessing> = [
       "角色暴击伤害提高<color style='color:#f29e38;'> 30.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615453,
@@ -1123,7 +1123,7 @@ const blessings: Array<Blessing> = [
       "角色击破敌方目标弱点后，使其行动延后<color style='color:#f29e38;'> 30.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615454,
@@ -1137,7 +1137,7 @@ const blessings: Array<Blessing> = [
       "角色击破敌方目标弱点后，速度提高<color style='color:#f29e38;'> 45.0% </color>，持续至受到攻击后。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615455,
@@ -1151,7 +1151,7 @@ const blessings: Array<Blessing> = [
       "角色回合结束时，行动提前<color style='color:#f29e38;'> 12.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615456,
@@ -1165,7 +1165,7 @@ const blessings: Array<Blessing> = [
       "角色回合开始时，恢复<color style='color:#f29e38;'> 6.0 </color>点能量。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615457,
@@ -1179,7 +1179,7 @@ const blessings: Array<Blessing> = [
       "角色回合开始时，提高等同于上一个行动的我方目标<color style='color:#f29e38;'> 15.0% </color>当前攻击力的攻击力，持续至下个回合开始时。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615530,
@@ -1193,7 +1193,7 @@ const blessings: Array<Blessing> = [
       "角色每损失或治疗自身生命值<color style='color:#f29e38;'> 16.0% </color>，获得<color style='color:#f29e38;'> 1.0 </color>层【<u class='infou'>战意</u>】效果，每回合最多获得<color style='color:#f29e38;'> 12.0 </color>层。累计损失或治疗自身<color style='color:#f29e38;'> 100.0% </color>的生命值后，使角色击破特攻提高<color style='color:#f29e38;'> 45.0% </color>。",
     ],
     effects: [60000005],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615531,
@@ -1207,7 +1207,7 @@ const blessings: Array<Blessing> = [
       "角色每次损失或治疗自身生命值，获得<color style='color:#f29e38;'> 2.0 </color>层【<u class='infou'>战意</u>】效果，并使随机<color style='color:#f29e38;'> 1.0 </color>名队友获得<color style='color:#f29e38;'> 1.0 </color>层【<u class='infou'>战意</u>】效果，该效果每次受到攻击最多触发1次。",
     ],
     effects: [60000005],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615532,
@@ -1221,7 +1221,7 @@ const blessings: Array<Blessing> = [
       "角色受到的伤害降低<color style='color:#f29e38;'> 15.0% </color>，受到攻击时，角色所受伤害由我方全体分摊。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615540,
@@ -1235,7 +1235,7 @@ const blessings: Array<Blessing> = [
       "持有【<u class='infou'>战意</u>】的角色，施放普攻/战技/终结技造成伤害时，敌方目标受到的伤害提高<color style='color:#f29e38;'> 15.0% </color>，【<u class='infou'>战意</u>】层数大于<color style='color:#f29e38;'> 10.0 </color>层时，额外使敌方目标受到的击破伤害提高<color style='color:#f29e38;'> 45.0% </color>。",
     ],
     effects: [60000005],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615541,
@@ -1249,7 +1249,7 @@ const blessings: Array<Blessing> = [
       "持有【<u class='infou'>战意</u>】的角色，受到的伤害降低<color style='color:#f29e38;'> 20.0% </color>。生命值百分比小于<color style='color:#f29e38;'> 50.0% </color>时，额外降低<color style='color:#f29e38;'> 12.0% </color>。",
     ],
     effects: [60000005],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615542,
@@ -1263,7 +1263,7 @@ const blessings: Array<Blessing> = [
       "角色累计损失或治疗自身<color style='color:#f29e38;'> 40.0% </color>生命值后，攻击处于弱点击破状态下的敌方目标后，会将本次攻击的削韧值转化为1次<color style='color:#f29e38;'> 105.0% </color>的<u class='infou'>超击破伤害</u>。",
     ],
     effects: [10000015],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615543,
@@ -1277,7 +1277,7 @@ const blessings: Array<Blessing> = [
       "角色累计损失或治疗自身<color style='color:#f29e38;'> 40.0% </color>生命值后，全属性抗性穿透提高<color style='color:#f29e38;'> 15.0% </color>，造成击破伤害时额外提高<color style='color:#f29e38;'> 30.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615544,
@@ -1291,7 +1291,7 @@ const blessings: Array<Blessing> = [
       "角色受到攻击或消耗生命值后，若当前生命值百分比小于<color style='color:#f29e38;'> 35.0% </color>，则回复等同于生命上限<color style='color:#f29e38;'> 12.0% </color>的生命值。当前生命值百分比越低回复量越高，最多不超过<color style='color:#f29e38;'> 20.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615545,
@@ -1305,7 +1305,7 @@ const blessings: Array<Blessing> = [
       "角色生命值百分比降低至<color style='color:#f29e38;'> 60.0% </color>时，固定恢复等同于自身能量上限<color style='color:#f29e38;'> 50.0% </color>的能量与<color style='color:#f29e38;'> 1.0 </color>个战技点，该效果在<color style='color:#f29e38;'> 4.0 </color>回合后可以再次触发。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615550,
@@ -1319,7 +1319,7 @@ const blessings: Array<Blessing> = [
       "角色击破特攻提高<color style='color:#f29e38;'> 75.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615551,
@@ -1333,7 +1333,7 @@ const blessings: Array<Blessing> = [
       "角色受到致命攻击时不会陷入无法战斗状态，并使当前生命值立即回复至自身生命上限的<color style='color:#f29e38;'> 30.0% </color>。该效果我方全体单场战斗中只能触发<color style='color:#f29e38;'> 1.0 </color>次。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
 
   {
@@ -1348,7 +1348,7 @@ const blessings: Array<Blessing> = [
       "角色生命上限提高<color style='color:#f29e38;'> 24.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615553,
@@ -1362,7 +1362,7 @@ const blessings: Array<Blessing> = [
       "敌方目标受到的击破伤害提高<color style='color:#f29e38;'> 36.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615554,
@@ -1376,7 +1376,7 @@ const blessings: Array<Blessing> = [
       "进入战斗时，角色消耗自身生命值至生命上限的<color style='color:#f29e38;'> 50.0% </color>，并获得能够抵消等同于已损失生命值<color style='color:#f29e38;'> 150.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 3.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615555,
@@ -1390,7 +1390,7 @@ const blessings: Array<Blessing> = [
       "当角色当前生命值百分比小于<color style='color:#f29e38;'> 50.0% </color>时，获得能够抵消等同于自身生命上限<color style='color:#f29e38;'> 30.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 2.0 </color>回合，该效果每名角色单场战斗中只能触发<color style='color:#f29e38;'> 1.0 </color>次。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615556,
@@ -1404,7 +1404,7 @@ const blessings: Array<Blessing> = [
       "角色损失或治疗自身生命值后，防御力提高<color style='color:#f29e38;'> 45.0% </color>，持续至下回合开始时。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615557,
@@ -1418,7 +1418,7 @@ const blessings: Array<Blessing> = [
       "角色损失或治疗自身生命值后，效果抵抗提高<color style='color:#f29e38;'> 24.0% </color>，持续至下回合开始时。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615630,
@@ -1432,7 +1432,7 @@ const blessings: Array<Blessing> = [
       "角色每次施放普攻/战技/终结技后，都会使下次发动追加攻击后，额外造成1次等同于角色攻击力<color style='color:#f29e38;'> 120.0% </color>的【<u class='infou'>回味</u>】伤害，通过该方式最多造成<color style='color:#f29e38;'> 5.0 </color>次。",
     ],
     effects: [60000003],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615631,
@@ -1446,7 +1446,7 @@ const blessings: Array<Blessing> = [
       "角色发动追加攻击后，对受到攻击的敌方目标造成1次等同于角色攻击力<color style='color:#f29e38;'> 80.0% </color>的【<u class='infou'>回味</u>】伤害。若敌方目标处于弱点击破状态，则额外造成<color style='color:#f29e38;'> 2.0 </color>次伤害。",
     ],
     effects: [60000003],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615632,
@@ -1460,7 +1460,7 @@ const blessings: Array<Blessing> = [
       "角色对敌方目标发动追加攻击后，使其行动延后<color style='color:#f29e38;'> 25.0% </color>，敌方目标每回合最多触发<color style='color:#f29e38;'> 3.0 </color>次。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615640,
@@ -1474,7 +1474,7 @@ const blessings: Array<Blessing> = [
       "角色对敌方目标造成【<u class='infou'>回味</u>】伤害时，额外造成<color style='color:#f29e38;'> 1.0 </color>次不同属性，且等同于原伤害<color style='color:#f29e38;'> 90.0% </color>的【<u class='infou'>回味</u>】伤害。",
     ],
     effects: [60000003],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615641,
@@ -1488,7 +1488,7 @@ const blessings: Array<Blessing> = [
       "敌方目标每受到1种属性的【<u class='infou'>回味</u>】伤害，攻击力降低<color style='color:#f29e38;'> 6.0% </color>，持续至下次行动后。",
     ],
     effects: [60000003],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615642,
@@ -1502,7 +1502,7 @@ const blessings: Array<Blessing> = [
       "角色发动追加攻击后，每击中1个敌方目标，则对每个被击中的目标额外造成1次等同于角色攻击力<color style='color:#f29e38;'> 36.0% </color>的附加伤害。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615643,
@@ -1516,7 +1516,7 @@ const blessings: Array<Blessing> = [
       "角色对敌方目标造成追加攻击伤害时，使追加攻击伤害提高<color style='color:#f29e38;'> 5.0% </color>，最多叠加<color style='color:#f29e38;'> 30.0 </color>层，持续至下回合开始时。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615644,
@@ -1530,7 +1530,7 @@ const blessings: Array<Blessing> = [
       "角色对敌方目标发动追加攻击后，使其受到的伤害提高<color style='color:#f29e38;'> 12.0% </color>，最多叠加<color style='color:#f29e38;'> 3.0 </color>次，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615645,
@@ -1544,7 +1544,7 @@ const blessings: Array<Blessing> = [
       "角色造成的追加攻击伤害无视敌方目标<color style='color:#f29e38;'> 27.0% </color>的防御力。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615650,
@@ -1558,7 +1558,7 @@ const blessings: Array<Blessing> = [
       "角色造成的追加攻击暴击伤害提高<color style='color:#f29e38;'> 66.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615651,
@@ -1572,7 +1572,7 @@ const blessings: Array<Blessing> = [
       "角色造成追加攻击伤害时的弱点击破效率提高<color style='color:#f29e38;'> 50.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
 
   {
@@ -1587,7 +1587,7 @@ const blessings: Array<Blessing> = [
       "角色造成的追加攻击伤害提高<color style='color:#f29e38;'> 39.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615653,
@@ -1601,7 +1601,7 @@ const blessings: Array<Blessing> = [
       "角色造成的追加攻击伤害暴击率提高<color style='color:#f29e38;'> 39.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615654,
@@ -1615,7 +1615,7 @@ const blessings: Array<Blessing> = [
       "角色发动追加攻击时，恢复<color style='color:#f29e38;'> 8.0 </color>点能量，该效果每回合最多触发<color style='color:#f29e38;'> 1.0 </color>次。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615655,
@@ -1629,7 +1629,7 @@ const blessings: Array<Blessing> = [
       "角色发动追加攻击后，回复等同于自身生命上限<color style='color:#f29e38;'> 15.0% </color>的生命值。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615656,
@@ -1643,7 +1643,7 @@ const blessings: Array<Blessing> = [
       "角色发动追加攻击后，防御力提高<color style='color:#f29e38;'> 40.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615657,
@@ -1657,7 +1657,7 @@ const blessings: Array<Blessing> = [
       "角色发动追加攻击后，速度提高<color style='color:#f29e38;'> 16.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615730,
@@ -1671,7 +1671,7 @@ const blessings: Array<Blessing> = [
       "角色每消耗1个战技点，使敌方全体获得<color style='color:#f29e38;'> 1.0 </color>个【<u class='infou'>孢子</u>】。若将战技点消耗至0，则使消耗最后一个战技点的角色速度提高<color style='color:#f29e38;'> 20.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [60000017],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615731,
@@ -1685,7 +1685,7 @@ const blessings: Array<Blessing> = [
       "角色每恢复1个战技点，使随机<color style='color:#f29e38;'> 2.0 </color>名敌方目标获得1个【<u class='infou'>孢子</u>】，【<u class='infou'>孢子</u>】上限提高<color style='color:#f29e38;'> 3.0 </color>个。",
     ],
     effects: [60000017],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615732,
@@ -1699,7 +1699,7 @@ const blessings: Array<Blessing> = [
       "角色施放终结技后，下一次消耗或恢复战技点时会被视为额外消耗或恢复1个战技点。每消耗或恢复1个战技点，角色暴击伤害提高<color style='color:#f29e38;'> 45.0% </color>，该效果最多叠加<color style='color:#f29e38;'> 2.0 </color>层，持续至该角色施放攻击后。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615746,
@@ -1713,7 +1713,7 @@ const blessings: Array<Blessing> = [
       "敌方目标受到【<u class='infou'>孢子</u>】伤害后，防御力降低<color style='color:#f29e38;'> 1.0% </color>，该效果最多叠加<color style='color:#f29e38;'> 20.0 </color>层。",
     ],
     effects: [60000017],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615740,
@@ -1727,7 +1727,7 @@ const blessings: Array<Blessing> = [
       "【<u class='infou'>孢子</u>】爆裂后的传播次数变为<color style='color:#f29e38;'> 3.0 </color>次，并且可以传播给持有【<u class='infou'>孢子</u>】的敌方目标自身。",
     ],
     effects: [60000017],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615741,
@@ -1741,7 +1741,7 @@ const blessings: Array<Blessing> = [
       "【<u class='infou'>孢子</u>】爆裂造成的伤害提高，提高数值等同于原伤害的<color style='color:#f29e38;'> 50.0% </color>，敌方目标被消灭后，将受到攻击前持有的【<u class='infou'>孢子</u>】传播给其他敌方目标。",
     ],
     effects: [60000017],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615742,
@@ -1755,7 +1755,7 @@ const blessings: Array<Blessing> = [
       "角色造成的普攻伤害提高<color style='color:#f29e38;'> 50.0% </color>。消耗战技点时，有<color style='color:#f29e38;'> 20.0% </color>固定概率恢复1个战技点。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615743,
@@ -1769,7 +1769,7 @@ const blessings: Array<Blessing> = [
       "角色造成的普攻伤害会对相邻目标，造成等同于原伤害<color style='color:#f29e38;'> 35.0% </color>的伤害。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615744,
@@ -1783,7 +1783,7 @@ const blessings: Array<Blessing> = [
       "角色每消耗1个战技点，受到的伤害降低<color style='color:#f29e38;'> 8.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合，该效果最多叠加<color style='color:#f29e38;'> 3.0 </color>层。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615745,
@@ -1797,7 +1797,7 @@ const blessings: Array<Blessing> = [
       "角色施放战技后，若该次战技未施放攻击，则使我方全体造成的伤害提高<color style='color:#f29e38;'> 30.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合，该效果最多叠加<color style='color:#f29e38;'> 3.0 </color>次。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615750,
@@ -1811,7 +1811,7 @@ const blessings: Array<Blessing> = [
       "角色造成的普攻伤害提高<color style='color:#f29e38;'> 36.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615751,
@@ -1825,7 +1825,7 @@ const blessings: Array<Blessing> = [
       "角色造成的普攻伤害暴击率提高<color style='color:#f29e38;'> 36.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615752,
@@ -1839,7 +1839,7 @@ const blessings: Array<Blessing> = [
       "角色造成的普攻伤害暴击伤害提高<color style='color:#f29e38;'> 60.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615753,
@@ -1853,7 +1853,7 @@ const blessings: Array<Blessing> = [
       "角色施放普攻后，防御力提高<color style='color:#f29e38;'> 40.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615754,
@@ -1867,7 +1867,7 @@ const blessings: Array<Blessing> = [
       "角色施放普攻后，速度提高<color style='color:#f29e38;'> 16.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615755,
@@ -1881,7 +1881,7 @@ const blessings: Array<Blessing> = [
       "进入战斗后，我方单体行动后恢复1个战技点，该效果我方全体最多触发<color style='color:#f29e38;'> 5.0 </color>次。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615756,
@@ -1895,7 +1895,7 @@ const blessings: Array<Blessing> = [
       "角色每消耗1个战技点，该角色额外恢复<color style='color:#f29e38;'> 4.0 </color>点能量。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615757,
@@ -1909,7 +1909,7 @@ const blessings: Array<Blessing> = [
       "角色每消耗1个战技点，回复等同于其生命上限<color style='color:#f29e38;'> 15.0% </color>的生命值。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615830,
@@ -1923,7 +1923,7 @@ const blessings: Array<Blessing> = [
       "进入战斗时，为【<u class='infou'>罐中脑</u>】充能<color style='color:#f29e38;'> 100.0% </color>。角色击破敌方目标弱点，或攻击处于弱点击破状态下的敌方目标时，分别为【<u class='infou'>罐中脑</u>】充能<color style='color:#f29e38;'> 40.0% </color>或<color style='color:#f29e38;'> 5.0% </color>，该效果每次攻击对每个敌方单体最多触发1次。",
     ],
     effects: [61000044],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615831,
@@ -1937,7 +1937,7 @@ const blessings: Array<Blessing> = [
       "角色使敌方目标受到致命伤害时，为【<u class='infou'>罐中脑</u>】充能<color style='color:#f29e38;'> 50.0% </color>，每次充满【<u class='infou'>罐中脑</u>】后，使角色速度提高<color style='color:#f29e38;'> 20.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [61000044],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615832,
@@ -1951,7 +1951,7 @@ const blessings: Array<Blessing> = [
       "角色造成的终结技伤害的全属性抗性穿透提高<color style='color:#f29e38;'> 25.0% </color>。基于本场战斗中已施放的终结技单次攻击敌方目标的最大数量，每1名都会使造成的终结技伤害的全属性抗性穿透额外提高<color style='color:#f29e38;'> 3.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615840,
@@ -1965,7 +1965,7 @@ const blessings: Array<Blessing> = [
       "角色利用【<u class='infou'>罐中脑</u>】施放终结技时，使暴击伤害提高<color style='color:#f29e38;'> 90.0% </color>，暴击伤害提高效果会持续至下一次攻击结束。",
     ],
     effects: [61000044],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615841,
@@ -1979,7 +1979,7 @@ const blessings: Array<Blessing> = [
       "角色利用【<u class='infou'>罐中脑</u>】施放终结技后，获得等同于生命上限<color style='color:#f29e38;'> 45.0% </color>的护盾，持续<color style='color:#f29e38;'> 3.0 </color>回合。",
     ],
     effects: [61000044],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615842,
@@ -1993,7 +1993,7 @@ const blessings: Array<Blessing> = [
       "角色施放攻击后，对受到攻击的敌方目标造成附加伤害，每有一个受到攻击的敌方目标，附加伤害数值提高等同于角色攻击力的<color style='color:#f29e38;'> 20.0% </color>。本场战斗中被消灭过的敌方目标也会被视为受到攻击，最多不超过5个。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615843,
@@ -2007,7 +2007,7 @@ const blessings: Array<Blessing> = [
       "角色造成的终结技伤害提高<color style='color:#f29e38;'> 50.0% </color>，进入战斗时，回复等同于能量上限<color style='color:#f29e38;'> 100.0% </color>的能量。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615030,
@@ -2021,7 +2021,7 @@ const blessings: Array<Blessing> = [
       "角色施放攻击后，对受到攻击的敌方目标造成等同于角色当前护盾量<color style='color:#f29e38;'> 100.0% </color>+队友当前护盾总量<color style='color:#f29e38;'> 20.0% </color>的【<u class='infou'>反震</u>】伤害。",
     ],
     effects: [BlessingExtra.Quake],
-    rel: new Set([]),
+    rel: [],
   },
 
   {
@@ -2036,7 +2036,7 @@ const blessings: Array<Blessing> = [
       "若角色的<u class='infou'>群攻</u>技能只攻击了1个敌方目标，则本次攻击对受到攻击的敌方目标额外造成等同于原伤害<color style='color:#f29e38;'> 60.0% </color>的固定数值的伤害。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615845,
@@ -2050,7 +2050,7 @@ const blessings: Array<Blessing> = [
       "角色施放终结技攻击处于弱点击破状态下的敌方目标后，使其行动延后<color style='color:#f29e38;'> 24.0% </color>，敌方目标每次陷入弱点击破状态后最多触发<color style='color:#f29e38;'> 3.0 </color>次该效果。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615850,
@@ -2064,7 +2064,7 @@ const blessings: Array<Blessing> = [
       "角色造成的终结技伤害提高<color style='color:#f29e38;'> 27.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615851,
@@ -2078,7 +2078,7 @@ const blessings: Array<Blessing> = [
       "角色造成的终结技伤害暴击率提高<color style='color:#f29e38;'> 27.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615852,
@@ -2092,7 +2092,7 @@ const blessings: Array<Blessing> = [
       "角色造成的终结技伤害暴击伤害提高<color style='color:#f29e38;'> 45.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615853,
@@ -2106,7 +2106,7 @@ const blessings: Array<Blessing> = [
       "角色施放终结技后的下一次攻击造成的伤害提高<color style='color:#f29e38;'> 75.0% </color>。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615854,
@@ -2120,7 +2120,7 @@ const blessings: Array<Blessing> = [
       "角色施放终结技时，使攻击力提高<color style='color:#f29e38;'> 36.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615855,
@@ -2134,7 +2134,7 @@ const blessings: Array<Blessing> = [
       "角色施放攻击后，每攻击一名敌方目标，使生命上限提高<color style='color:#f29e38;'> 7.5% </color>，最多叠加<color style='color:#f29e38;'> 5.0 </color>次，持续至下回合开始时。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615856,
@@ -2148,7 +2148,7 @@ const blessings: Array<Blessing> = [
       "角色施放终结技后，回复等同于生命上限<color style='color:#f29e38;'> 24.0% </color>的生命值。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615857,
@@ -2162,7 +2162,7 @@ const blessings: Array<Blessing> = [
       "角色受到致命攻击时，不会陷入无法战斗状态，消耗自身所有能量，回复等同于消耗能量值百分比的<color style='color:#f29e38;'> 100.0% </color>的生命值，全队每场战斗只能触发1次。",
     ],
     effects: [],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615046,
@@ -2176,7 +2176,7 @@ const blessings: Array<Blessing> = [
       "角色造成的【<u class='infou'>反震</u>】伤害，暴击率提高<color style='color:#f29e38;'> 30.0% </color>，暴击伤害提高<color style='color:#f29e38;'> 75.0% </color>。",
     ],
     effects: [BlessingExtra.Quake],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615146,
@@ -2190,7 +2190,7 @@ const blessings: Array<Blessing> = [
       "我方目标施放攻击后，有<color style='color:#f29e38;'> 60.0% </color>的基础概率使攻击目标陷入【<u class='infou'>离神</u>】状态，该效果对每个敌方目标单场战斗最多触发<color style='color:#f29e38;'> 1.0 </color>次。",
     ],
     effects: [60000002],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615246,
@@ -2204,7 +2204,7 @@ const blessings: Array<Blessing> = [
       "敌方目标进入战斗时，获得<color style='color:#f29e38;'> 45.0 </color>层【<u class='infou'>怀疑</u>】。",
     ],
     effects: [60000012],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615346,
@@ -2218,7 +2218,7 @@ const blessings: Array<Blessing> = [
       "角色造成的【<u class='infou'>珠露</u>】伤害，暴击率提高<color style='color:#f29e38;'> 30.0% </color>，暴击伤害提高<color style='color:#f29e38;'> 75.0% </color>。",
     ],
     effects: [60000013],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615446,
@@ -2232,7 +2232,7 @@ const blessings: Array<Blessing> = [
       "角色回合开始时，若持有大于等于<color style='color:#f29e38;'> 4.0 </color>层【<u class='infou'>会心</u>】，速度提高<color style='color:#f29e38;'> 36.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [60000004],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615546,
@@ -2246,7 +2246,7 @@ const blessings: Array<Blessing> = [
       "角色进入战斗时，获得<color style='color:#f29e38;'> 18.0 </color>层【<u class='infou'>战意</u>】。",
     ],
     effects: [60000005],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615646,
@@ -2260,7 +2260,7 @@ const blessings: Array<Blessing> = [
       "角色造成的【<u class='infou'>回味</u>】伤害提高<color style='color:#f29e38;'> 105.0% </color>。",
     ],
     effects: [60000003],
-    rel: new Set([]),
+    rel: [],
   },
   {
     _id: 615846,
@@ -2274,7 +2274,7 @@ const blessings: Array<Blessing> = [
       "角色使用【<u class='infou'>罐中脑</u>】施放终结技后，攻击力提高<color style='color:#f29e38;'> 90.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
     ],
     effects: [61000044],
-    rel: new Set([]),
+    rel: [],
   },
 ]
 

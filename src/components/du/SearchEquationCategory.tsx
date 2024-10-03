@@ -4,8 +4,8 @@ import clsx from 'clsx'
 import { type Component, For } from 'solid-js'
 import EquationCard from './EquationCard'
 
-type RelatedEquation = BlessingEquation & {
-  intersection: Set<GainType>
+export type RelatedEquation = BlessingEquation & {
+  intersection: GainType[]
 }
 
 const SearchEquationCategory: Component<{
@@ -14,7 +14,7 @@ const SearchEquationCategory: Component<{
   return (
     <div class="max-w-1200px mx-auto">
       <div class="text-2xl font-bold text-center my-4">方程</div>
-      <div class={clsx('grid', 'grid-cols-3 md:grid-cols-4', 'gap-2')}>
+      <div class={clsx('grid', 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4', 'gap-2')}>
         <For each={props.equations}>
           {(equation) => (
             <div>
