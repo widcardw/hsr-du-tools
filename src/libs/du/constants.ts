@@ -24,15 +24,15 @@ const PATH_MAP: Record<Path, string> = {
 }
 
 const PATH_ICON_MAP: Record<Path, string> = {
-  [Path.Knight]: '/IconProfessionKnightMiddle.png',
-  [Path.Memory]: '/IconProfessionMemoryMiddle.png',
-  [Path.Warlock]: '/IconProfessionWarlockMiddle.png',
-  [Path.Pirest]: '/IconProfessionPirestMiddle.png',
-  [Path.Rogue]: '/IconProfessionRogueMiddle.png',
-  [Path.Warrior]: '/IconProfessionWarriorMiddle.png',
-  [Path.Joy]: '/IconProfessionJoyMiddle.png',
-  [Path.Propagation]: '/IconProfessionPropagationMiddle.png',
-  [Path.Mage]: '/IconProfessionMageMiddle.png',
+  [Path.Knight]: '/IconProfessionKnightMiddle.webp',
+  [Path.Memory]: '/IconProfessionMemoryMiddle.webp',
+  [Path.Warlock]: '/IconProfessionWarlockMiddle.webp',
+  [Path.Pirest]: '/IconProfessionPirestMiddle.webp',
+  [Path.Rogue]: '/IconProfessionRogueMiddle.webp',
+  [Path.Warrior]: '/IconProfessionWarriorMiddle.webp',
+  [Path.Joy]: '/IconProfessionJoyMiddle.webp',
+  [Path.Propagation]: '/IconProfessionPropagationMiddle.webp',
+  [Path.Mage]: '/IconProfessionMageMiddle.webp',
 }
 
 // 命途特殊效果

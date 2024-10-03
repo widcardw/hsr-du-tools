@@ -10,7 +10,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 3,
-    icon: '/IconRogueKnight01.png',
+    icon: '/IconRogueKnight01.webp',
     name: '神性构筑 • 超静定场',
     desc: [
       "角色受到攻击后，对攻击者造成等同于受到攻击前护盾量<color style='color:#f29e38;'> 280.0% </color>的【<u class='infou'>反震</u>】伤害。该伤害无法消灭敌方目标。",
@@ -24,7 +24,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 3,
-    icon: '/IconRogueKnight02.png',
+    icon: '/IconRogueKnight02.webp',
     name: '神性构筑 • 宏观偏析',
     desc: [
       "角色获得特殊护盾，获得其他护盾时该护盾会增加获取护盾量<color style='color:#f29e38;'> 100.0% </color>的护盾量。超过角色生命上限<color style='color:#f29e38;'> 30.0% </color>的部分，会在角色回合开始时失去<color style='color:#f29e38;'> 90.0% </color>。",
@@ -38,7 +38,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 2,
-    icon: '/IconRogueKnight01.png',
+    icon: '/IconRogueKnight01.webp',
     name: '星间构筑 • 切变结构',
     desc: [
       "角色对敌方目标造成的【<u class='infou'>反震</u>】伤害提高<color style='color:#f29e38;'> 10.0% </color>，且同时会对其相邻目标造成等同于主目标<color style='color:#f29e38;'> 25.0% </color>的【<u class='infou'>反震</u>】伤害。",
@@ -52,7 +52,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 2,
-    icon: '/IconRogueKnight01.png',
+    icon: '/IconRogueKnight01.webp',
     name: '星间构筑 • 固溶强化',
     desc: [
       "角色对敌方目标造成【<u class='infou'>反震</u>】时的伤害提高，提高数值等同于角色当前防御力的<color style='color:#f29e38;'> 80.0% </color>。",
@@ -66,7 +66,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 2,
-    icon: '/IconRogueKnight01.png',
+    icon: '/IconRogueKnight01.webp',
     name: '星间构筑 • 安全载荷',
     desc: [
       "持有护盾的角色提高等同于自身护盾量<color style='color:#f29e38;'> 40.0% </color>的攻击力，但不超过基础攻击力的<color style='color:#f29e38;'> 120.0% </color>。",
@@ -80,7 +80,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 2,
-    icon: '/IconRogueKnight02.png',
+    icon: '/IconRogueKnight02.webp',
     name: '星间构筑 • 回馈庇护',
     desc: [
       "回合结束时，角色获得能够抵消等同于自身生命上限<color style='color:#f29e38;'> 10.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -94,7 +94,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 2,
-    icon: '/IconRogueKnight02.png',
+    icon: '/IconRogueKnight02.webp',
     name: '星间构筑 • 四棱锥体',
     desc: [
       "角色提供的护盾量提高<color style='color:#f29e38;'> 30.0% </color>。",
@@ -108,7 +108,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 2,
-    icon: '/IconRogueKnight01.png',
+    icon: '/IconRogueKnight01.webp',
     name: '星间构筑 • 过共晶体',
     desc: [
       "角色为我方目标提供护盾时，使双方造成的伤害提高<color style='color:#f29e38;'> 20.0% </color>，最多叠加<color style='color:#f29e38;'> 5.0 </color>次，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -122,7 +122,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 1,
-    icon: '/IconRogueKnight02.png',
+    icon: '/IconRogueKnight02.webp',
     name: '构筑 • 聚塑',
     desc: [
       "角色防御力提高<color style='color:#f29e38;'> 20.0% </color>。",
@@ -136,7 +136,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 1,
-    icon: '/IconRogueKnight02.png',
+    icon: '/IconRogueKnight02.webp',
     name: '构筑 • 哨戒',
     desc: [
       "进入战斗时，角色获得能够抵消等同于自身生命上限<color style='color:#f29e38;'> 16.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
@@ -150,7 +150,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 1,
-    icon: '/IconRogueKnight02.png',
+    icon: '/IconRogueKnight02.webp',
     name: '构筑 • 弥合',
     desc: [
       "角色受到攻击后，获得等同于本次攻击内损失的生命值<color style='color:#f29e38;'> 18.0% </color>的护盾，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -164,7 +164,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 1,
-    icon: '/IconRogueKnight02.png',
+    icon: '/IconRogueKnight02.webp',
     name: '构筑 • 补偿',
     desc: [
       "角色击破敌方目标弱点后，获得能够抵消等同于自身生命上限<color style='color:#f29e38;'> 14.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
@@ -178,7 +178,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 1,
-    icon: '/IconRogueKnight02.png',
+    icon: '/IconRogueKnight02.webp',
     name: '构筑 • 坚定',
     desc: [
       "持有护盾的角色受到的伤害降低<color style='color:#f29e38;'> 16.0% </color>。",
@@ -192,7 +192,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 1,
-    icon: '/IconRogueKnight02.png',
+    icon: '/IconRogueKnight02.webp',
     name: '构筑 • 回转',
     desc: [
       "角色获得护盾时，有<color style='color:#f29e38;'> 20.0% </color>固定概率解除1个自身的负面效果。",
@@ -206,7 +206,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 1,
-    icon: '/IconRogueKnight01.png',
+    icon: '/IconRogueKnight01.webp',
     name: '构筑 • 迸发',
     desc: [
       "持有护盾的角色暴击伤害提高<color style='color:#f29e38;'> 30.0% </color>。",
@@ -220,7 +220,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 1,
-    icon: '/IconRogueKnight01.png',
+    icon: '/IconRogueKnight01.webp',
     name: '构筑 • 专注',
     desc: [
       "持有护盾的角色暴击率提高<color style='color:#f29e38;'> 16.0% </color>。",
@@ -234,7 +234,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 3,
-    icon: '/IconRogueMemory04.png',
+    icon: '/IconRogueMemory04.webp',
     name: '完美体验：浮黎',
     desc: [
       "角色对陷入冻结状态下的敌方目标施放攻击后，有<color style='color:#f29e38;'> 100.0% </color>的基础概率使其陷入【<u class='infou'>离神</u>】状态，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -248,7 +248,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 3,
-    icon: '/IconRogueMemory04.png',
+    icon: '/IconRogueMemory04.webp',
     name: '完美体验：纯真',
     desc: [
       "角色击破敌方目标弱点后，有<color style='color:#f29e38;'> 100.0% </color>的基础概率使其陷入【<u class='infou'>离神</u>】状态，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -262,7 +262,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 3,
-    icon: '/IconRogueMemory04.png',
+    icon: '/IconRogueMemory04.webp',
     name: '完美体验：缄默',
     desc: [
       "敌方目标受到<color style='color:#f29e38;'> 6.0 </color>次攻击后，有<color style='color:#f29e38;'> 120.0% </color>基础概率陷入冻结状态，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -276,7 +276,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 2,
-    icon: '/IconRogueMemory04.png',
+    icon: '/IconRogueMemory04.webp',
     name: '极端体验：头晕目眩',
     desc: [
       "陷入【<u class='infou'>离神</u>】状态的敌方目标受到的伤害提高<color style='color:#f29e38;'> 36.0% </color>。该效果在【<u class='infou'>离神</u>】状态被解除后仍会持续1回合。",
@@ -290,7 +290,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 2,
-    icon: '/IconRogueMemory04.png',
+    icon: '/IconRogueMemory04.webp',
     name: '极端体验：麻木不仁',
     desc: [
       "敌方目标的【<u class='infou'>离神</u>】状态被解除后，有<color style='color:#f29e38;'> 50.0% </color>的基础概率陷入冻结状态，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -304,7 +304,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 2,
-    icon: '/IconRogueMemory04.png',
+    icon: '/IconRogueMemory04.webp',
     name: '极端体验：瞻前顾后',
     desc: [
       "冻结状态解除时，敌方目标造成的伤害降低<color style='color:#f29e38;'> 20.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -318,7 +318,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 2,
-    icon: '/IconRogueMemory03.png',
+    icon: '/IconRogueMemory03.webp',
     name: '极端体验：洞若观火',
     desc: [
       "角色对敌方目标施加冻结状态时，效果命中提高<color style='color:#f29e38;'> 30.0% </color>，使敌方目标陷入冻结状态后，造成的伤害提高<color style='color:#f29e38;'> 40.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
@@ -332,7 +332,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 2,
-    icon: '/IconRogueMemory05.png',
+    icon: '/IconRogueMemory05.webp',
     name: '极端体验：不寒而栗',
     desc: [
       "角色施放终结技后，有<color style='color:#f29e38;'> 70.0% </color>的基础概率使随机敌方单体获得冰属性弱点，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
@@ -346,7 +346,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 2,
-    icon: '/IconRogueMemory04.png',
+    icon: '/IconRogueMemory04.webp',
     name: '极端体验：特立独行',
     desc: [
       "进入战斗时，每个敌方单体均有<color style='color:#f29e38;'> 150.0% </color>基础概率陷入冻结状态，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -360,7 +360,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 1,
-    icon: '/IconRogueMemory04.png',
+    icon: '/IconRogueMemory04.webp',
     name: '体验：痼疾的摧残',
     desc: [
       "敌方目标抵抗冻结状态的概率降低<color style='color:#f29e38;'> 30.0% </color>。",
@@ -374,7 +374,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 1,
-    icon: '/IconRogueMemory03.png',
+    icon: '/IconRogueMemory03.webp',
     name: '体验：疏离的煎熬',
     desc: [
       "角色的效果命中提高<color style='color:#f29e38;'> 16.0% </color>。",
@@ -388,7 +388,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 1,
-    icon: '/IconRogueMemory04.png',
+    icon: '/IconRogueMemory04.webp',
     name: '体验：丢失的记忆',
     desc: [
       "角色施放攻击后，若受到攻击的敌方目标当前生命值百分比首次小于<color style='color:#f29e38;'> 50.0% </color>，则有<color style='color:#f29e38;'> 70.0% </color>的基础概率使其陷入冻结状态，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -402,7 +402,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 1,
-    icon: '/IconRogueMemory01.png',
+    icon: '/IconRogueMemory01.webp',
     name: '体验：决绝的痛恨',
     desc: [
       "角色对陷入冻结状态的敌方目标施放战技或终结技时，造成的伤害提高<color style='color:#f29e38;'> 36.0% </color>。",
@@ -416,7 +416,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 1,
-    icon: '/IconRogueMemory01.png',
+    icon: '/IconRogueMemory01.webp',
     name: '体验：病痛的折磨',
     desc: [
       "角色攻击冻结状态下的敌方目标后，造成等同于<color style='color:#f29e38;'> 40.0% </color>攻击力的附加伤害。",
@@ -430,7 +430,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 1,
-    icon: '/IconRogueMemory04.png',
+    icon: '/IconRogueMemory04.webp',
     name: '体验：原初的苦衷',
     desc: [
       "陷入冻结状态的敌方目标受到的伤害提高<color style='color:#f29e38;'> 16.0% </color>。",
@@ -444,7 +444,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 1,
-    icon: '/IconRogueMemory03.png',
+    icon: '/IconRogueMemory03.webp',
     name: '体验：攀升的刺激',
     desc: [
       "角色对敌方目标施加冻结状态后，自身恢复<color style='color:#f29e38;'> 8.0 </color>点能量，该效果每次行动只能触发1次。",
@@ -458,7 +458,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 1,
-    icon: '/IconRogueMemory02.png',
+    icon: '/IconRogueMemory02.webp',
     name: '体验：回应的兴奋',
     desc: [
       "敌方目标陷入的冻结状态解除后，护盾量最低的角色获得能够抵消等同于自身生命上限<color style='color:#f29e38;'> 30.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
@@ -472,7 +472,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 3,
-    icon: '/IconRogueWarlock04.png',
+    icon: '/IconRogueWarlock04.webp',
     name: '感官追奉者的葬礼',
     desc: [
       "敌方目标每受到1次持续伤害，陷入<color style='color:#f29e38;'> 2.0 </color>层【<u class='infou'>怀疑</u>】效果。",
@@ -486,7 +486,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 3,
-    icon: '/IconRogueWarlock04.png',
+    icon: '/IconRogueWarlock04.webp',
     name: '多余人的日记',
     desc: [
       "角色击破敌方目标弱点，或攻击处于弱点击破状态下的敌方目标后，分别使其陷入<color style='color:#f29e38;'> 15.0 </color>或<color style='color:#f29e38;'> 3.0 </color>层【<u class='infou'>怀疑</u>】效果。",
@@ -500,7 +500,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 3,
-    icon: '/IconRogueWarlock04.png',
+    icon: '/IconRogueWarlock04.webp',
     name: '为何一切尚未消失',
     desc: [
       "敌方目标回合开始时额外触发<color style='color:#f29e38;'> 1.0 </color>次持续伤害结算，使其当前承受的持续伤害状态立即产生相当于原伤害<color style='color:#f29e38;'> 90.0% </color>的伤害。",
@@ -514,7 +514,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 2,
-    icon: '/IconRogueWarlock05.png',
+    icon: '/IconRogueWarlock05.webp',
     name: '开端与终结',
     desc: [
       "陷入【<u class='infou'>怀疑</u>】效果下的敌方目标被消灭时，使<color style='color:#f29e38;'> 1.0 </color>名随机其他敌方目标陷入等同于被消灭目标【<u class='infou'>怀疑</u>】层数的【<u class='infou'>怀疑</u>】效果。",
@@ -528,7 +528,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 2,
-    icon: '/IconRogueWarlock05.png',
+    icon: '/IconRogueWarlock05.webp',
     name: '自欺咖啡馆',
     desc: [
       "敌方目标陷入【<u class='infou'>怀疑</u>】效果时，额外陷入<color style='color:#f29e38;'> 1.0 </color>层【<u class='infou'>怀疑</u>】效果。",
@@ -542,7 +542,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 2,
-    icon: '/IconRogueWarlock04.png',
+    icon: '/IconRogueWarlock04.webp',
     name: '致死的疾病',
     desc: [
       "敌方目标受到持续伤害后，造成的伤害降低<color style='color:#f29e38;'> 5.0% </color>，最多叠加<color style='color:#f29e38;'> 4.0 </color>次，持续至回合结束时。",
@@ -556,7 +556,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 2,
-    icon: '/IconRogueWarlock03.png',
+    icon: '/IconRogueWarlock03.webp',
     name: '火堆外的夜',
     desc: [
       "角色的弱点击破效率提高<color style='color:#f29e38;'> 30.0% </color>。",
@@ -570,7 +570,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 2,
-    icon: '/IconRogueWarlock01.png',
+    icon: '/IconRogueWarlock01.webp',
     name: '他人即地狱',
     desc: [
       "角色击破敌方目标弱点时，对相邻目标造成一次等同于弱点击破伤害<color style='color:#f29e38;'> 140.0% </color>的击破伤害。",
@@ -584,7 +584,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 2,
-    icon: '/IconRogueWarlock04.png',
+    icon: '/IconRogueWarlock04.webp',
     name: '无根据颂歌',
     desc: [
       "敌方目标受到攻击后，若处于持续伤害状态，随机触发1个持续伤害，造成等同于原持续伤害<color style='color:#f29e38;'> 100.0% </color>的伤害。",
@@ -598,7 +598,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 1,
-    icon: '/IconRogueWarlock03.png',
+    icon: '/IconRogueWarlock03.webp',
     name: '漠视主义',
     desc: [
       "角色造成的持续伤害提高<color style='color:#f29e38;'> 24.0% </color>。",
@@ -612,7 +612,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 1,
-    icon: '/IconRogueWarlock03.png',
+    icon: '/IconRogueWarlock03.webp',
     name: '拟像崩解',
     desc: [
       "角色攻击力提高<color style='color:#f29e38;'> 18.0% </color>。",
@@ -626,7 +626,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 1,
-    icon: '/IconRogueWarlock04.png',
+    icon: '/IconRogueWarlock04.webp',
     name: '盲目视界',
     desc: [
       "敌方目标效果抵抗降低<color style='color:#f29e38;'> 12.0% </color>。",
@@ -640,7 +640,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 1,
-    icon: '/IconRogueWarlock04.png',
+    icon: '/IconRogueWarlock04.webp',
     name: '悲剧讲座',
     desc: [
       "敌方目标受到的持续伤害提高<color style='color:#f29e38;'> 10.0% </color>。",
@@ -654,7 +654,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 1,
-    icon: '/IconRogueWarlock04.png',
+    icon: '/IconRogueWarlock04.webp',
     name: '自我呈现',
     desc: [
       "处于弱点击破状态下的敌方目标，防御力降低<color style='color:#f29e38;'> 15.0% </color>。",
@@ -668,7 +668,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 1,
-    icon: '/IconRogueWarlock04.png',
+    icon: '/IconRogueWarlock04.webp',
     name: '情绪舍离',
     desc: [
       "敌方目标每承受1个持续伤害状态，受到的伤害提高<color style='color:#f29e38;'> 3.0% </color>，该效果最多叠加<color style='color:#f29e38;'> 4.0 </color>层。",
@@ -682,7 +682,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 1,
-    icon: '/IconRogueWarlock02.png',
+    icon: '/IconRogueWarlock02.webp',
     name: '虚妄供品',
     desc: [
       "敌方目标每受到1次持续伤害，我方全体回复等同于各自<color style='color:#f29e38;'> 1.0% </color>生命上限的生命值。",
@@ -696,7 +696,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 1,
-    icon: '/IconRogueWarlock03.png',
+    icon: '/IconRogueWarlock03.webp',
     name: '日出之前',
     desc: [
       "敌方目标每受到1次持续伤害，我方随机目标恢复<color style='color:#f29e38;'> 2.0 </color>点能量，敌方目标每回合最多触发<color style='color:#f29e38;'> 20.0 </color>次该效果。",
@@ -710,7 +710,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 3,
-    icon: '/IconRoguePirest01.png',
+    icon: '/IconRoguePirest01.webp',
     name: '葳蕤繁祉，延彼遐龄',
     desc: [
       "角色接受治疗时，对【<u class='infou'>珠露</u>】进行充能，充能值为回复量的<color style='color:#f29e38;'> 100.0% </color>。",
@@ -724,7 +724,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 3,
-    icon: '/IconRoguePirest01.png',
+    icon: '/IconRoguePirest01.webp',
     name: '若罪若福，施诸愿印',
     desc: [
       "角色回合开始时，对【<u class='infou'>珠露</u>】进行充能，充能值为当前生命值的<color style='color:#f29e38;'> 60.0% </color>。",
@@ -738,7 +738,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 3,
-    icon: '/IconRoguePirest02.png',
+    icon: '/IconRoguePirest02.webp',
     name: '丰饶众生，一法界心',
     desc: [
       "角色提供治疗时，接受治疗目标以外的我方目标会回复等同于回复量<color style='color:#f29e38;'> 30.0% </color>的生命值。",
@@ -752,7 +752,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 2,
-    icon: '/IconRoguePirest02.png',
+    icon: '/IconRoguePirest02.webp',
     name: '灭罪累生善',
     desc: [
       "【<u class='infou'>珠露</u>】破裂时，会为角色回复等同于充能值<color style='color:#f29e38;'> 20.0% </color>的生命值，不超过角色生命上限的<color style='color:#f29e38;'> 18.0% </color>。",
@@ -766,7 +766,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 2,
-    icon: '/IconRoguePirest05.png',
+    icon: '/IconRoguePirest05.webp',
     name: '天人不动众',
     desc: [
       "角色当前生命值等于自身生命上限时，对【<u class='infou'>珠露</u>】的充能效率提高<color style='color:#f29e38;'> 80.0% </color>。",
@@ -780,7 +780,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 2,
-    icon: '/IconRoguePirest01.png',
+    icon: '/IconRoguePirest01.webp',
     name: '宝光烛日月',
     desc: [
       "角色为我方目标提供治疗时，使双方攻击力提高<color style='color:#f29e38;'> 50.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -794,7 +794,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 2,
-    icon: '/IconRoguePirest01.png',
+    icon: '/IconRoguePirest01.webp',
     name: '厌离邪秽苦',
     desc: [
       "角色施放攻击后，对受到攻击的敌方目标造成等同于当前生命值<color style='color:#f29e38;'> 36.0% </color>的附加伤害。",
@@ -808,7 +808,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 2,
-    icon: '/IconRoguePirest02.png',
+    icon: '/IconRoguePirest02.webp',
     name: '明澈琉璃身',
     desc: [
       "当角色生命值回复至自身生命上限时，受到的伤害降低<color style='color:#f29e38;'> 25.0% </color>，效果抵抗提高<color style='color:#f29e38;'> 15.0% </color>，持续至受到攻击后。",
@@ -822,7 +822,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 2,
-    icon: '/IconRoguePirest02.png',
+    icon: '/IconRoguePirest02.webp',
     name: '大愿般若船',
     desc: [
       "角色接受我方目标提供的治疗后，会额外回复等同于回复量<color style='color:#f29e38;'> 30.0% </color>的生命值。",
@@ -836,7 +836,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 1,
-    icon: '/IconRoguePirest02.png',
+    icon: '/IconRoguePirest02.webp',
     name: '法雨',
     desc: [
       "角色回复的生命值溢出时，生命上限提高<color style='color:#f29e38;'> 24.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -850,7 +850,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 1,
-    icon: '/IconRoguePirest02.png',
+    icon: '/IconRoguePirest02.webp',
     name: '甘露',
     desc: [
       "角色的生命值回复量提高<color style='color:#f29e38;'> 12.0% </color>。",
@@ -864,7 +864,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 1,
-    icon: '/IconRoguePirest02.png',
+    icon: '/IconRoguePirest02.webp',
     name: '延寿',
     desc: [
       "角色在战斗中生命值百分比首次小于<color style='color:#f29e38;'> 50.0% </color>时，回复等同于生命上限<color style='color:#f29e38;'> 30.0% </color>的生命值。",
@@ -878,7 +878,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 1,
-    icon: '/IconRoguePirest02.png',
+    icon: '/IconRoguePirest02.webp',
     name: '愿印',
     desc: [
       "角色击破敌方目标弱点后，回复等同于生命上限<color style='color:#f29e38;'> 16.0% </color>的生命值。",
@@ -892,7 +892,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 1,
-    icon: '/IconRoguePirest02.png',
+    icon: '/IconRoguePirest02.webp',
     name: '禳灾',
     desc: [
       "角色接受治疗后，防御力提高<color style='color:#f29e38;'> 24.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -906,7 +906,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 1,
-    icon: '/IconRoguePirest02.png',
+    icon: '/IconRoguePirest02.webp',
     name: '回生',
     desc: [
       "角色提供治疗后，回复等同于自身生命上限<color style='color:#f29e38;'> 12.0% </color>的生命值，该效果每次行动只可触发1次。",
@@ -920,7 +920,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 1,
-    icon: '/IconRoguePirest03.png',
+    icon: '/IconRoguePirest03.webp',
     name: '胜军',
     desc: [
       "角色接受治疗后，速度提高<color style='color:#f29e38;'> 10.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -934,7 +934,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 1,
-    icon: '/IconRoguePirest02.png',
+    icon: '/IconRoguePirest02.webp',
     name: '灌顶',
     desc: [
       "角色回复的生命值溢出时，有<color style='color:#f29e38;'> 25.0% </color>的固定概率解除1个自身的负面效果，该效果每回合最多触发<color style='color:#f29e38;'> 1.0 </color>次。",
@@ -948,7 +948,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 3,
-    icon: '/IconRogueRogue03.png',
+    icon: '/IconRogueRogue03.webp',
     name: '帝星君临制穹桑',
     desc: [
       "角色回合开始时，获得<color style='color:#f29e38;'> 1.0 </color>层【<u class='infou'>会心</u>】效果。",
@@ -962,7 +962,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 3,
-    icon: '/IconRogueRogue03.png',
+    icon: '/IconRogueRogue03.webp',
     name: '帝车超光所向捷',
     desc: [
       "角色消灭敌方目标后，自身行动提前 100% ，在下个回合开始时，获得<color style='color:#f29e38;'> 4.0 </color>层【<u class='infou'>会心</u>】效果。",
@@ -976,7 +976,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 3,
-    icon: '/IconRogueRogue03.png',
+    icon: '/IconRogueRogue03.webp',
     name: '帝弓断空彻太清',
     desc: [
       "角色击破敌方目标弱点后，自身行动提前 100% ，并使下次攻击造成的伤害提高<color style='color:#f29e38;'> 50.0% </color>。",
@@ -990,7 +990,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 2,
-    icon: '/IconRogueRogue03.png',
+    icon: '/IconRogueRogue03.webp',
     name: '天舟缴夙敌',
     desc: [
       "当角色的暴击率大于 100% 时，若具有【<u class='infou'>会心</u>】效果，每溢出1%暴击率提高<color style='color:#f29e38;'> 3.0% </color>暴击伤害，暴击伤害最多提高<color style='color:#f29e38;'> 150.0% </color>。",
@@ -1004,7 +1004,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 2,
-    icon: '/IconRogueRogue05.png',
+    icon: '/IconRogueRogue05.webp',
     name: '序师执迟彝',
     desc: [
       "当任意我方目标施放终结技时，可以继承【<u class='infou'>会心</u>】效果，并使【<u class='infou'>会心</u>】层数提高<color style='color:#f29e38;'> 1.0 </color>层。",
@@ -1018,7 +1018,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 2,
-    icon: '/IconRogueRogue01.png',
+    icon: '/IconRogueRogue01.webp',
     name: '流岚追孽物',
     desc: [
       "相同角色连续行动时，攻击力提高<color style='color:#f29e38;'> 40.0% </color>，该效果最多叠加<color style='color:#f29e38;'> 2.0 </color>层。",
@@ -1032,7 +1032,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 2,
-    icon: '/IconRogueRogue02.png',
+    icon: '/IconRogueRogue02.webp',
     name: '参连讨妖星',
     desc: [
       "角色施放攻击后，受到伤害降低<color style='color:#f29e38;'> 12.0% </color>，该效果最多叠加<color style='color:#f29e38;'> 2.0 </color>层，持续至受到攻击后。",
@@ -1046,7 +1046,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 2,
-    icon: '/IconRogueRogue03.png',
+    icon: '/IconRogueRogue03.webp',
     name: '云镝逐步离',
     desc: [
       "我方全体每经过<color style='color:#f29e38;'> 6.0 </color>个回合后，当前角色行动提前 100% ，该效果无法被相同角色连续触发。",
@@ -1060,7 +1060,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 2,
-    icon: '/IconRogueRogue02.png',
+    icon: '/IconRogueRogue02.webp',
     name: '飞虹诛凿齿',
     desc: [
       "角色消灭敌方目标后，我方全体回复等同于自身生命上限<color style='color:#f29e38;'> 30.0% </color>的生命值，并使攻击力提高<color style='color:#f29e38;'> 25.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
@@ -1074,7 +1074,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 1,
-    icon: '/IconRogueRogue03.png',
+    icon: '/IconRogueRogue03.webp',
     name: '彤弓素矰',
     desc: [
       "角色速度提高<color style='color:#f29e38;'> 8.0% </color>。",
@@ -1088,7 +1088,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 1,
-    icon: '/IconRogueRogue01.png',
+    icon: '/IconRogueRogue01.webp',
     name: '背生击死',
     desc: [
       "角色暴击率提高<color style='color:#f29e38;'> 11.0% </color>。",
@@ -1102,7 +1102,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 1,
-    icon: '/IconRogueRogue01.png',
+    icon: '/IconRogueRogue01.webp',
     name: '背孤击虚',
     desc: [
       "角色暴击伤害提高<color style='color:#f29e38;'> 20.0% </color>。",
@@ -1116,7 +1116,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 1,
-    icon: '/IconRogueRogue04.png',
+    icon: '/IconRogueRogue04.webp',
     name: '雷车动地',
     desc: [
       "角色击破敌方目标弱点后，使其行动延后<color style='color:#f29e38;'> 20.0% </color>。",
@@ -1130,7 +1130,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 1,
-    icon: '/IconRogueRogue03.png',
+    icon: '/IconRogueRogue03.webp',
     name: '电射牛斗',
     desc: [
       "角色击破敌方目标弱点后，速度提高<color style='color:#f29e38;'> 30.0% </color>，持续至受到攻击后。",
@@ -1144,7 +1144,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 1,
-    icon: '/IconRogueRogue03.png',
+    icon: '/IconRogueRogue03.webp',
     name: '天棓步危',
     desc: [
       "角色回合结束时，行动提前<color style='color:#f29e38;'> 8.0% </color>。",
@@ -1158,7 +1158,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 1,
-    icon: '/IconRogueRogue03.png',
+    icon: '/IconRogueRogue03.webp',
     name: '桑弧蓬矢',
     desc: [
       "角色回合开始时，恢复<color style='color:#f29e38;'> 4.0 </color>点能量。",
@@ -1172,7 +1172,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 1,
-    icon: '/IconRogueRogue01.png',
+    icon: '/IconRogueRogue01.webp',
     name: '乌号綦箭',
     desc: [
       "角色回合开始时，提高等同于上一个行动的我方目标<color style='color:#f29e38;'> 10.0% </color>当前攻击力的攻击力，持续至下个回合开始时。",
@@ -1186,7 +1186,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 3,
-    icon: '/IconRogueWarrior03.png',
+    icon: '/IconRogueWarrior03.webp',
     name: '类星体熔毁常数',
     desc: [
       "角色每损失或治疗自身生命值<color style='color:#f29e38;'> 20.0% </color>，获得<color style='color:#f29e38;'> 1.0 </color>层【<u class='infou'>战意</u>】效果，每回合最多获得<color style='color:#f29e38;'> 8.0 </color>层。累计损失或治疗自身<color style='color:#f29e38;'> 100.0% </color>的生命值后，使角色击破特攻提高<color style='color:#f29e38;'> 30.0% </color>。",
@@ -1200,7 +1200,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 3,
-    icon: '/IconRogueWarrior03.png',
+    icon: '/IconRogueWarrior03.webp',
     name: '临界密度扩张群',
     desc: [
       "角色每次损失或治疗自身生命值，获得<color style='color:#f29e38;'> 2.0 </color>层【<u class='infou'>战意</u>】效果，该效果每次受到攻击最多触发1次。",
@@ -1214,7 +1214,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 3,
-    icon: '/IconRogueWarrior02.png',
+    icon: '/IconRogueWarrior02.webp',
     name: '湮灭回归不等式',
     desc: [
       '受到攻击时，角色所受伤害将由我方全体分摊。',
@@ -1228,7 +1228,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 2,
-    icon: '/IconRogueWarrior04.png',
+    icon: '/IconRogueWarrior04.webp',
     name: '灾难性共振',
     desc: [
       "持有【<u class='infou'>战意</u>】的角色，施放普攻/战技/终结技造成伤害时，敌方目标受到的伤害提高<color style='color:#f29e38;'> 10.0% </color>，【<u class='infou'>战意</u>】层数大于<color style='color:#f29e38;'> 10.0 </color>层时，额外使敌方目标受到的击破伤害提高<color style='color:#f29e38;'> 30.0% </color>。",
@@ -1242,7 +1242,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 2,
-    icon: '/IconRogueWarrior02.png',
+    icon: '/IconRogueWarrior02.webp',
     name: '预兆性景深',
     desc: [
       "持有【<u class='infou'>战意</u>】的角色，受到的伤害降低<color style='color:#f29e38;'> 16.0% </color>。生命值百分比小于<color style='color:#f29e38;'> 50.0% </color>时，额外降低<color style='color:#f29e38;'> 8.0% </color>。",
@@ -1256,7 +1256,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 2,
-    icon: '/IconRogueWarrior01.png',
+    icon: '/IconRogueWarrior01.webp',
     name: '灭绝性潮汐',
     desc: [
       "角色累计损失或治疗自身<color style='color:#f29e38;'> 40.0% </color>生命值后，攻击处于弱点击破状态下的敌方目标后，会将本次攻击的削韧值转化为1次<color style='color:#f29e38;'> 70.0% </color>的<u class='infou'>超击破伤害</u>。",
@@ -1270,7 +1270,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 2,
-    icon: '/IconRogueWarrior03.png',
+    icon: '/IconRogueWarrior03.webp',
     name: '衰亡性爆缩',
     desc: [
       "角色累计损失或治疗自身<color style='color:#f29e38;'> 40.0% </color>生命值后，全属性抗性穿透提高<color style='color:#f29e38;'> 10.0% </color>，造成击破伤害时额外提高<color style='color:#f29e38;'> 20.0% </color>。",
@@ -1284,7 +1284,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 2,
-    icon: '/IconRogueWarrior02.png',
+    icon: '/IconRogueWarrior02.webp',
     name: '戒律性闪变',
     desc: [
       "角色受到攻击或消耗生命值后，若当前生命值百分比小于<color style='color:#f29e38;'> 35.0% </color>，回复等同于生命上限<color style='color:#f29e38;'> 12.0% </color>的生命值。",
@@ -1298,7 +1298,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 2,
-    icon: '/IconRogueWarrior03.png',
+    icon: '/IconRogueWarrior03.webp',
     name: '扰乱性脉冲',
     desc: [
       "角色生命值百分比降低至<color style='color:#f29e38;'> 50.0% </color>时，固定恢复等同于自身能量上限<color style='color:#f29e38;'> 50.0% </color>的能量，该效果在<color style='color:#f29e38;'> 4.0 </color>回合后可以再次触发。",
@@ -1312,7 +1312,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 1,
-    icon: '/IconRogueWarrior01.png',
+    icon: '/IconRogueWarrior01.webp',
     name: '突裂奇点',
     desc: [
       "角色击破特攻提高<color style='color:#f29e38;'> 50.0% </color>。",
@@ -1326,7 +1326,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 1,
-    icon: '/IconRogueWarrior02.png',
+    icon: '/IconRogueWarrior02.webp',
     name: '回光效应',
     desc: [
       "角色受到致命攻击时不会陷入无法战斗状态，并使当前生命值立即回复至自身生命上限的<color style='color:#f29e38;'> 1.0% </color>。该效果我方全体单场战斗中只能触发<color style='color:#f29e38;'> 1.0 </color>次。",
@@ -1341,7 +1341,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 1,
-    icon: '/IconRogueWarrior02.png',
+    icon: '/IconRogueWarrior02.webp',
     name: '轨道红移',
     desc: [
       "角色生命上限提高<color style='color:#f29e38;'> 16.0% </color>。",
@@ -1355,7 +1355,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 1,
-    icon: '/IconRogueWarrior04.png',
+    icon: '/IconRogueWarrior04.webp',
     name: '类星喷流',
     desc: [
       "敌方目标受到的击破伤害提高<color style='color:#f29e38;'> 24.0% </color>。",
@@ -1369,7 +1369,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 1,
-    icon: '/IconRogueWarrior02.png',
+    icon: '/IconRogueWarrior02.webp',
     name: '储备度规',
     desc: [
       "进入战斗时，角色消耗自身生命值至生命上限的<color style='color:#f29e38;'> 50.0% </color>，并获得能够抵消等同于已损失生命值<color style='color:#f29e38;'> 100.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 3.0 </color>回合。",
@@ -1383,7 +1383,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 1,
-    icon: '/IconRogueWarrior02.png',
+    icon: '/IconRogueWarrior02.webp',
     name: '哨戒卫星',
     desc: [
       "当角色当前生命值百分比小于<color style='color:#f29e38;'> 50.0% </color>时，获得能够抵消等同于自身生命上限<color style='color:#f29e38;'> 20.0% </color>伤害的护盾，持续<color style='color:#f29e38;'> 2.0 </color>回合，该效果每名角色单场战斗中只能触发<color style='color:#f29e38;'> 1.0 </color>次。",
@@ -1397,7 +1397,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 1,
-    icon: '/IconRogueWarrior02.png',
+    icon: '/IconRogueWarrior02.webp',
     name: '偏振受体',
     desc: [
       "角色损失或治疗自身生命值后，防御力提高<color style='color:#f29e38;'> 30.0% </color>，持续至下回合开始时。",
@@ -1411,7 +1411,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 1,
-    icon: '/IconRogueWarrior02.png',
+    icon: '/IconRogueWarrior02.webp',
     name: '永坍缩体',
     desc: [
       "角色损失或治疗自身生命值后，效果抵抗提高<color style='color:#f29e38;'> 16.0% </color>，持续至下回合开始时。",
@@ -1425,7 +1425,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 3,
-    icon: '/IconRogueJoy01.png',
+    icon: '/IconRogueJoy01.webp',
     name: '《葡萄庄园 • 抵抗黑夜》',
     desc: [
       "角色每次施放普攻/战技/终结技后，都会使下次发动追加攻击后，额外造成1次等同于角色攻击力<color style='color:#f29e38;'> 80.0% </color>的【<u class='infou'>回味</u>】伤害，通过该方式最多造成<color style='color:#f29e38;'> 5.0 </color>次。",
@@ -1439,7 +1439,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 3,
-    icon: '/IconRogueJoy01.png',
+    icon: '/IconRogueJoy01.webp',
     name: '《四号屠场 • 众生安眠》',
     desc: [
       "角色发动追加攻击后，对受到攻击的敌方目标造成1次等同于角色攻击力<color style='color:#f29e38;'> 80.0% </color>的【<u class='infou'>回味</u>】伤害。若敌方目标处于弱点击破状态，则额外造成<color style='color:#f29e38;'> 1.0 </color>次伤害。",
@@ -1453,7 +1453,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 3,
-    icon: '/IconRogueJoy04.png',
+    icon: '/IconRogueJoy04.webp',
     name: '《斩首之邀 • 暗箱哭泣》',
     desc: [
       "角色对敌方目标发动追加攻击后，使其行动延后<color style='color:#f29e38;'> 25.0% </color>，敌方目标每回合最多触发<color style='color:#f29e38;'> 2.0 </color>次。",
@@ -1467,7 +1467,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 2,
-    icon: '/IconRogueJoy01.png',
+    icon: '/IconRogueJoy01.webp',
     name: '《燃烧男子的肖像》',
     desc: [
       "角色对敌方目标造成【<u class='infou'>回味</u>】伤害时，额外造成<color style='color:#f29e38;'> 1.0 </color>次不同属性，且等同于原伤害<color style='color:#f29e38;'> 60.0% </color>的【<u class='infou'>回味</u>】伤害。",
@@ -1481,7 +1481,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 2,
-    icon: '/IconRogueJoy04.png',
+    icon: '/IconRogueJoy04.webp',
     name: '《砂时镜下的幼园》',
     desc: [
       "敌方目标每受到1种属性的【<u class='infou'>回味</u>】伤害，攻击力降低<color style='color:#f29e38;'> 4.0% </color>，持续至下次行动后。",
@@ -1495,7 +1495,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 2,
-    icon: '/IconRogueJoy01.png',
+    icon: '/IconRogueJoy01.webp',
     name: '《被涂污的信天翁》',
     desc: [
       "角色发动追加攻击后，每击中1个敌方目标，则对每个被击中的目标额外造成1次等同于角色攻击力<color style='color:#f29e38;'> 24.0% </color>的附加伤害。",
@@ -1509,7 +1509,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 2,
-    icon: '/IconRogueJoy03.png',
+    icon: '/IconRogueJoy03.webp',
     name: '《十二猴子与怒汉》',
     desc: [
       "角色对敌方目标造成追加攻击伤害时，使追加攻击伤害提高<color style='color:#f29e38;'> 4.0% </color>，最多叠加<color style='color:#f29e38;'> 24.0 </color>层，持续至下回合开始时。",
@@ -1523,7 +1523,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 2,
-    icon: '/IconRogueJoy04.png',
+    icon: '/IconRogueJoy04.webp',
     name: '《像弗莱明一样好》',
     desc: [
       "角色对敌方目标发动追加攻击后，使其受到的伤害提高<color style='color:#f29e38;'> 8.0% </color>，最多叠加<color style='color:#f29e38;'> 3.0 </color>次，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -1537,7 +1537,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 2,
-    icon: '/IconRogueJoy03.png',
+    icon: '/IconRogueJoy03.webp',
     name: '《鱼发现了火》',
     desc: [
       "角色造成的追加攻击伤害无视敌方目标<color style='color:#f29e38;'> 20.0% </color>的防御力。",
@@ -1551,7 +1551,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 1,
-    icon: '/IconRogueJoy01.png',
+    icon: '/IconRogueJoy01.webp',
     name: '《看那些愚者》',
     desc: [
       "角色造成的追加攻击暴击伤害提高<color style='color:#f29e38;'> 44.0% </color>。",
@@ -1565,7 +1565,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 1,
-    icon: '/IconRogueJoy03.png',
+    icon: '/IconRogueJoy03.webp',
     name: '《基本有害》',
     desc: [
       "角色造成追加攻击伤害时的弱点击破效率提高<color style='color:#f29e38;'> 35.0% </color>。",
@@ -1580,7 +1580,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 1,
-    icon: '/IconRogueJoy01.png',
+    icon: '/IconRogueJoy01.webp',
     name: '《阴风阵阵》',
     desc: [
       "角色造成的追加攻击伤害提高<color style='color:#f29e38;'> 26.0% </color>。",
@@ -1594,7 +1594,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 1,
-    icon: '/IconRogueJoy01.png',
+    icon: '/IconRogueJoy01.webp',
     name: '《灰暗的火》',
     desc: [
       "角色造成的追加攻击伤害暴击率提高<color style='color:#f29e38;'> 26.0% </color>。",
@@ -1608,7 +1608,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 1,
-    icon: '/IconRogueJoy03.png',
+    icon: '/IconRogueJoy03.webp',
     name: '《回灯塔去》',
     desc: [
       "角色发动追加攻击时，恢复<color style='color:#f29e38;'> 6.0 </color>点能量，该效果每回合最多触发<color style='color:#f29e38;'> 1.0 </color>次。",
@@ -1622,7 +1622,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 1,
-    icon: '/IconRogueJoy02.png',
+    icon: '/IconRogueJoy02.webp',
     name: '《奇爱医生》',
     desc: [
       "角色发动追加攻击后，回复等同于自身生命上限<color style='color:#f29e38;'> 10.0% </color>的生命值。",
@@ -1636,7 +1636,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 1,
-    icon: '/IconRogueJoy02.png',
+    icon: '/IconRogueJoy02.webp',
     name: '《铂金时代》',
     desc: [
       "角色发动追加攻击后，防御力提高<color style='color:#f29e38;'> 40.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -1650,7 +1650,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 1,
-    icon: '/IconRogueJoy03.png',
+    icon: '/IconRogueJoy03.webp',
     name: '《发条苹果》',
     desc: [
       "角色发动追加攻击后，速度提高<color style='color:#f29e38;'> 16.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -1664,7 +1664,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 3,
-    icon: '/IconRoguePropagation05.png',
+    icon: '/IconRoguePropagation05.webp',
     name: '子囊释放',
     desc: [
       "角色每消耗1个战技点，使敌方全体获得<color style='color:#f29e38;'> 1.0 </color>个【<u class='infou'>孢子</u>】。",
@@ -1678,7 +1678,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 3,
-    icon: '/IconRoguePropagation05.png',
+    icon: '/IconRoguePropagation05.webp',
     name: '菌种脓疱',
     desc: [
       "角色每恢复1个战技点，使随机<color style='color:#f29e38;'> 2.0 </color>名敌方目标获得1个【<u class='infou'>孢子</u>】。",
@@ -1692,7 +1692,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 3,
-    icon: '/IconRoguePropagation01.png',
+    icon: '/IconRoguePropagation01.webp',
     name: '镰刀肢足',
     desc: [
       "角色施放终结技后，下一次消耗战技点时会被视为额外消耗1个战技点。每消耗1个战技点，角色暴击伤害提高<color style='color:#f29e38;'> 40.0% </color>，该效果最多叠加<color style='color:#f29e38;'> 2.0 </color>层，持续至该角色施放攻击后。",
@@ -1706,7 +1706,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 2,
-    icon: '/IconRoguePropagation04.png',
+    icon: '/IconRoguePropagation04.webp',
     name: '阻滞胺',
     desc: [
       "敌方目标受到【<u class='infou'>孢子</u>】伤害后，防御力降低<color style='color:#f29e38;'> 1.0% </color>，该效果最多叠加<color style='color:#f29e38;'> 15.0 </color>层。",
@@ -1720,7 +1720,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 2,
-    icon: '/IconRoguePropagation05.png',
+    icon: '/IconRoguePropagation05.webp',
     name: '腐殖疮',
     desc: [
       "【<u class='infou'>孢子</u>】爆裂后的传播次数变为<color style='color:#f29e38;'> 2.0 </color>次，并且可以传播给持有【<u class='infou'>孢子</u>】的敌方目标自身。",
@@ -1734,7 +1734,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 2,
-    icon: '/IconRoguePropagation01.png',
+    icon: '/IconRoguePropagation01.webp',
     name: '裂解酶',
     desc: [
       "【<u class='infou'>孢子</u>】爆裂造成的伤害提高，提高数值等同于原伤害的<color style='color:#f29e38;'> 35.0% </color>，敌方目标被消灭后，将受到攻击前持有的【<u class='infou'>孢子</u>】传播给相邻目标。",
@@ -1748,7 +1748,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 2,
-    icon: '/IconRoguePropagation05.png',
+    icon: '/IconRoguePropagation05.webp',
     name: '兴奋腺',
     desc: [
       "角色造成的普攻伤害提高<color style='color:#f29e38;'> 30.0% </color>。消耗战技点时，有<color style='color:#f29e38;'> 15.0% </color>固定概率恢复1个战技点。",
@@ -1762,7 +1762,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 2,
-    icon: '/IconRoguePropagation05.png',
+    icon: '/IconRoguePropagation05.webp',
     name: '裸脑质',
     desc: [
       "角色造成的普攻伤害会对随机相邻单体，造成等同于原伤害<color style='color:#f29e38;'> 30.0% </color>的伤害。",
@@ -1776,7 +1776,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 2,
-    icon: '/IconRoguePropagation02.png',
+    icon: '/IconRoguePropagation02.webp',
     name: '节间膜',
     desc: [
       "角色每消耗1个战技点，受到的伤害降低<color style='color:#f29e38;'> 8.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合，该效果最多叠加<color style='color:#f29e38;'> 2.0 </color>层。",
@@ -1790,7 +1790,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 2,
-    icon: '/IconRoguePropagation01.png',
+    icon: '/IconRoguePropagation01.webp',
     name: '催化剂',
     desc: [
       "角色施放战技后，若该次战技未施放攻击，则使我方全体造成的伤害提高<color style='color:#f29e38;'> 20.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合，该效果最多叠加<color style='color:#f29e38;'> 3.0 </color>次。",
@@ -1804,7 +1804,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 1,
-    icon: '/IconRoguePropagation01.png',
+    icon: '/IconRoguePropagation01.webp',
     name: '骨刃',
     desc: [
       "角色造成的普攻伤害提高<color style='color:#f29e38;'> 24.0% </color>。",
@@ -1818,7 +1818,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 1,
-    icon: '/IconRoguePropagation01.png',
+    icon: '/IconRoguePropagation01.webp',
     name: '脊刺',
     desc: [
       "角色造成的普攻伤害暴击率提高<color style='color:#f29e38;'> 24.0% </color>。",
@@ -1832,7 +1832,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 1,
-    icon: '/IconRoguePropagation01.png',
+    icon: '/IconRoguePropagation01.webp',
     name: '槽针',
     desc: [
       "角色造成的普攻伤害暴击伤害提高<color style='color:#f29e38;'> 40.0% </color>。",
@@ -1846,7 +1846,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 1,
-    icon: '/IconRoguePropagation02.png',
+    icon: '/IconRoguePropagation02.webp',
     name: '结膜',
     desc: [
       "角色施放普攻后，防御力提高<color style='color:#f29e38;'> 40.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -1860,7 +1860,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 1,
-    icon: '/IconRoguePropagation03.png',
+    icon: '/IconRoguePropagation03.webp',
     name: '鳞翅',
     desc: [
       "角色施放普攻后，速度提高<color style='color:#f29e38;'> 16.0% </color>，持续<color style='color:#f29e38;'> 1.0 </color>回合。",
@@ -1874,7 +1874,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 1,
-    icon: '/IconRoguePropagation05.png',
+    icon: '/IconRoguePropagation05.webp',
     name: '复眼',
     desc: [
       "进入战斗后，我方单体行动后恢复1个战技点，该效果我方全体最多触发<color style='color:#f29e38;'> 3.0 </color>次。",
@@ -1888,7 +1888,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 1,
-    icon: '/IconRoguePropagation05.png',
+    icon: '/IconRoguePropagation05.webp',
     name: '孢夹',
     desc: [
       "角色每消耗1个战技点，该角色额外恢复<color style='color:#f29e38;'> 3.0 </color>点能量。",
@@ -1902,7 +1902,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 127,
     rarity: 1,
-    icon: '/IconRoguePropagation05.png',
+    icon: '/IconRoguePropagation05.webp',
     name: '液囊',
     desc: [
       "角色每消耗1个战技点，回复等同于其生命上限<color style='color:#f29e38;'> 10.0% </color>的生命值。",
@@ -1916,7 +1916,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 3,
-    icon: '/IconRogueMage03.png',
+    icon: '/IconRogueMage03.webp',
     name: 'BCI -34 型灰质',
     desc: [
       "进入战斗时，为【<u class='infou'>罐中脑</u>】充能<color style='color:#f29e38;'> 65.0% </color>。角色击破敌方目标弱点后，为【<u class='infou'>罐中脑</u>】充能<color style='color:#f29e38;'> 35.0% </color>。",
@@ -1930,7 +1930,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 3,
-    icon: '/IconRogueMage03.png',
+    icon: '/IconRogueMage03.webp',
     name: 'SMR-2型杏仁核',
     desc: [
       "角色使敌方目标受到致命伤害时，为【<u class='infou'>罐中脑</u>】充能<color style='color:#f29e38;'> 50.0% </color>。",
@@ -1944,7 +1944,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 3,
-    icon: '/IconRogueMage01.png',
+    icon: '/IconRogueMage01.webp',
     name: 'VEP -18 型枕叶',
     desc: [
       "角色造成的终结技伤害的全属性抗性穿透提高<color style='color:#f29e38;'> 20.0% </color>，施放终结技后，每有1个受到攻击的敌方目标，都会使造成的终结技伤害的全属性抗性穿透额外提高<color style='color:#f29e38;'> 3.0% </color>，持续至下一次施放终结技后。",
@@ -1958,7 +1958,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 2,
-    icon: '/IconRogueMage01.png',
+    icon: '/IconRogueMage01.webp',
     name: '附加：前庭系统',
     desc: [
       "角色利用【<u class='infou'>罐中脑</u>】施放终结技时，使暴击伤害提高<color style='color:#f29e38;'> 80.0% </color>，持续至本次技能结束。",
@@ -1972,7 +1972,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 2,
-    icon: '/IconRogueMage02.png',
+    icon: '/IconRogueMage02.webp',
     name: '植入：外显记忆',
     desc: [
       "角色利用【<u class='infou'>罐中脑</u>】施放终结技后，获得等同于生命上限<color style='color:#f29e38;'> 36.0% </color>的护盾，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
@@ -1986,7 +1986,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 2,
-    icon: '/IconRogueMage01.png',
+    icon: '/IconRogueMage01.webp',
     name: '拟态：触觉通路',
     desc: [
       "角色施放攻击后，对受到攻击的敌方目标造成附加伤害，每有一个受到攻击的敌方目标，附加伤害数值提高等同于角色攻击力的<color style='color:#f29e38;'> 15.0% </color>。",
@@ -2000,7 +2000,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 2,
-    icon: '/IconRogueMage01.png',
+    icon: '/IconRogueMage01.webp',
     name: '分析：阈下知觉',
     desc: [
       "角色造成的终结技伤害提高<color style='color:#f29e38;'> 50.0% </color>，持续至首次施放终结技后。进入战斗时，回复等同于能量上限<color style='color:#f29e38;'> 60.0% </color>的能量。",
@@ -2014,7 +2014,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 3,
-    icon: '/IconRogueKnight01.png',
+    icon: '/IconRogueKnight01.webp',
     name: '神性构筑 • 谐振传递',
     desc: [
       "角色施放攻击后，对受到攻击的敌方目标造成等同于角色当前护盾量<color style='color:#f29e38;'> 100.0% </color>的【<u class='infou'>反震</u>】伤害。",
@@ -2029,7 +2029,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 2,
-    icon: '/IconRogueMage01.png',
+    icon: '/IconRogueMage01.webp',
     name: '装载：纹状皮层',
     desc: [
       "若角色的<u class='infou'>群攻</u>技能只攻击了1个敌方目标，则本次攻击对受到攻击的敌方目标额外造成等同于原伤害<color style='color:#f29e38;'> 40.0% </color>的固定数值的伤害。",
@@ -2043,7 +2043,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 2,
-    icon: '/IconRogueMage04.png',
+    icon: '/IconRogueMage04.webp',
     name: '激发：跳跃传导',
     desc: [
       "角色施放终结技攻击处于弱点击破状态下的敌方目标后，使其行动延后<color style='color:#f29e38;'> 16.0% </color>，敌方目标每次陷入弱点击破状态后最多触发<color style='color:#f29e38;'> 3.0 </color>次该效果。",
@@ -2057,7 +2057,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 1,
-    icon: '/IconRogueMage01.png',
+    icon: '/IconRogueMage01.webp',
     name: '齿轮啮合的王座',
     desc: [
       "角色造成的终结技伤害提高<color style='color:#f29e38;'> 18.0% </color>。",
@@ -2071,7 +2071,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 1,
-    icon: '/IconRogueMage01.png',
+    icon: '/IconRogueMage01.webp',
     name: '导线弯绕的指环',
     desc: [
       "角色造成的终结技伤害暴击率提高<color style='color:#f29e38;'> 18.0% </color>。",
@@ -2085,7 +2085,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 1,
-    icon: '/IconRogueMage01.png',
+    icon: '/IconRogueMage01.webp',
     name: '能量变矩的权杖',
     desc: [
       "角色造成的终结技伤害暴击伤害提高<color style='color:#f29e38;'> 30.0% </color>。",
@@ -2099,7 +2099,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 1,
-    icon: '/IconRogueMage01.png',
+    icon: '/IconRogueMage01.webp',
     name: '偏时引燃的炬火',
     desc: [
       "角色施放终结技后的下一次攻击造成的伤害提高<color style='color:#f29e38;'> 50.0% </color>。",
@@ -2113,7 +2113,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 1,
-    icon: '/IconRogueMage03.png',
+    icon: '/IconRogueMage03.webp',
     name: '离子推进的宝剑',
     desc: [
       "角色施放终结技时，使攻击力提高<color style='color:#f29e38;'> 24.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
@@ -2127,7 +2127,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 1,
-    icon: '/IconRogueMage02.png',
+    icon: '/IconRogueMage02.webp',
     name: '钢铁熔铸的绶带',
     desc: [
       "角色施放攻击后，每攻击一名敌方目标，使生命上限提高<color style='color:#f29e38;'> 5.0% </color>，最多叠加<color style='color:#f29e38;'> 5.0 </color>次，持续至下回合开始时。",
@@ -2141,7 +2141,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 1,
-    icon: '/IconRogueMage02.png',
+    icon: '/IconRogueMage02.webp',
     name: '线圈编织的罗绮',
     desc: [
       "角色施放终结技后，回复等同于生命上限<color style='color:#f29e38;'> 16.0% </color>的生命值。",
@@ -2155,7 +2155,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 1,
-    icon: '/IconRogueMage02.png',
+    icon: '/IconRogueMage02.webp',
     name: '管道交错的桂冠',
     desc: [
       "角色受到致命攻击时，不会陷入无法战斗状态，消耗自身所有能量，回复等同于消耗能量值百分比的<color style='color:#f29e38;'> 50.0% </color>的生命值，全队每场战斗只能触发1次。",
@@ -2169,7 +2169,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 120,
     rarity: 2,
-    icon: '/IconRogueKnight01.png',
+    icon: '/IconRogueKnight01.webp',
     name: '星间构筑 • 倒易立方',
     desc: [
       "角色造成的【<u class='infou'>反震</u>】伤害，暴击率提高<color style='color:#f29e38;'> 20.0% </color>，暴击伤害提高<color style='color:#f29e38;'> 50.0% </color>。",
@@ -2183,7 +2183,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 121,
     rarity: 2,
-    icon: '/IconRogueMemory04.png',
+    icon: '/IconRogueMemory04.webp',
     name: '极端体验：愤世嫉俗',
     desc: [
       "我方目标施放攻击后，有<color style='color:#f29e38;'> 40.0% </color>的基础概率使攻击目标陷入【<u class='infou'>离神</u>】状态，该效果对每个敌方目标单场战斗最多触发<color style='color:#f29e38;'> 1.0 </color>次。",
@@ -2197,7 +2197,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 122,
     rarity: 2,
-    icon: '/IconRogueWarlock04.png',
+    icon: '/IconRogueWarlock04.webp',
     name: '林中的通径',
     desc: [
       "敌方目标进入战斗时，获得<color style='color:#f29e38;'> 30.0 </color>层【<u class='infou'>怀疑</u>】。",
@@ -2211,7 +2211,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 123,
     rarity: 2,
-    icon: '/IconRoguePirest01.png',
+    icon: '/IconRoguePirest01.webp',
     name: '燃臂供万生',
     desc: [
       "角色造成的【<u class='infou'>珠露</u>】伤害，暴击率提高<color style='color:#f29e38;'> 20.0% </color>，暴击伤害提高<color style='color:#f29e38;'> 50.0% </color>。",
@@ -2225,7 +2225,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 124,
     rarity: 2,
-    icon: '/IconRogueRogue03.png',
+    icon: '/IconRogueRogue03.webp',
     name: '金戈平寿瘟',
     desc: [
       "角色回合开始时，若持有大于等于<color style='color:#f29e38;'> 4.0 </color>层【<u class='infou'>会心</u>】，速度提高<color style='color:#f29e38;'> 24.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
@@ -2239,7 +2239,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 125,
     rarity: 2,
-    icon: '/IconRogueWarrior03.png',
+    icon: '/IconRogueWarrior03.webp',
     name: '回归性暴涨',
     desc: [
       "角色进入战斗时，获得<color style='color:#f29e38;'> 12.0 </color>层【<u class='infou'>战意</u>】。",
@@ -2253,7 +2253,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 126,
     rarity: 2,
-    icon: '/IconRogueJoy01.png',
+    icon: '/IconRogueJoy01.webp',
     name: '《最后的塔拉克人》',
     desc: [
       "角色造成的【<u class='infou'>回味</u>】伤害提高<color style='color:#f29e38;'> 70.0% </color>。",
@@ -2267,7 +2267,7 @@ const blessings: Array<Blessing> = [
     type: BuffType.Blessing,
     path: 128,
     rarity: 2,
-    icon: '/IconRogueMage01.png',
+    icon: '/IconRogueMage01.webp',
     name: '协调：共振核团',
     desc: [
       "角色使用【<u class='infou'>罐中脑</u>】施放终结技后，攻击力提高<color style='color:#f29e38;'> 60.0% </color>，持续<color style='color:#f29e38;'> 2.0 </color>回合。",
