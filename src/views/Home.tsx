@@ -138,7 +138,7 @@ const Home: Component = () => {
       />
       <Show
         when={relatedEquations().length > 0}
-        fallback={<div class="text-center py-4rem">暂无数据</div>}
+        fallback={<div class="text-center py-4rem text-xl">暂无数据</div>}
       >
         <SearchEquationCategory equations={relatedEquations()} />
       </Show>
