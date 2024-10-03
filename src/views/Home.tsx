@@ -1,48 +1,46 @@
 import EquationCard from '@/components/du/EquationCard'
-import EquationCategory from '@/components/du/EquationCategory'
-import SearchEquationCategory, {
-  type RelatedEquation,
-} from '@/components/du/SearchEquationCategory'
 import { CarbonCloseLarge } from '@/components/icons/CarbonCloseIcon'
-import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-} from '@/components/ui/command'
+  Checkbox,
+  CheckboxControl,
+  CheckboxLabel,
+} from '@/components/ui/checkbox'
+
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
 import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
+import {
   NumberField,
   NumberFieldDecrementTrigger,
   NumberFieldGroup,
   NumberFieldIncrementTrigger,
   NumberFieldInput,
-  NumberFieldLabel,
 } from '@/components/ui/number-field'
-import {
-  TextField,
-  TextFieldLabel,
-  TextFieldRoot,
-} from '@/components/ui/textfield'
+
 import { ToggleButton } from '@/components/ui/toggle'
 import { GAIN_MAP, type GainType, PATH_MAP } from '@/libs/du/constants'
 import { EQUATIONS } from '@/libs/du/equations'
+import { BlessingEquationEr, type RelatedEquation } from '@/libs/du/types'
 import type { DialogTriggerProps } from '@kobalte/core/dialog'
+import type { DropdownMenuSubTriggerProps } from '@kobalte/core/dropdown-menu'
 import clsx from 'clsx'
 import { type Component, For, Show, createMemo, createSignal } from 'solid-js'
+import { createStore } from 'solid-js/store'
+
+import '@/components/du/blessing-bg.css'
 
 const GainButton: Component<{
   gain: GainType
@@ -64,44 +62,88 @@ const GainButton: Component<{
   )
 }
 
-const GainSearchArea: Component<{
-  gains: GainType[]
-  interCnt: number
-  onAdd: (gains: GainType[]) => void
-  onDelete: (gain: GainType) => void
-  onClear: () => void
-  onInterCountChange: (cnt: number) => void
-}> = (props) => {
+const Home: Component = () => {
+  const MIXED_EQUATIONS = EQUATIONS.filter(
+    (i) => i.er !== BlessingEquationEr.Critical,
+  )
+  const [selectedGains, setSelectedGains] = createSignal<GainType[]>([])
+  const [interCnt, setInterCnt] = createSignal(1)
+  const [dlgOpen, setDlgOpen] = createSignal(false)
+  /** 方程等级过滤 */
+  const [erFilter, setErFilter] = createStore<{
+    [key in BlessingEquationEr]?: boolean
+  }>({
+    [BlessingEquationEr.Gold]: true,
+    [BlessingEquationEr.Purple]: true,
+    [BlessingEquationEr.Blue]: true,
+  })
+
   const allGains = Object.keys(GAIN_MAP)
     .slice(1)
     .map((i) => Number(i) as GainType)
-  const [tempSelected, setTempSelected] = createSignal<GainType[]>(props.gains)
-  const [dlgOpen, setDlgOpen] = createSignal(false)
-  const tempAddInDlg = (v: boolean, gain: GainType) => {
-    if (v) {
-      setTempSelected((p) => [...p, gain])
-    } else {
-      setTempSelected((p) => p.filter((i) => i !== gain))
+
+  const [tempAddGains, setTempAddGains] = createSignal<GainType[]>([])
+  const tempGainChange = (gain: GainType, v: boolean) => {
+    v
+      ? setTempAddGains((p) => [...p, gain])
+      : setTempAddGains((p) => p.filter((i) => i !== gain))
+  }
+
+  const pushTempGains = () => {
+    setSelectedGains(tempAddGains())
+  }
+
+  const relatedEquations = createMemo<RelatedEquation[]>(() => {
+    if (selectedGains().length === 0)
+      return MIXED_EQUATIONS.filter((i) => {
+        return erFilter[i.er]
+      })
+    const sg = selectedGains()
+    const filteredEquations: RelatedEquation[] = []
+    for (const eq of MIXED_EQUATIONS) {
+      const intersection = eq.rel.filter((g) => sg.includes(g))
+      if (intersection.length >= interCnt()) {
+        filteredEquations.push({
+          ...eq,
+          intersection,
+        })
+      }
     }
+    return filteredEquations
+      .filter((i) => {
+        console.log(i.name, i.er, erFilter[i.er])
+        return erFilter[i.er]
+      })
+      .sort((a, b) => {
+        const i = (b.intersection?.length || 0) - (a.intersection?.length || 0)
+        if (i !== 0) return i
+        return b.er - a.er
+      })
+  })
+
+  const onQueriedTagClick = (gain: GainType, v: boolean) => {
+    console.log(GAIN_MAP[gain][1], v)
+    v
+      ? setSelectedGains((p) => [...p, gain])
+      : setSelectedGains((p) => p.filter((i) => i !== gain))
   }
-  const pushTempSelected = () => {
-    props.onAdd(tempSelected())
-    setTempSelected([])
-    setDlgOpen(false)
-  }
+
   return (
-    <>
-      <div class="flex gap-2 justify-center">
+    <div class="max-w-1200px mx-a space-y-2">
+      <div class="text-2xl text-center font-bold">搜索</div>
+      {/* 搜索按钮 */}
+      <div class="grid grid-cols-3 gap-2 justify-center">
+        {/* 标签选择对话框 */}
         <Dialog
           open={dlgOpen()}
           onOpenChange={(v) => {
             setDlgOpen(v)
-            if (!v) props.onAdd(tempSelected())
+            if (!v) pushTempGains()
           }}
         >
           <DialogTrigger
-            as={(props: DialogTriggerProps) => (
-              <Button variant="secondary" {...props}>
+            as={(inner_props: DialogTriggerProps) => (
+              <Button variant="secondary" {...inner_props}>
                 选择标签
               </Button>
             )}
@@ -114,54 +156,86 @@ const GainSearchArea: Component<{
               <For each={allGains}>
                 {(gain) => (
                   <GainButton
-                    pressed={props.gains.includes(gain)}
+                    pressed={selectedGains().includes(gain)}
                     gain={gain}
-                    onChange={(v) => tempAddInDlg(v, gain)}
+                    onChange={(v) => tempGainChange(gain, v)}
                   />
                 )}
               </For>
             </div>
             <DialogFooter>
-              <Button onClick={pushTempSelected}>确定</Button>
+              <Button
+                onClick={() => {
+                  pushTempGains()
+                  setDlgOpen(false)
+                }}
+              >
+                确定
+              </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
-        <div>
-          <NumberField
-            defaultValue={props.interCnt}
-            onChange={(e) => props.onInterCountChange(Number(e))}
-            minValue={1}
-            maxValue={5}
-            class="w-6rem"
-          >
-            <NumberFieldGroup>
-              <NumberFieldDecrementTrigger
-                class="bg-transparent text-foreground"
-                aria-label="Decrement"
-              />
-              <NumberFieldInput class="bg-background text-foreground" />
-              <NumberFieldIncrementTrigger
-                class="bg-transparent text-foreground"
-                aria-label="Increment"
-              />
-            </NumberFieldGroup>
-          </NumberField>
-        </div>
-        <Button
-          class="w-6rem"
-          variant="secondary"
-          onClick={() => {
-            props.onInterCountChange(1)
-            // 这里是思维有点乱了，必须加上
-            setTempSelected([])
-            props.onClear()
-          }}
+        {/* 关键字数量 */}
+        <NumberField
+          defaultValue={interCnt()}
+          onChange={(e) => setInterCnt(Number(e))}
+          minValue={1}
+          maxValue={5}
         >
+          <NumberFieldGroup>
+            <NumberFieldDecrementTrigger
+              class="bg-transparent text-foreground"
+              aria-label="Decrement"
+            />
+            <NumberFieldInput class="bg-background text-foreground" />
+            <NumberFieldIncrementTrigger
+              class="bg-transparent text-foreground"
+              aria-label="Increment"
+            />
+          </NumberFieldGroup>
+        </NumberField>
+        {/* 清空 */}
+        <Button variant="destructive" onClick={() => setSelectedGains([])}>
           清空
         </Button>
+        {/* 方程等级过滤 */}
+        <ToggleButton
+          class={clsx(
+            'text-foreground',
+            'bg-secondary',
+            'data-[pressed]:blessing-gold',
+          )}
+          pressed={erFilter[BlessingEquationEr.Gold]}
+          onChange={(v) => setErFilter(BlessingEquationEr.Gold, v)}
+        >
+          金色方程
+        </ToggleButton>
+        <ToggleButton
+          class={clsx(
+            'text-foreground',
+            'bg-secondary',
+            'data-[pressed]:blessing-purple',
+          )}
+          pressed={erFilter[BlessingEquationEr.Purple]}
+          onChange={(v) => setErFilter(BlessingEquationEr.Purple, v)}
+        >
+          紫色方程
+        </ToggleButton>
+        <ToggleButton
+          class={clsx(
+            'text-foreground',
+            'bg-secondary',
+            'data-[pressed]:blessing-blue',
+          )}
+          pressed={erFilter[BlessingEquationEr.Blue]}
+          onChange={(v) => setErFilter(BlessingEquationEr.Blue, v)}
+        >
+          蓝色方程
+        </ToggleButton>
       </div>
+      {/* 所选的tag */}
       <div>
-        <For each={props.gains}>
+        <For each={selectedGains()}>
           {(gain) => (
             <Button
               variant="default"
@@ -170,60 +244,40 @@ const GainSearchArea: Component<{
               <span>{GAIN_MAP[gain][1]}</span>
               <CarbonCloseLarge
                 class="cursor-pointer inline"
-                onClick={() => {
-                  props.onDelete(gain)
-                  // 这里是思维有点乱了，必须加上
-                  setTempSelected((p) => p.filter((i) => i !== gain))
-                }}
+                onClick={() =>
+                  setSelectedGains((p) => p.filter((i) => i !== gain))
+                }
               />
             </Button>
           )}
         </For>
       </div>
-    </>
-  )
-}
 
-const Home: Component = () => {
-  const [selectedGains, setSelectedGains] = createSignal<GainType[]>([])
-  const [interCnt, setInterCnt] = createSignal(1)
-  const relatedEquations = createMemo(() => {
-    if (selectedGains().length === 0) return []
-    const sg = selectedGains()
-    const filteredEquations: RelatedEquation[] = []
-    for (const eq of EQUATIONS) {
-      const intersection = eq.rel.filter((g) => sg.includes(g))
-      if (intersection.length >= interCnt()) {
-        filteredEquations.push({
-          ...eq,
-          intersection,
-        })
-      }
-    }
-    return filteredEquations.sort((a, b) => {
-      const i = b.intersection.length - a.intersection.length
-      if (i !== 0) return i
-      return b.er - a.er
-    })
-  })
-  return (
-    <div class="max-w-1200px mx-a space-y-2">
-      <div class="text-xl text-center">搜索</div>
-      <GainSearchArea
-        gains={selectedGains()}
-        interCnt={interCnt()}
-        onAdd={(gains) => setSelectedGains(gains)}
-        onDelete={(gain) =>
-          setSelectedGains(selectedGains().filter((g) => g !== gain))
-        }
-        onClear={() => setSelectedGains([])}
-        onInterCountChange={(cnt) => setInterCnt(cnt)}
-      />
+      {/* 搜索到的方程 */}
       <Show
         when={relatedEquations().length > 0}
         fallback={<div class="text-center py-4rem text-xl">暂无数据</div>}
       >
-        <SearchEquationCategory equations={relatedEquations()} />
+        <div class="text-2xl font-bold text-center my-4">方程</div>
+        <div
+          class={clsx(
+            'grid',
+            'grid-cols-2 sm:grid-cols-3 md:grid-cols-4',
+            'gap-2',
+          )}
+        >
+          <For each={relatedEquations()}>
+            {(equation) => (
+              <div>
+                <EquationCard
+                  equation={equation}
+                  hilitedTag={equation.intersection}
+                  onTagClick={onQueriedTagClick}
+                />
+              </div>
+            )}
+          </For>
+        </div>
       </Show>
     </div>
   )

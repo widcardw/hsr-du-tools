@@ -1,19 +1,24 @@
+.data-\[pressed\]\:blessing-blue[data-pressed],
 .blessing-blue {
-    background: linear-gradient(#40456D, #487ABC);
+    background: linear-gradient(0.49turn, #40456D, #487ABC);
 }
 
+.data-\[pressed\]\:blessing-gold[data-pressed],
 .blessing-gold {
-    background: linear-gradient(#936159, #C7A671);
+    background: linear-gradient(0.49turn, #936159, #C7A671);
 }
 
+.data-\[pressed\]\:blessing-gray[data-pressed],
 .blessing-gray {
-    background: linear-gradient(#434553, #818186);
+    background: linear-gradient(0.49turn, #434553, #818186);
 }
 
+.data-\[pressed\]\:blessing-ultimate[data-pressed],
 .blessing-ultimate {
-    background: linear-gradient(#93734C, #FFFFAA);
+    background: linear-gradient(0.49turn, #93734C, #FFFFAA);
 }
 
+.data-\[pressed\]\:blessing-purple[data-pressed],
 .blessing-purple {
-    background: linear-gradient(#444069, #9467CB);
+    background: linear-gradient(0.49turn, #444069, #9467CB);
 }

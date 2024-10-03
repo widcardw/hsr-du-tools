@@ -18,7 +18,7 @@ export default defineConfig({
     presetAnimations(),
   ],
   shortcuts: [
-    { 'head-link': 'px-4 py-2 text-foreground bg-background rounded-2 mx-2 hover:text-yellow-500'}
+    { 'head-link': 'px-4 py-2 text-foreground bg-background rounded-2 mx-2 hover:text-yellow-500' }
   ],
   transformers: [transformerVariantGroup(), transformerDirectives()],
   theme: {

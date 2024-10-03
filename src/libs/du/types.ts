@@ -61,6 +61,10 @@ interface BlessingEquation extends Buff {
   }
 }
 
+type RelatedEquation = BlessingEquation & {
+  intersection?: GainType[]
+}
+
 export { BuffType, BlessingRarity, BlessingEquationEr }
 
-export type { BlessingEquation, Blessing, Buff }
+export type { BlessingEquation, Blessing, Buff, RelatedEquation }

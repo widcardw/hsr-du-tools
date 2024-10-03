@@ -1,7 +1,8 @@
+import { sortAllEquations } from '../search/sort'
 import { GainType } from './constants'
 import { type BlessingEquation, BlessingEquationEr, BuffType } from './types'
 
-const equations: Array<BlessingEquation> = [
+const equations: Array<BlessingEquation> = sortAllEquations([
   {
     _id: 670010,
     path: 120,
@@ -89,7 +90,7 @@ const equations: Array<BlessingEquation> = [
       127: 4,
     },
     er: 8,
-    rel: [GainType.CriticalBoost, GainType.SporeDmg],
+    rel: [GainType.CriticalBoost, GainType.SporeDmg, GainType.SporeCnt],
     type: BuffType.Equation,
   },
   {
@@ -150,7 +151,7 @@ const equations: Array<BlessingEquation> = [
       122: 5,
     },
     er: 8,
-    rel: [GainType.SporeDmg, GainType.MON_in_NEG_EFFECT],
+    rel: [GainType.SporeCnt, GainType.MON_in_NEG_EFFECT],
     type: BuffType.Equation,
   },
   {
@@ -259,7 +260,7 @@ const equations: Array<BlessingEquation> = [
       127: 4,
     },
     er: 8,
-    rel: [GainType.UltimateAtk, GainType.SporeDmg],
+    rel: [GainType.UltimateAtk, GainType.SporeDmg,  GainType.SporeCnt],
     type: BuffType.Equation,
   },
   {
@@ -339,7 +340,7 @@ const equations: Array<BlessingEquation> = [
       121: 3,
     },
     er: 6,
-    rel: [GainType.Freeze, GainType.DissociationDmg, GainType.DoT, GainType.Suspicion],
+    rel: [GainType.Freeze, GainType.DissociationDmg, GainType.DoT, GainType.Suspicion, GainType.DotBoom],
     type: BuffType.Equation,
   },
   {
@@ -517,7 +518,7 @@ const equations: Array<BlessingEquation> = [
       127: 4,
     },
     er: 6,
-    rel: [GainType.SporeDmg, GainType.FollowUpAtk],
+    rel: [GainType.SporeCnt, GainType.FollowUpAtk],
     type: BuffType.Equation,
   },
   {
@@ -533,7 +534,7 @@ const equations: Array<BlessingEquation> = [
       120: 3,
     },
     er: 6,
-    rel: [GainType.Shield, GainType.SporeDmg, GainType.SporeMul],
+    rel: [GainType.Shield,GainType.SporeCnt, GainType.SporeDmg],
     type: BuffType.Equation,
   },
   {
@@ -729,7 +730,7 @@ const equations: Array<BlessingEquation> = [
       124: 3,
     },
     er: 6,
-    rel: [GainType.SporeDmg, GainType.SuccessiveAction],
+    rel: [GainType.SporeCnt, GainType.SuccessiveAction],
     type: BuffType.Equation,
   },
   {
@@ -1123,7 +1124,7 @@ const equations: Array<BlessingEquation> = [
       122: 2,
     },
     er: 4,
-    rel: [GainType.SporeDmg, GainType.SporeMul, GainType.MON_in_NEG_EFFECT],
+    rel: [GainType.SporeDmg, GainType.MON_in_NEG_EFFECT],
     type: BuffType.Equation,
   },
   {
@@ -1251,7 +1252,7 @@ const equations: Array<BlessingEquation> = [
       127: 2,
     },
     er: 4,
-    rel: [GainType.Healing, GainType.SporeDmg],
+    rel: [GainType.Healing, GainType.SporeCnt],
     type: BuffType.Equation,
   },
   {
@@ -1471,6 +1472,6 @@ const equations: Array<BlessingEquation> = [
     rel: [],
     er: BlessingEquationEr.Critical,
   },
-]
+])
 
 export { equations as EQUATIONS }

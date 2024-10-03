@@ -1,12 +1,7 @@
-import type { GainType } from '@/libs/du/constants'
-import type { BlessingEquation } from '@/libs/du/types'
+import type { RelatedEquation } from '@/libs/du/types'
 import clsx from 'clsx'
 import { type Component, For } from 'solid-js'
 import EquationCard from './EquationCard'
-
-export type RelatedEquation = BlessingEquation & {
-  intersection: GainType[]
-}
 
 const SearchEquationCategory: Component<{
   equations: RelatedEquation[]

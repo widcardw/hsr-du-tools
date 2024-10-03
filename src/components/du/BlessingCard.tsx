@@ -54,7 +54,7 @@ const BlessingCard: Component<{ blessing: Blessing; up?: boolean }> = (
         class={clsx(
           'text-0.75rem text-center',
           'bg-foreground',
-          upgraded() ? 'text-yellow-600 shadow-md shadow-yellow-500' : 'text-background',
+          upgraded() ? 'text-yellow-600 shadow-sm shadow-yellow-500' : 'text-background',
         )}
         onClick={() => setUpgrade((v) => !v)}
       >

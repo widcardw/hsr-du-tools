@@ -24,6 +24,7 @@ const Equation_BG_MAP = {
 const EquationCard: Component<{
   equation: BlessingEquation
   hilitedTag?: GainType[]
+  onTagClick?: (gain: GainType, v: boolean) => void
 }> = (props) => {
   return (
     <div
@@ -81,14 +82,21 @@ const EquationCard: Component<{
           )}
         >
           <For each={Array.from(props.equation.rel)}>
-            {(it) => (
-              <Badge
-                variant={props.hilitedTag?.includes(it) ? 'default' : 'secondary'}
-                class="whitespace-nowrap"
-              >
-                {GAIN_MAP[it][1]}
-              </Badge>
-            )}
+            {(it) => {
+              const hilited = props.hilitedTag?.includes(it)
+              return (
+                <Badge
+                  variant={hilited ? 'default' : 'secondary'}
+                  class={clsx(
+                    'whitespace-nowrap',
+                    props.onTagClick && 'cursor-pointer',
+                  )}
+                  onClick={() => props.onTagClick?.(it, !hilited)}
+                >
+                  {GAIN_MAP[it][1]}
+                </Badge>
+              )
+            }}
           </For>
         </div>
       </div>

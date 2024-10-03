@@ -84,8 +84,8 @@ enum GainType {
   MON_EFF_HIT_RATE_DEC = 57, // 敌方效果命中
   MON_FREEZE_RES_DEC = 58, // 敌方冻结抗性
 
-  QuakeDmg = 100, // 反震伤害
-  DissociationDmg = 101, // 离神伤害
+  QuakeDmg = 100, // 反震
+  DissociationDmg = 101, // 离神
   DoT = 102, // 通用持续伤害
   FollowUpAtk = 103, // 追击
   NomralAtk = 104, // 普攻
@@ -105,7 +105,6 @@ enum GainType {
   CriticalBoost = 118, // 会心
   SuccessiveAction = 119, // 连续行动
   SporeDmg = 120, // 孢子伤害
-  SporeMul = 121, // 孢子倍率
   AddWeakness = 122, // 添加弱点
   Grit = 123, // 战意
   DewDropCharge = 124, // 珠露充能
@@ -115,6 +114,8 @@ enum GainType {
   HitWeak = 128, // 回味
   Break = 129, // 中枢链接
   Point = 130, // 战技点
+  SporeCnt = 131, // 战技点
+  DotBoom = 132, // 持续伤害结算
 }
 
 enum Side {
@@ -150,8 +151,8 @@ const GAIN_MAP: Record<GainType, [Side, string]> = {
   [GainType.MON_EFF_HIT_RATE_DEC]: [Side.Enemy, '效果命中降低'],
   [GainType.MON_FREEZE_RES_DEC]: [Side.Enemy, '冻结抗性'],
 
-  [GainType.QuakeDmg]: [Side.Self, '反震伤害'],
-  [GainType.DissociationDmg]: [Side.Self, '离神伤害'],
+  [GainType.QuakeDmg]: [Side.Self, '反震'],
+  [GainType.DissociationDmg]: [Side.Self, '离神'],
   [GainType.DoT]: [Side.Self, '持续伤害'],
   [GainType.FollowUpAtk]: [Side.Self, '追击'],
   [GainType.NomralAtk]: [Side.Self, '普攻'],
@@ -171,7 +172,7 @@ const GAIN_MAP: Record<GainType, [Side, string]> = {
   [GainType.CriticalBoost]: [Side.Self, '会心'],
   [GainType.SuccessiveAction]: [Side.Self, '连续行动'],
   [GainType.SporeDmg]: [Side.Self, '孢子伤害'],
-  [GainType.SporeMul]: [Side.Self, '孢子倍率'],
+  [GainType.SporeCnt]: [Side.Self, '孢子数量'],
   [GainType.AddWeakness]: [Side.Enemy, '添加弱点'],
   [GainType.Grit]: [Side.Self, '战意'],
   [GainType.DewDropCharge]: [Side.Self, '珠露充能'],
@@ -181,6 +182,7 @@ const GAIN_MAP: Record<GainType, [Side, string]> = {
   [GainType.HitWeak]: [Side.Self, '攻击破弱目标'],
   [GainType.Break]: [Side.Self, '击破'],
   [GainType.Point]: [Side.Self, '战技点'],
+  [GainType.DotBoom]: [Side.Self, '持续伤害结算'],
 }
 
 const BLESSING_EXTRA_MAP: Record<
