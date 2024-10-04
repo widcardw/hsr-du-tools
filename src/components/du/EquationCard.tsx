@@ -1,6 +1,6 @@
 import { type BlessingEquation, BlessingEquationEr } from '@/libs/du/types'
 import clsx from 'clsx'
-import { type Component, For } from 'solid-js'
+import { type Component, For, Show } from 'solid-js'
 
 import './scroll-bar.css'
 import './blessing-bg.css'
@@ -24,6 +24,7 @@ const Equation_BG_MAP = {
 const EquationCard: Component<{
   equation: BlessingEquation
   hilitedTag?: GainType[]
+  noDesc?: boolean
   onTagClick?: (gain: GainType, v: boolean) => void
 }> = (props) => {
   return (
@@ -50,7 +51,11 @@ const EquationCard: Component<{
         />
       </div>
       {/* 方程名称 */}
-      <div class={clsx('font-bold text-center')}>{props.equation.name}</div>
+      <div
+        class={clsx('font-bold text-center', 'whitespace-nowrap', 'truncate')}
+      >
+        {props.equation.name}
+      </div>
       {/* 所需祝福数量 */}
       <div class="flex justify-center gap-1 items-center">
         <For
@@ -69,10 +74,13 @@ const EquationCard: Component<{
         </For>
       </div>
       {/* 方程描述 */}
-      <div
-        class={clsx('text-sm text-center', 'h-7rem of-y-auto')}
-        innerHTML={props.equation.desc}
-      />
+      <Show when={props.noDesc !== true}>
+        <div
+          class={clsx('text-sm text-center', 'h-7rem of-y-auto')}
+          innerHTML={props.equation.desc}
+        />
+      </Show>
+
       {/* 相关 buff */}
       <div class="tag-outer">
         <div

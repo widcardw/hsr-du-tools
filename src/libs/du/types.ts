@@ -65,6 +65,10 @@ type RelatedEquation = BlessingEquation & {
   intersection?: GainType[]
 }
 
+type RelatedBlessing = Blessing & {
+  intersection?: GainType[]
+}
+
 export { BuffType, BlessingRarity, BlessingEquationEr }
 
-export type { BlessingEquation, Blessing, Buff, RelatedEquation }
+export type { BlessingEquation, Blessing, Buff, RelatedEquation, RelatedBlessing }

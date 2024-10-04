@@ -7,14 +7,14 @@ import { type Component, For, createSignal } from 'solid-js'
 const BlessingView: Component = () => {
   const [up, setUp] = createSignal(false)
   return (
-    <div class="text-center">
-      <ToggleButton class="text-foreground" pressed={up()} onChange={setUp}>
+    <>
+      <ToggleButton class="text-foreground block mx-a" pressed={up()} onChange={setUp}>
         强化所有祝福
       </ToggleButton>
       <For each={sortAndSplitBlessings(BLESSINGS)}>
         {(it) => <BlessingCategory blessings={it} up={up()} />}
       </For>
-    </div>
+    </>
   )
 }
 

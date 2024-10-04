@@ -15,7 +15,7 @@ import './footer.css'
 
 const Footer: Component = () => {
   return (
-    <footer class="w-full py-2rem text-center">
+    <footer class="w-full py-2rem text-center text-sm">
       <div class="my-2">本工具仅用于学习交流，一切以正式服上线数据为准</div>
       <AlertDialog>
         <AlertDialogTrigger
@@ -42,7 +42,7 @@ const Footer: Component = () => {
                 >
                   GitHub
                 </a>{' '}
-                查看，若有任何建议或问题，请于{' '}
+                查看，若有任何建议或问题，包括但不限于：样式问题、适配问题、Tag 校对，请于{' '}
                 <a
                   href="https://github.com/widcardw/hsr-du-tools/issues"
                   target="_blank"

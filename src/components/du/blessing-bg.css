@@ -22,3 +22,8 @@
 .blessing-purple {
     background: linear-gradient(0.49turn, #444069, #9467CB);
 }
+
+.data-\[pressed\]\:blessing-desc[data-pressed],
+.blessing-desc {
+    background: linear-gradient(0.49turn, #406946, #67cbad);
+}

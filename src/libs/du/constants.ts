@@ -57,7 +57,6 @@ enum BlessingExtra {
 
 // 增益类型
 enum GainType {
-  None = 0,
   ATK = 1, // 角色攻击
   DEF = 2, // 防御
   HEAL = 3, // 生命
@@ -83,6 +82,8 @@ enum GainType {
   MON_in_NEG_EFFECT = 56, // 使敌方陷入负面
   MON_EFF_HIT_RATE_DEC = 57, // 敌方效果命中
   MON_FREEZE_RES_DEC = 58, // 敌方冻结抗性
+  MON_act_delay = 59, // 敌方行动延后
+  MON_BREAK_VUL = 60, // 敌方击破易伤
 
   QuakeDmg = 100, // 反震
   DissociationDmg = 101, // 离神
@@ -111,11 +112,19 @@ enum GainType {
   CounterAtk = 125, // 反击
   BeHit = 126, // 被击
   Kill = 127, // 击杀
-  HitWeak = 128, // 回味
-  Break = 129, // 中枢链接
+  /** 攻击弱点击破的目标 */
+  HitWeak = 128,
+  /** 造成击破 */
+  Break = 129, //
   Point = 130, // 战技点
   SporeCnt = 131, // 战技点
   DotBoom = 132, // 持续伤害结算
+  HitFrozenUnit = 133, // 攻击冻结单位
+  DamageSpread = 134, // 伤害扩散
+  DebuffRemove = 135, // 负面效果解除
+  ConsumeHp = 136, // 消耗生命
+  Brain_in_a_Vat = 137, // 罐中脑
+  Aftertaste = 138, // 回味
 }
 
 enum Side {
@@ -124,10 +133,9 @@ enum Side {
 }
 
 const GAIN_MAP: Record<GainType, [Side, string]> = {
-  [GainType.None]: [Side.Self, '无'],
-  [GainType.ATK]: [Side.Self, '攻击'],
-  [GainType.DEF]: [Side.Self, '防御'],
-  [GainType.HEAL]: [Side.Self, '生命'],
+  [GainType.ATK]: [Side.Self, '攻击力'],
+  [GainType.DEF]: [Side.Self, '防御力'],
+  [GainType.HEAL]: [Side.Self, '生命值'],
   [GainType.SPD]: [Side.Self, '速度'],
   [GainType.CRIT]: [Side.Self, '暴击'],
   [GainType.CRITDMG]: [Side.Self, '暴伤'],
@@ -150,6 +158,8 @@ const GAIN_MAP: Record<GainType, [Side, string]> = {
   [GainType.MON_in_NEG_EFFECT]: [Side.Enemy, '负面状态'],
   [GainType.MON_EFF_HIT_RATE_DEC]: [Side.Enemy, '效果命中降低'],
   [GainType.MON_FREEZE_RES_DEC]: [Side.Enemy, '冻结抗性'],
+  [GainType.MON_act_delay]: [Side.Enemy, '行动延后'],
+  [GainType.MON_BREAK_VUL]: [Side.Enemy, '击破易伤'],
 
   [GainType.QuakeDmg]: [Side.Self, '反震'],
   [GainType.DissociationDmg]: [Side.Self, '离神'],
@@ -183,6 +193,12 @@ const GAIN_MAP: Record<GainType, [Side, string]> = {
   [GainType.Break]: [Side.Self, '击破'],
   [GainType.Point]: [Side.Self, '战技点'],
   [GainType.DotBoom]: [Side.Self, '持续伤害结算'],
+  [GainType.HitFrozenUnit]: [Side.Self, '攻击冻结目标'],
+  [GainType.DamageSpread]: [Side.Self, '伤害扩散'],
+  [GainType.DebuffRemove]: [Side.Self, '负面状态解除'],
+  [GainType.ConsumeHp]: [Side.Self, '消耗生命'],
+  [GainType.Brain_in_a_Vat]: [Side.Self, '罐中脑'],
+  [GainType.Aftertaste]: [Side.Self, '回味'],
 }
 
 const BLESSING_EXTRA_MAP: Record<
