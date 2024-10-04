@@ -59,6 +59,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       GainType.DoT_By_Char,
       GainType.DoT,
       GainType.Brain_in_a_Vat_Charge,
+      GainType.MON_in_NEG_EFFECT,
     ],
     type: BuffType.Equation,
   },
@@ -279,7 +280,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       122: 3,
     },
     er: 6,
-    rel: [GainType.DoT, GainType.QuakeDmg],
+    rel: [GainType.DoT, GainType.QuakeDmg, GainType.MON_in_NEG_EFFECT],
     type: BuffType.Equation,
   },
   {
@@ -350,6 +351,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       GainType.DoT,
       GainType.Suspicion,
       GainType.DotBoom,
+      GainType.MON_in_NEG_EFFECT,
     ],
     type: BuffType.Equation,
   },
@@ -883,7 +885,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       120: 2,
     },
     er: 4,
-    rel: [GainType.DoT, GainType.Shield],
+    rel: [GainType.DoT, GainType.Shield, GainType.MON_in_NEG_EFFECT],
     type: BuffType.Equation,
   },
   {

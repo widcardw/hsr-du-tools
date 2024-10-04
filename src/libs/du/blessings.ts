@@ -483,7 +483,7 @@ const blessings: Array<Blessing> = [
       "敌方目标每受到1次持续伤害，陷入<color style='color:#f29e38;'> 2.0 </color>层【<u class='infou'>怀疑</u>】效果。【<u class='infou'>怀疑</u>】首次达到 99 层后，提供的持续伤害易伤不再受层数影响，固定为<color style='color:#f29e38;'> 120.0% </color>。",
     ],
     effects: [60000012],
-    rel: [GainType.DoT, GainType.Suspicion],
+    rel: [GainType.DoT, GainType.Suspicion, GainType.MON_in_NEG_EFFECT],
   },
   {
     _id: 615231,
@@ -497,7 +497,12 @@ const blessings: Array<Blessing> = [
       "角色击破敌方目标弱点，或攻击处于弱点击破状态下的敌方目标后，分别使其陷入<color style='color:#f29e38;'> 24.0 </color>或<color style='color:#f29e38;'> 4.0 </color>层【<u class='infou'>怀疑</u>】效果。",
     ],
     effects: [60000012],
-    rel: [GainType.Break, GainType.HitWeak, GainType.Suspicion],
+    rel: [
+      GainType.Break,
+      GainType.HitWeak,
+      GainType.Suspicion,
+      GainType.MON_in_NEG_EFFECT,
+    ],
   },
   {
     _id: 615232,
@@ -539,7 +544,7 @@ const blessings: Array<Blessing> = [
       "敌方目标陷入【<u class='infou'>怀疑</u>】效果时，陷入层数翻倍。",
     ],
     effects: [60000012],
-    rel: [GainType.Suspicion],
+    rel: [GainType.Suspicion, GainType.MON_in_NEG_EFFECT],
   },
   {
     _id: 615242,
@@ -553,7 +558,7 @@ const blessings: Array<Blessing> = [
       "敌方目标受到持续伤害后，造成的伤害降低<color style='color:#f29e38;'> 7.0% </color>，最多叠加<color style='color:#f29e38;'> 4.0 </color>次，持续至回合结束时。",
     ],
     effects: [],
-    rel: [GainType.DoT, GainType.MON_DMG_DEC],
+    rel: [GainType.DoT, GainType.MON_DMG_DEC, GainType.MON_in_NEG_EFFECT],
   },
   {
     _id: 615243,
@@ -2223,7 +2228,7 @@ const blessings: Array<Blessing> = [
       "敌方目标进入战斗时，获得<color style='color:#f29e38;'> 45.0 </color>层【<u class='infou'>怀疑</u>】。",
     ],
     effects: [60000012],
-    rel: [GainType.Suspicion],
+    rel: [GainType.Suspicion, GainType.MON_in_NEG_EFFECT],
   },
   {
     _id: 615346,
