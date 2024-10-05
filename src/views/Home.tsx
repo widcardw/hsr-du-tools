@@ -2,24 +2,6 @@ import EquationCard from '@/components/du/EquationCard'
 import { CarbonCloseLarge } from '@/components/icons/CarbonCloseIcon'
 import { Button } from '@/components/ui/button'
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog'
-
-import {
-  NumberField,
-  NumberFieldDecrementTrigger,
-  NumberFieldGroup,
-  NumberFieldIncrementTrigger,
-  NumberFieldInput,
-} from '@/components/ui/number-field'
-
 import { ToggleButton } from '@/components/ui/toggle'
 import { GAIN_MAP, type GainType, PATH_MAP } from '@/libs/du/constants'
 import { EQUATIONS } from '@/libs/du/equations'
@@ -46,323 +28,25 @@ import { createStore } from 'solid-js/store'
 import '@/components/du/blessing-bg.css'
 import BlessingCard from '@/components/du/BlessingCard'
 import { SORTED_BLESSINGS } from '@/libs/du/blessings'
+import { LAYOUT } from '@/libs/du/layout'
+import { blRarityClassMap, eqErClassMap } from '@/libs/du/maps'
 import { makePersisted } from '@solid-primitives/storage'
-
-const allGains = Object.keys(GAIN_MAP).map((i) => Number(i) as GainType)
-
-/** 方程等级过滤 */
-const [erFilter, setErFilter] = makePersisted(
-  createStore<{
-    [key in BlessingEquationEr]?: boolean
-  }>({
-    [BlessingEquationEr.Gold]: true,
-    [BlessingEquationEr.Purple]: true,
-    [BlessingEquationEr.Blue]: true,
-  }),
-  { name: 'erFilter' },
-)
-
-const [blRarityFilter, setBlRarityFilter] = makePersisted(
-  createStore<{
-    [key in BlessingRarity]?: boolean
-  }>({
-    [BlessingRarity.Gold]: true,
-    [BlessingRarity.Blue]: true,
-    [BlessingRarity.Gray]: true,
-  }),
-  { name: 'blRarityFilter' },
-)
-
-const [enableEqSearch, setEnableEqSearch] = makePersisted(createSignal(true), {
-  name: 'enableEqSearch',
-})
-const [enableBlSearch, setEnableBlSearch] = makePersisted(createSignal(false), {
-  name: 'enableBlSearch',
-})
-
-const GainButton: Component<{
-  gain: GainType
-  pressed: boolean
-  onChange: (v: boolean) => void
-}> = (props) => {
-  const [p, setP] = createSignal(props.pressed)
-  return (
-    <ToggleButton
-      class="text-foreground whitespace-nowrap mb-2 mr-2"
-      pressed={p()}
-      onChange={(v) => {
-        setP(v)
-        props.onChange(v)
-      }}
-    >
-      {GAIN_MAP[props.gain][1]}
-    </ToggleButton>
-  )
-}
-
-const TagSelectDialog: Component<{
-  initGains: GainType[]
-  onChange: (gains: GainType[]) => void
-}> = (props) => {
-  const [dlgOpen, setDlgOpen] = createSignal(false)
-  const [selectedGains, setSelectedGains] = createSignal<GainType[]>(
-    props.initGains,
-  )
-
-  createEffect(
-    on(
-      () => props.initGains,
-      () => setSelectedGains(props.initGains),
-    ),
-  )
-
-  const tempGainChange = (gain: GainType, v: boolean) => {
-    if (v) {
-      setSelectedGains((gains) => [...gains, gain])
-    } else {
-      setSelectedGains((gains) => gains.filter((i) => i !== gain))
-    }
-  }
-  const pushTempGains = () => {
-    props.onChange(selectedGains())
-  }
-  return (
-    <Dialog
-      open={dlgOpen()}
-      onOpenChange={(v) => {
-        setDlgOpen(v)
-        if (!v) pushTempGains()
-      }}
-    >
-      <DialogTrigger
-        as={(inner_props: DialogTriggerProps) => (
-          <Button variant="secondary" {...inner_props}>
-            选择标签
-          </Button>
-        )}
-      />
-      <DialogContent class="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>标签列表</DialogTitle>
-        </DialogHeader>
-        <div class="max-h-400px of-y-auto">
-          <For each={allGains}>
-            {(gain) => (
-              <GainButton
-                pressed={selectedGains().includes(gain)}
-                gain={gain}
-                onChange={(v) => tempGainChange(gain, v)}
-              />
-            )}
-          </For>
-        </div>
-        <DialogFooter>
-          <Button
-            onClick={() => {
-              pushTempGains()
-              setDlgOpen(false)
-            }}
-          >
-            确定
-          </Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
-  )
-}
-
-const TagIntersectionCntField: Component<{
-  initCnt: number
-  onChange: (cnt: number) => void
-}> = (props) => {
-  return (
-    <NumberField
-      defaultValue={props.initCnt}
-      onChange={(e) => props.onChange(Number(e))}
-      minValue={1}
-      maxValue={5}
-    >
-      <NumberFieldGroup>
-        <NumberFieldDecrementTrigger
-          class="bg-transparent text-foreground"
-          aria-label="Decrement"
-        />
-        <NumberFieldInput class="bg-background text-foreground" />
-        <NumberFieldIncrementTrigger
-          class="bg-transparent text-foreground"
-          aria-label="Increment"
-        />
-      </NumberFieldGroup>
-    </NumberField>
-  )
-}
-
-const eqErClassMap: Record<BlessingEquationEr, [string, string]> = {
-  [BlessingEquationEr.Gold]: ['blessing-gold', '金色方程'],
-  [BlessingEquationEr.Purple]: ['blessing-purple', '紫色方程'],
-  [BlessingEquationEr.Blue]: ['blessing-blue', '蓝色方程'],
-  [BlessingEquationEr.Critical]: ['blessing-ultimate', '临界方程'],
-}
-
-const blRarityClassMap: Record<BlessingRarity, [string, string]> = {
-  [BlessingRarity.Gold]: ['blessing-gold', '金色祝福'],
-  [BlessingRarity.Blue]: ['blessing-blue', '蓝色祝福'],
-  [BlessingRarity.Gray]: ['blessing-gray', '白色祝福'],
-  [BlessingRarity.Equation]: ['blessing-ultimate', '方程'],
-}
-
-const EquationErEnableToggle: Component<{
-  init: boolean
-  level: BlessingEquationEr
-  enabled?: boolean
-  onChange: (v: boolean) => void
-}> = (props) => {
-  return (
-    <ToggleButton
-      class={clsx(
-        'text-foreground',
-        'bg-secondary',
-        `data-[pressed]:${eqErClassMap[props.level][0]}`,
-      )}
-      pressed={erFilter[props.level]}
-      onChange={(v) => props.onChange(v)}
-      disabled={props.enabled === false}
-    >
-      {eqErClassMap[props.level][1]}
-    </ToggleButton>
-  )
-}
-
-const BlessingRarityEnableToggle: Component<{
-  init: boolean
-  level: BlessingRarity
-  enabled?: boolean
-  onChange: (v: boolean) => void
-}> = (props) => {
-  return (
-    <ToggleButton
-      class={clsx(
-        'text-foreground',
-        'bg-secondary',
-        `data-[pressed]:${blRarityClassMap[props.level][0]}`,
-      )}
-      pressed={blRarityFilter[props.level]}
-      onChange={(v) => props.onChange(v)}
-      disabled={props.enabled === false}
-    >
-      {blRarityClassMap[props.level][1]}
-    </ToggleButton>
-  )
-}
-
-const LAYOUT = {
-  0: '松散',
-  1: '紧凑',
-}
-
-const MustContainDialog: Component<{
-  initGains: GainType[]
-  mustContainGains: GainType[]
-  onChange: (gains: GainType[]) => void
-}> = (props) => {
-  const [dlgOpen, setDlgOpen] = createSignal(false)
-  const [selectedGains, setSelectedGains] = createSignal<GainType[]>(
-    props.initGains,
-  )
-
-  const [mustContainGains, setMustContainGains] = createSignal<GainType[]>(
-    props.mustContainGains,
-  )
-
-  createEffect(
-    on(
-      () => props.initGains,
-      (v) => {
-        setSelectedGains(v)
-        // buff 变少了但是还在「必须包含」中，那么从「必须包含」中将这个 buff 去掉
-        if (mustContainGains()?.some((i) => !v.includes(i))) {
-          setMustContainGains((prev) => prev.filter((i) => v.includes(i)))
-          // 这里应该不会造成无限更新
-          props.onChange(mustContainGains())
-        }
-      },
-    ),
-  )
-
-  createEffect(
-    on(
-      () => props.mustContainGains,
-      (v) => setMustContainGains(v),
-    ),
-  )
-
-  const tempAddMustContainGainChange = (gain: GainType, v: boolean) => {
-    if (v) setMustContainGains((prev) => [...prev, gain])
-    else setMustContainGains((prev) => prev.filter((i) => i !== gain))
-  }
-
-  const pushTempMustContainGains = () => {
-    props.onChange(mustContainGains())
-  }
-
-  return (
-    <Dialog
-      open={dlgOpen()}
-      onOpenChange={(v) => {
-        setDlgOpen(v)
-        if (!v) pushTempMustContainGains()
-      }}
-    >
-      <DialogTrigger
-        as={(inner_props: DialogTriggerProps) => (
-          <Button
-            variant="secondary"
-            class={clsx(
-              mustContainGains() &&
-                mustContainGains().length > 0 &&
-                'blessing-desc',
-            )}
-            {...inner_props}
-          >
-            必须包含
-          </Button>
-        )}
-      />
-      <DialogContent class="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>标签列表</DialogTitle>
-          <DialogDescription>选择必须包含的标签</DialogDescription>
-        </DialogHeader>
-        <Show
-          when={selectedGains().length > 0}
-          fallback={<div class="max-h-400px">尚未选择任何 buff，请先通过“选择标签”或点击方程和祝福下的按钮已添加 buff</div>}
-        >
-          <div class="max-h-400px of-y-auto">
-            <For each={selectedGains()}>
-              {(gain) => (
-                <GainButton
-                  pressed={mustContainGains().includes(gain)}
-                  gain={gain}
-                  onChange={(v) => tempAddMustContainGainChange(gain, v)}
-                />
-              )}
-            </For>
-          </div>
-        </Show>
-        <DialogFooter>
-          <Button
-            onClick={() => {
-              pushTempMustContainGains()
-              setDlgOpen(false)
-            }}
-          >
-            确定
-          </Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
-  )
-}
+import BlessingRarityEnableToggle from './home-comps/BlessingRarityEnableToggle'
+import EquationErEnableToggle from './home-comps/EquationErEnableToggle'
+import MustContainDialog from './home-comps/MustContainDialog'
+import TagIntersectionCntField from './home-comps/TagIntersectionCntField'
+import TagSelectDialog from './home-comps/TagSelectDialog'
+import {
+  allGains,
+  blRarityFilter,
+  enableBlSearch,
+  enableEqSearch,
+  erFilter,
+  setBlRarityFilter,
+  setEnableBlSearch,
+  setEnableEqSearch,
+  setErFilter,
+} from './home-comps/data'
 
 const Home: Component = () => {
   const MIXED_EQUATIONS = EQUATIONS.filter(
@@ -374,7 +58,7 @@ const Home: Component = () => {
   const [layout, setLayout] = makePersisted(
     createSignal<keyof typeof LAYOUT>(0),
     {
-      name: 'layout',
+      name: 'du-layout',
     },
   )
 
@@ -430,16 +114,20 @@ const Home: Component = () => {
   })
 
   const onQueriedTagClick = (gain: GainType, v: boolean) => {
-    v
-      ? setSelectedGains((p) => [...p, gain])
-      : setSelectedGains((p) => p.filter((i) => i !== gain))
+    if (v) setSelectedGains((p) => [...p, gain])
+    else {
+      setSelectedGains((p) => p.filter((i) => i !== gain))
+      // 将 tag 取消时，检测这个值是否也在 mustContain 中，如果在，则需要删除
+      if (mustContainGains().includes(gain))
+        setMustContainGains((p) => p.filter((i) => i !== gain))
+    }
   }
 
   const [eqNoDesc, setEqNoDesc] = makePersisted(createSignal(false), {
-    name: 'eqNoDesc',
+    name: 'du-eqNoDesc',
   })
   const [blNoDesc, setBlNoDesc] = makePersisted(createSignal(false), {
-    name: 'blNoDesc',
+    name: 'du-blNoDesc',
   })
 
   return (
