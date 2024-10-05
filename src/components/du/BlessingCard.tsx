@@ -49,7 +49,9 @@ const BlessingCard: Component<{
       <div
         class={clsx(
           'p-2 flex items-center justify-center',
-          BLESSING_BG_MAP[props.blessing.rarity],
+          upgraded()
+            ? `${BLESSING_BG_MAP[props.blessing.rarity]}-up`
+            : BLESSING_BG_MAP[props.blessing.rarity],
         )}
       >
         <img
@@ -58,7 +60,10 @@ const BlessingCard: Component<{
           class={clsx('w-60%')}
         />
       </div>
-      <div class={clsx('font-bold text-center', 'whitespace-nowrap', 'truncate')} title={props.blessing.name}>
+      <div
+        class={clsx('font-bold text-center', 'whitespace-nowrap', 'truncate')}
+        title={props.blessing.name}
+      >
         {props.blessing.name}
       </div>
       <Show when={props.noDesc !== true}>
@@ -102,7 +107,7 @@ const BlessingCard: Component<{
           'text-0.75rem text-center',
           'bg-foreground',
           upgraded()
-            ? 'text-yellow-600 shadow-sm shadow-yellow-500'
+            ? 'text-yellow-600'
             : 'text-background',
         )}
         onClick={() => setUpgrade((v) => !v)}

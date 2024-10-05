@@ -5,6 +5,7 @@ import { type Component, For, Show } from 'solid-js'
 import './scroll-bar.css'
 import './blessing-bg.css'
 import './scrollable-tags.css'
+import './eq-shadow.css'
 
 import {
   GAIN_MAP,
@@ -47,6 +48,7 @@ const EquationCard: Component<{
               ? 'w-40%'
               : 'w-70%',
             'mx-a block',
+            `${Equation_BG_MAP[props.equation.er]}-img`
           )}
         />
       </div>

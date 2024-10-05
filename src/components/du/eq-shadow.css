@@ -1,0 +1,15 @@
+.blessing-gold-img {
+    filter: drop-shadow(0 0 1rem #fff7c7);
+}
+
+.blessing-blue-img {
+    filter: drop-shadow(0 0 1rem #c7e0ff);
+}
+
+.blessing-purple-img {
+    filter: drop-shadow(0 0 1rem #e6c7ff);
+}
+
+.blessing-ultimate-img {
+    filter: drop-shadow(0 0 1rem #fff6dd);
+}
