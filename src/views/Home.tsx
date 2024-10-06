@@ -254,11 +254,12 @@ const Home: Component = () => {
         <For each={selectedGains()}>
           {(gain) => (
             <Button
-              variant={
-                mustContainGains().includes(gain) ? 'default' : 'secondary'
-              }
-              class="inline-flex items-center gap-1 whitespace-nowrap mr-2 mb-2"
+              variant='secondary'
+              class={clsx("inline-flex items-center gap-1 whitespace-nowrap mr-2 mb-2",
+                mustContainGains().includes(gain) && 'blessing-gray'
+              )}
             >
+              <img src={GAIN_MAP[gain][2]} alt='' class="w-5 h-5" />
               <span>{GAIN_MAP[gain][1]}</span>
               <CarbonCloseLarge
                 class="cursor-pointer inline"

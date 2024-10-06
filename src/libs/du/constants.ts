@@ -1,14 +1,14 @@
 // 命途
 enum Path {
-  Knight = 120, // 存护
-  Memory = 121, // 记忆
-  Warlock = 122, //虚无
-  Pirest = 123, // 丰饶
-  Rogue = 124, // 巡猎
-  Warrior = 125, // 毁灭
-  Joy = 126, // 欢愉
-  Propagation = 127, // 繁育
-  Mage = 128, // 智识
+  Knight = 120,  // 存护
+  Memory = 121,  // 记忆
+  Warlock = 122,  //虚无
+  Pirest = 123,   // 丰饶
+  Rogue = 124,  // 巡猎
+  Warrior = 125,  // 毁灭
+  Joy = 126,   // 欢愉
+  Propagation = 127,   // 繁育
+  Mage = 128,  // 智识
 }
 
 const PATH_MAP: Record<Path, string> = {
@@ -37,94 +37,90 @@ const PATH_ICON_MAP: Record<Path, string> = {
 
 // 命途特殊效果
 enum BlessingExtra {
-  BasicDmg = 61000500, // 基础伤害
-  Quake = 70000102, // 反震
-  Dissociation = 60000002, // 离神
-  Suspicion = 60000012, // 怀疑
-  Brain_in_a_Vat = 61000044, // 罐中脑
-  Dewdrop = 60000013, // 珠露
-  Grit = 60000005, // 战意
-  CriticalBoost = 60000004, // 会心
-  Spore = 60000017, // 孢子
-  Aftertaste = 60000003, // 回味
-  SuperBreakDmg = 10000015, // 超击破伤害
-  FreeOfSuffer = 61000301, // 谛苦除灭
-  Eclosion = 61000302, // 羽化
-  CentralLink = 61000303, // 中枢链接
-  Quake2 = 60000001, // 反震
-  GroupAttack = 61000045, // 群攻
+  BasicDmg = 61000500,  // 基础伤害
+  Quake = 70000102,  // 反震
+  Dissociation = 60000002,  // 离神
+  Suspicion = 60000012,  // 怀疑
+  Brain_in_a_Vat = 61000044,  // 罐中脑
+  Dewdrop = 60000013,   // 珠露
+  Grit = 60000005,  // 战意
+  CriticalBoost = 60000004,   // 会心
+  Spore = 60000017,   // 孢子
+  Aftertaste = 60000003,   // 回味
+  SuperBreakDmg = 10000015,   // 超击破伤害
+  FreeOfSuffer = 61000301,   // 谛苦除灭
+  Eclosion = 61000302,   // 羽化
+  CentralLink = 61000303,  // 中枢链接
+  Quake2 = 60000001,   // 反震
+  GroupAttack = 61000045,   // 群攻
 }
 
 // 增益类型
 enum GainType {
-  ATK = 1, // 角色攻击
-  DEF = 2, // 防御
-  HEAL = 3, // 生命
-  SPD = 4, // 速度
-  CRIT = 5, // 暴击率
-  CRITDMG = 6, // 暴伤
-  DMG_Gain = 7, // 增伤
-  RESIST = 8, // 效果抵抗
-  BREAK = 9, // 击破特攻
-  EFFECT_HIT_RATE = 10, // 效果命中
-  ENERGY_Charge = 11, // 充能
-  DMG_RESIST = 12, // 受到伤害降低
-  DoT_By_Char = 13, // 角色持续伤害
-  AdditionalDmg = 14, // 附加倍率
-  ResistStrike = 15, // 抗性穿透
-
-  MON_ATK_DEC = 50, // 敌方攻击
-  MON_DEF_DEC = 51, // 敌方防御
-  MON_SPD_DEC = 52, // 敌方速度
-  MON_RESISTANCE_DEC = 53, // 敌方效果抵抗降低
-  MON_DMG_DEC = 54, // 敌方伤害降低
-  MON_VUL_INC = 55, // 敌方受到伤害提高
-  MON_in_NEG_EFFECT = 56, // 使敌方陷入负面
-  MON_EFF_HIT_RATE_DEC = 57, // 敌方效果命中
-  MON_FREEZE_RES_DEC = 58, // 敌方冻结抗性
-  MON_act_delay = 59, // 敌方行动延后
-  MON_BREAK_VUL = 60, // 敌方击破易伤
-
-  QuakeDmg = 100, // 反震
-  DissociationDmg = 101, // 离神
-  DoT = 102, // 通用持续伤害
-  FollowUpAtk = 103, // 追击
-  NomralAtk = 104, // 普攻
-  SkillAtk = 105, // 战技
-  UltimateAtk = 106, // 终结技
-  BreakDmg = 107, // 击破伤害
-  SuperBreakDmg = 108, // 超击破伤害
-  Shield = 109, // 护盾
-  Healing = 110, // 治疗量
-  DewDropDmg = 111, // 珠露伤害
-  CutToughness = 112, // 削韧
-  Freeze = 113, // 使敌方陷入冻结
-  Suspicion = 114, // 使敌方陷入怀疑
-  BreakEfficiency = 115, // 击破效率
-  DoT_Vulnerability = 116, // 持续伤害易伤
-  Brain_in_a_Vat_Charge = 117, // 罐中脑充能
-  CriticalBoost = 118, // 会心
-  SuccessiveAction = 119, // 连续行动
-  SporeDmg = 120, // 孢子伤害
-  AddWeakness = 122, // 添加弱点
-  Grit = 123, // 战意
-  DewDropCharge = 124, // 珠露充能
-  CounterAtk = 125, // 反击
-  BeHit = 126, // 被击
-  Kill = 127, // 击杀
-  /** 攻击弱点击破的目标 */
-  HitWeak = 128,
-  /** 造成击破 */
-  Break = 129, //
-  Point = 130, // 战技点
-  SporeCnt = 131, // 战技点
-  DotBoom = 132, // 持续伤害结算
-  HitFrozenUnit = 133, // 攻击冻结单位
-  DamageSpread = 134, // 伤害扩散
-  DebuffRemove = 135, // 负面效果解除
-  ConsumeHp = 136, // 消耗生命
-  Brain_in_a_Vat = 137, // 罐中脑
-  Aftertaste = 138, // 回味
+    ATK = 1,
+    DEF = 2,
+    HEAL = 3,
+    SPD = 4,
+    CRIT = 5,
+    CRITDMG = 6,
+    DMG_Gain = 7,
+    RESIST = 8,
+    BREAK = 9,
+    EFFECT_HIT_RATE = 10,
+    ENERGY_Charge = 11,
+    DMG_RESIST = 12,
+    AdditionalDmg = 13,
+    ResistStrike = 14,
+    MON_ATK_DEC = 15,
+    MON_DEF_DEC = 16,
+    MON_SPD_DEC = 17,
+    MON_RESISTANCE_DEC = 18,
+    MON_DMG_DEC = 19,
+    MON_VUL_INC = 20,
+    MON_in_NEG_EFFECT = 21,
+    MON_EFF_HIT_RATE_DEC = 22,
+    DissociationDmg = 23,
+    MON_FREEZE_RES_DEC = 24,
+    Freeze = 25,
+    HitFrozenUnit = 26,
+    DoT_By_Char = 27,
+    DoT = 28,
+    DotBoom = 29,
+    DoT_Vulnerability = 30,
+    Suspicion = 31,
+    QuakeDmg = 32,
+    Shield = 33,
+    FollowUpAtk = 34,
+    NomralAtk = 35,
+    SkillAtk = 36,
+    UltimateAtk = 37,
+    CounterAtk = 38,
+    Aftertaste = 39,
+    CriticalBoost = 40,
+    Kill = 41,
+    SuccessiveAction = 42,
+    BreakDmg = 43,
+    SuperBreakDmg = 44,
+    Break = 45,
+    HitWeak = 46,
+    AddWeakness = 47,
+    CutToughness = 48,
+    BreakEfficiency = 49,
+    MON_act_delay = 50,
+    MON_BREAK_VUL = 51,
+    SporeDmg = 52,
+    SporeCnt = 53,
+    Point = 54,
+    DewDropDmg = 55,
+    DewDropCharge = 56,
+    Healing = 57,
+    DebuffRemove = 58,
+    Grit = 59,
+    BeHit = 60,
+    ConsumeHp = 61,
+    DamageSpread = 62,
+    Brain_in_a_Vat = 63,
+    Brain_in_a_Vat_Charge = 64,
 }
 
 enum Side {
@@ -132,73 +128,71 @@ enum Side {
   Enemy = 2,
 }
 
-const GAIN_MAP: Record<GainType, [Side, string]> = {
-  [GainType.ATK]: [Side.Self, '攻击力'],
-  [GainType.DEF]: [Side.Self, '防御力'],
-  [GainType.HEAL]: [Side.Self, '生命值'],
-  [GainType.SPD]: [Side.Self, '速度'],
-  [GainType.CRIT]: [Side.Self, '暴击'],
-  [GainType.CRITDMG]: [Side.Self, '暴伤'],
-  [GainType.DMG_Gain]: [Side.Self, '伤害'],
-  [GainType.RESIST]: [Side.Self, '效果抵抗'],
-  [GainType.BREAK]: [Side.Self, '击破特攻'],
-  [GainType.EFFECT_HIT_RATE]: [Side.Self, '效果命中'],
-  [GainType.ENERGY_Charge]: [Side.Self, '充能'],
-  [GainType.DMG_RESIST]: [Side.Self, '受到伤害降低'],
-  [GainType.DoT_By_Char]: [Side.Self, '角色持续伤害'],
-  [GainType.AdditionalDmg]: [Side.Self, '附加倍率'],
-  [GainType.ResistStrike]: [Side.Self, '抗性穿透'],
-
-  [GainType.MON_ATK_DEC]: [Side.Enemy, '攻击降低'],
-  [GainType.MON_DEF_DEC]: [Side.Enemy, '防御降低'],
-  [GainType.MON_SPD_DEC]: [Side.Enemy, '速度降低'],
-  [GainType.MON_RESISTANCE_DEC]: [Side.Enemy, '效果抵抗降低'],
-  [GainType.MON_DMG_DEC]: [Side.Enemy, '伤害降低'],
-  [GainType.MON_VUL_INC]: [Side.Enemy, '易伤'],
-  [GainType.MON_in_NEG_EFFECT]: [Side.Enemy, '负面状态'],
-  [GainType.MON_EFF_HIT_RATE_DEC]: [Side.Enemy, '效果命中降低'],
-  [GainType.MON_FREEZE_RES_DEC]: [Side.Enemy, '冻结抗性'],
-  [GainType.MON_act_delay]: [Side.Enemy, '行动延后'],
-  [GainType.MON_BREAK_VUL]: [Side.Enemy, '击破易伤'],
-
-  [GainType.QuakeDmg]: [Side.Self, '反震'],
-  [GainType.DissociationDmg]: [Side.Self, '离神'],
-  [GainType.DoT]: [Side.Self, '持续伤害'],
-  [GainType.FollowUpAtk]: [Side.Self, '追击'],
-  [GainType.NomralAtk]: [Side.Self, '普攻'],
-  [GainType.SkillAtk]: [Side.Self, '战技'],
-  [GainType.UltimateAtk]: [Side.Self, '终结技'],
-  [GainType.BreakDmg]: [Side.Self, '击破伤害'],
-  [GainType.SuperBreakDmg]: [Side.Self, '超击破伤害'],
-  [GainType.Shield]: [Side.Self, '护盾'],
-  [GainType.Healing]: [Side.Self, '治疗量'],
-  [GainType.DewDropDmg]: [Side.Self, '珠露伤害'],
-  [GainType.CutToughness]: [Side.Self, '削韧'],
-  [GainType.Freeze]: [Side.Enemy, '冻结'],
-  [GainType.Suspicion]: [Side.Self, '怀疑'],
-  [GainType.BreakEfficiency]: [Side.Self, '击破效率'],
-  [GainType.DoT_Vulnerability]: [Side.Self, '持续伤害易伤'],
-  [GainType.Brain_in_a_Vat_Charge]: [Side.Self, '罐中脑充能'],
-  [GainType.CriticalBoost]: [Side.Self, '会心'],
-  [GainType.SuccessiveAction]: [Side.Self, '连续行动'],
-  [GainType.SporeDmg]: [Side.Self, '孢子伤害'],
-  [GainType.SporeCnt]: [Side.Self, '孢子数量'],
-  [GainType.AddWeakness]: [Side.Enemy, '添加弱点'],
-  [GainType.Grit]: [Side.Self, '战意'],
-  [GainType.DewDropCharge]: [Side.Self, '珠露充能'],
-  [GainType.CounterAtk]: [Side.Self, '反击'],
-  [GainType.BeHit]: [Side.Self, '被击'],
-  [GainType.Kill]: [Side.Self, '击杀'],
-  [GainType.HitWeak]: [Side.Self, '攻击破弱目标'],
-  [GainType.Break]: [Side.Self, '击破'],
-  [GainType.Point]: [Side.Self, '战技点'],
-  [GainType.DotBoom]: [Side.Self, '持续伤害结算'],
-  [GainType.HitFrozenUnit]: [Side.Self, '攻击冻结目标'],
-  [GainType.DamageSpread]: [Side.Self, '伤害扩散'],
-  [GainType.DebuffRemove]: [Side.Self, '负面状态解除'],
-  [GainType.ConsumeHp]: [Side.Self, '消耗生命'],
-  [GainType.Brain_in_a_Vat]: [Side.Self, '罐中脑'],
-  [GainType.Aftertaste]: [Side.Self, '回味'],
+const GAIN_MAP: Record<GainType, [Side, string, string]> = {
+  [GainType.ATK]: [Side.Self, '攻击力', '/property/IconAttack.webp'],
+  [GainType.DEF]: [Side.Self, '防御力', '/property/IconDefence.webp'],
+  [GainType.HEAL]: [Side.Self, '生命值', '/property/IconMaxHP.webp'],
+  [GainType.SPD]: [Side.Self, '速度', '/property/IconSpeed.webp'],
+  [GainType.CRIT]: [Side.Self, '暴击', '/property/IconCriticalChance.webp'],
+  [GainType.CRITDMG]: [Side.Self, '暴伤', '/property/IconCriticalDamage.webp'],
+  [GainType.DMG_Gain]: [Side.Self, '伤害', '/status/Icon_Sanguine_Gaze.webp'],
+  [GainType.RESIST]: [Side.Self, '效果抵抗', '/property/IconStatusResistance.webp'],
+  [GainType.BREAK]: [Side.Self, '击破特攻', '/property/IconBreakUp.webp'],
+  [GainType.EFFECT_HIT_RATE]: [Side.Self, '效果命中', '/property/IconStatusProbability.webp'],
+  [GainType.ENERGY_Charge]: [Side.Self, '充能', '/property/IconEnergyRecovery.webp'],
+  [GainType.DMG_RESIST]: [Side.Self, '受到伤害降低', '/status/Icon_DMG_Reduction.webp'],
+  [GainType.AdditionalDmg]: [Side.Self, '附加倍率', '/property/IconAttack.webp'],
+  [GainType.ResistStrike]: [Side.Self, '抗性穿透', '/status/Icon_Ruan_mei.webp'],
+  [GainType.MON_ATK_DEC]: [Side.Enemy, '攻击降低', '/status/Icon_ATK_Down.webp'],
+  [GainType.MON_DEF_DEC]: [Side.Enemy, '防御降低', '/status/IconDefenceDecrease.png'],
+  [GainType.MON_SPD_DEC]: [Side.Enemy, '速度降低', '/status/IconSpeedDecrease.png'],
+  [GainType.MON_RESISTANCE_DEC]: [Side.Enemy, '效果抵抗降低', '/status/IconStatusResistanceDecrease.png'],
+  [GainType.MON_DMG_DEC]: [Side.Enemy, '伤害降低', '/status/IconDMGDecrease.png'],
+  [GainType.MON_VUL_INC]: [Side.Enemy, '易伤', '/status/Icon_All_DMG_Boost.webp'],
+  [GainType.MON_in_NEG_EFFECT]: [Side.Enemy, '负面状态', '/path/IconProfessionWarlockMiddle.webp'],
+  [GainType.MON_EFF_HIT_RATE_DEC]: [Side.Enemy, '效果命中降低', '/status/IconStatusProbabilitydecrease.png'],
+  [GainType.DissociationDmg]: [Side.Self, '离神', '/path/IconProfessionMemoryMiddle.webp'],
+  [GainType.MON_FREEZE_RES_DEC]: [Side.Enemy, '冻结抗性', '/property/IconIceResistanceDelta.webp'],
+  [GainType.Freeze]: [Side.Enemy, '冻结', '/status/Icon_Freeze.webp'],
+  [GainType.HitFrozenUnit]: [Side.Self, '攻击冻结目标', '/status/Icon_Freeze.webp'],
+  [GainType.DoT_By_Char]: [Side.Self, '角色持续伤害', '/status/Icon_Arcana.webp'],
+  [GainType.DoT]: [Side.Self, '持续伤害', '/status/Icon_Shock.webp'],
+  [GainType.DotBoom]: [Side.Self, '持续伤害结算', '/status/Eidolon_Fortississimo.webp'],
+  [GainType.DoT_Vulnerability]: [Side.Self, '持续伤害易伤', '/status/Ability_Shining_Bright.webp'],
+  [GainType.Suspicion]: [Side.Self, '怀疑', '/path/IconProfessionWarlockMiddle.webp'],
+  [GainType.QuakeDmg]: [Side.Self, '反震', '/path/IconProfessionKnightMiddle.webp'],
+  [GainType.Shield]: [Side.Self, '护盾', '/status/Icon_Shield.webp'],
+  [GainType.FollowUpAtk]: [Side.Self, '追击', '/status/Ability_Difficulty_Paying.webp'],
+  [GainType.NomralAtk]: [Side.Self, '普攻', '/status/Ability_Cherry_on_Top.webp'],
+  [GainType.SkillAtk]: [Side.Self, '战技', '/status/Ability_Master_Its_Tea_Time.webp'],
+  [GainType.UltimateAtk]: [Side.Self, '终结技', '/status/Ability_Merit_Bestowed_in_My_Garden.webp'],
+  [GainType.CounterAtk]: [Side.Self, '反击', '/status/Ability_Because_We_re_Family.webp'],
+  [GainType.Aftertaste]: [Side.Self, '回味', '/path/IconProfessionJoyMiddle.webp'],
+  [GainType.CriticalBoost]: [Side.Self, '会心', '/status/Icon_DMG_Boost.webp'],
+  [GainType.Kill]: [Side.Self, '击杀', '/property/IconAttack.webp'],
+  [GainType.SuccessiveAction]: [Side.Self, '连续行动', '/status/Icon_DMG_Boost.webp'],
+  [GainType.BreakDmg]: [Side.Self, '击破伤害', '/property/IconBreakUp.webp'],
+  [GainType.SuperBreakDmg]: [Side.Self, '超击破伤害', '/status/Icon_Detonated.webp'],
+  [GainType.Break]: [Side.Self, '击破目标', '/status/Icon_Safeguard_Broken.webp'],
+  [GainType.HitWeak]: [Side.Self, '攻击破弱目标', '/status/Icon_Thanatoplum_Rebloom.webp'],
+  [GainType.AddWeakness]: [Side.Enemy, '添加弱点', '/status/Ability_Allow_Changes.webp'],
+  [GainType.CutToughness]: [Side.Self, '削韧', '/status/Icon_Safeguard_Broken.webp'],
+  [GainType.BreakEfficiency]: [Side.Self, '击破效率', '/status/Icon_Safeguard_Broken.webp'],
+  [GainType.MON_act_delay]: [Side.Enemy, '行动延后', '/status/IconSpeedDecrease.png'],
+  [GainType.MON_BREAK_VUL]: [Side.Enemy, '击破易伤', '/property/IconBreakUp.webp'],
+  [GainType.SporeDmg]: [Side.Self, '孢子伤害', '/path/IconProfessionPropagationMiddle.webp'],
+  [GainType.SporeCnt]: [Side.Self, '孢子数量', '/path/IconProfessionPropagationMiddle.webp'],
+  [GainType.Point]: [Side.Self, '战技点', '/status/StarBig_WhiteGlow.png'],
+  [GainType.DewDropDmg]: [Side.Self, '珠露伤害', '/status/Icon_Draining_Hit.webp'],
+  [GainType.DewDropCharge]: [Side.Self, '珠露充能', '/status/Icon_Draining_Hit.webp'],
+  [GainType.Healing]: [Side.Self, '治疗量', '/property/IconHealRatio.webp'],
+  [GainType.DebuffRemove]: [Side.Self, '负面状态解除', '/status/Trace_Kinship.webp'],
+  [GainType.Grit]: [Side.Self, '战意', '/path/IconProfessionWarriorMiddle.webp'],
+  [GainType.BeHit]: [Side.Self, '被击', '/path/IconProfessionWarriorMiddle.webp'],
+  [GainType.ConsumeHp]: [Side.Self, '消耗生命', '/status/Icon_Prana-Siphoned.webp'],
+  [GainType.DamageSpread]: [Side.Self, '伤害扩散', '/property/IconAttack.webp'],
+  [GainType.Brain_in_a_Vat]: [Side.Self, '罐中脑', '/path/IconProfessionMageMiddle.webp'],
+  [GainType.Brain_in_a_Vat_Charge]: [Side.Self, '罐中脑充能', '/path/IconProfessionMageMiddle.webp'],
 }
 
 const BLESSING_EXTRA_MAP: Record<
