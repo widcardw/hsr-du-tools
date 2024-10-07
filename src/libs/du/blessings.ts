@@ -516,7 +516,7 @@ const blessings: Array<Blessing> = [
       "敌方目标回合开始时额外触发<color style='color:#f29e38;'> 1.0 </color>次持续伤害结算，使其当前承受的持续伤害状态立即产生相当于原伤害<color style='color:#f29e38;'> 135.0% </color>的伤害。",
     ],
     effects: [],
-    rel: [GainType.DoT, GainType.DotBoom],
+    rel: [GainType.DoT, GainType.DotDetonate],
   },
   {
     _id: 615240,
@@ -600,7 +600,7 @@ const blessings: Array<Blessing> = [
       "敌方目标受到攻击后，若处于持续伤害状态，随机触发1个持续伤害，造成等同于原持续伤害<color style='color:#f29e38;'> 150.0% </color>的伤害。",
     ],
     effects: [],
-    rel: [GainType.DoT, GainType.DotBoom],
+    rel: [GainType.DoT, GainType.DotDetonate],
   },
   {
     _id: 615250,

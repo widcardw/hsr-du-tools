@@ -350,7 +350,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       GainType.HitFrozenUnit,
       GainType.DoT,
       GainType.Suspicion,
-      GainType.DotBoom,
+      GainType.DotDetonate,
       GainType.MON_in_NEG_EFFECT,
     ],
     type: BuffType.Equation,
@@ -1391,7 +1391,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       120: 16,
     },
     type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Shield],
     er: BlessingEquationEr.Critical,
   },
   {
@@ -1406,7 +1406,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       121: 16,
     },
     type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Freeze],
     er: BlessingEquationEr.Critical,
   },
   {
@@ -1421,7 +1421,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       122: 16,
     },
     type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.DoT, GainType.DotDetonate],
     er: BlessingEquationEr.Critical,
   },
   {
@@ -1436,7 +1436,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       123: 16,
     },
     type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Healing, GainType.DebuffRemove],
     er: BlessingEquationEr.Critical,
   },
   {
@@ -1451,7 +1451,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       124: 16,
     },
     type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.SuccessiveAction, GainType.CriticalBoost],
     er: BlessingEquationEr.Critical,
   },
   {
@@ -1466,7 +1466,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       125: 16,
     },
     type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.BeHit, GainType.ConsumeHp, GainType.AdditionalDmg],
     er: BlessingEquationEr.Critical,
   },
   {
@@ -1481,7 +1481,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       126: 16,
     },
     type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Aftertaste, GainType.FollowUpAtk],
     er: BlessingEquationEr.Critical,
   },
   {
@@ -1496,7 +1496,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       127: 16,
     },
     type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.SuccessiveAction, GainType.Point],
     er: BlessingEquationEr.Critical,
   },
   {
@@ -1511,7 +1511,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       128: 16,
     },
     type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.ENERGY_Charge, GainType.DamageSpread],
     er: BlessingEquationEr.Critical,
   },
 ])
