@@ -189,7 +189,7 @@ const GAIN_MAP: Record<GainType, [Side, string, string]> = {
   [GainType.DebuffRemove]: [Side.Self, '负面状态解除', '/status/Trace_Kinship.webp'],
   [GainType.Grit]: [Side.Self, '战意', '/path/IconProfessionWarriorMiddle.webp'],
   [GainType.BeHit]: [Side.Self, '被击', '/path/IconProfessionWarriorMiddle.webp'],
-  [GainType.ConsumeHp]: [Side.Self, '消耗生命', '/status/Icon_Prana-Siphoned.webp'],
+  [GainType.ConsumeHp]: [Side.Self, '消耗生命', '/status/Icon_Prana-Siphoned.png'],
   [GainType.DamageSpread]: [Side.Self, '伤害扩散', '/property/IconAttack.webp'],
   [GainType.Brain_in_a_Vat]: [Side.Self, '罐中脑', '/path/IconProfessionMageMiddle.webp'],
   [GainType.Brain_in_a_Vat_Charge]: [Side.Self, '罐中脑充能', '/path/IconProfessionMageMiddle.webp'],
