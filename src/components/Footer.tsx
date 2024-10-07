@@ -75,7 +75,7 @@ const Footer: Component = () => {
                 </a>
                 .
               </p>
-              <p>特别感谢：HoYoverse, YuHengCup, Mar-7th.</p>
+              <p>特别感谢：HoYoverse, YuHengCup, Mar-7th, Fandom.</p>
             </AlertDialogDescription>
           </AlertDialogHeader>
         </AlertDialogContent>
