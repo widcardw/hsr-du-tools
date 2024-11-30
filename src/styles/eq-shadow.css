@@ -1,23 +1,29 @@
-.blessing-gold-img {
-    filter: drop-shadow(0 0 1rem #fff7c7);
+/* .blessing-gold-img {
+  will-change: filter;
+  filter: drop-shadow(0 0 0.75rem #fff7c7);
 }
 
 .blessing-blue-img {
-    filter: drop-shadow(0 0 1rem #c7e0ff);
+  will-change: filter;
+  filter: drop-shadow(0 0 0.75rem #c7e0ff);
 }
 
 .blessing-purple-img {
-    filter: drop-shadow(0 0 1rem #e6c7ff);
+  will-change: filter;
+  filter: drop-shadow(0 0 0.75rem #e6c7ff);
 }
 
 .blessing-ultimate-img {
-    filter: drop-shadow(0 0 1rem #fff6dd);
+  will-change: filter;
+  filter: drop-shadow(0 0 0.75rem #fff6dd);
 }
 
 .blessing-negative-img {
-    filter: drop-shadow(0 0 1rem #ffdddd3f);
+  will-change: filter;
+  filter: drop-shadow(0 0 0.75rem #ffdddd3f);
 }
 
 .blessing-gray-img {
-    filter: drop-shadow(0 0 1rem #e5e5e5);
-}
+  will-change: filter;
+  filter: drop-shadow(0 0 0.75rem #e5e5e5);
+} */

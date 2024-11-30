@@ -58,7 +58,7 @@
 .blessing-purple-up {
   background: radial-gradient(
       circle at bottom,
-      rgba(203, 112, 255, 0.71) 20%,
+      rgba(181, 112, 254, 0.71) 20%,
       transparent
     ), linear-gradient(0.49turn, #444069, #9467cb);
 }

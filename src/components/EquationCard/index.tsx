@@ -41,7 +41,7 @@ const EquationCard: Component<{
       <div
         class={clsx(
           'p-2 relative',
-          Equation_BG_MAP[props.equation.er],
+          `${Equation_BG_MAP[props.equation.er]}-up`,
           'h-8rem sm:h-6rem md:h-8rem',
         )}
       >
@@ -58,16 +58,29 @@ const EquationCard: Component<{
               `${Equation_BG_MAP[props.equation.er]}-img`
             )}
           /> */}
-        <img
-          src={`/eq-simp/l${props.equation.path}.webp`}
-          alt={props.equation.name}
-          class={clsx(
-            'w-70%',
-            'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
-            `${Equation_BG_MAP[props.equation.er]}-img`,
-          )}
-        />
-        <Show when={props.equation.er !== BlessingEquationEr.Critical}>
+        <Show
+          when={props.equation.er !== BlessingEquationEr.Critical}
+          fallback={
+            <img
+              src={`/hoshinokami/${props.equation.path}.webp`}
+              alt={props.equation.name}
+              class={clsx(
+                'w-70%',
+                'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
+                `${Equation_BG_MAP[props.equation.er]}-img`,
+              )}
+            />
+          }
+        >
+          <img
+            src={`/eq-simp/l${props.equation.path}.webp`}
+            alt={props.equation.name}
+            class={clsx(
+              'w-70%',
+              'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
+              `${Equation_BG_MAP[props.equation.er]}-img`,
+            )}
+          />
           <img
             src={`/eq-simp/r${Object.keys(props.equation.need)
               .map((i) => Number(i))

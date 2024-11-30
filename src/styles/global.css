@@ -60,6 +60,7 @@ a {
   text-decoration: underline;
   text-decoration-style: dashed;
   text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
   transition: all 0.2s ease-in-out;
 }
 
