@@ -121,6 +121,16 @@ enum GainType {
     DamageSpread = 62,
     Brain_in_a_Vat = 63,
     Brain_in_a_Vat_Charge = 64,
+
+    Knight = 120,  // 存护
+    Memory = 121,  // 记忆
+    Warlock = 122,  //虚无
+    Pirest = 123,   // 丰饶
+    Rogue = 124,  // 巡猎
+    Warrior = 125,  // 毁灭
+    Joy = 126,   // 欢愉
+    Propagation = 127,   // 繁育
+    Mage = 128,  // 智识
 }
 
 enum Side {
@@ -129,6 +139,15 @@ enum Side {
 }
 
 const GAIN_MAP: Record<GainType, [Side, string, string]> = {
+  [GainType.Knight]: [Side.Self, '存护', '/path/IconProfessionKnightMiddle.webp'],
+  [GainType.Memory]: [Side.Self, '记忆', '/path/IconProfessionMemoryMiddle.webp'],
+  [GainType.Warlock]: [Side.Self, '虚无', '/path/IconProfessionWarlockMiddle.webp'],
+  [GainType.Pirest]: [Side.Self, '丰饶', '/path/IconProfessionPirestMiddle.webp'],
+  [GainType.Rogue]: [Side.Self, '巡猎', '/path/IconProfessionRogueMiddle.webp'],
+  [GainType.Warrior]: [Side.Self, '毁灭', '/path/IconProfessionWarriorMiddle.webp'],
+  [GainType.Joy]: [Side.Self, '欢愉', '/path/IconProfessionJoyMiddle.webp'],
+  [GainType.Propagation]: [Side.Self, '繁育', '/path/IconProfessionPropagationMiddle.webp'],
+  [GainType.Mage]: [Side.Self, '智识', '/path/IconProfessionMageMiddle.webp'],
   [GainType.ATK]: [Side.Self, '攻击力', '/property/IconAttack.webp'],
   [GainType.DEF]: [Side.Self, '防御力', '/property/IconDefence.webp'],
   [GainType.HEAL]: [Side.Self, '生命值', '/property/IconMaxHP.webp'],

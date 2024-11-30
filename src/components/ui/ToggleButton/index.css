@@ -1,0 +1,7 @@
+.toggle-button[data-variant="secondary"]:has(input[type="checkbox"]:checked) {
+    background: var(--bg-tertiary);
+}
+
+.toggle-button[data-variant="primary"]:has(input[type="checkbox"]:checked) {
+    background: var(--fg-secondary);
+}

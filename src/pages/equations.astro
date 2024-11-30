@@ -1,0 +1,12 @@
+---
+import { EQUATIONS } from "@/libs/du/equations";
+import Layout from "../layouts/Layout.astro";
+import EquationCategory from "@/components/EquationCategory";
+import { sortAndSplitEquations } from "@/libs/search/sort";
+
+const sortedEquations = sortAndSplitEquations(EQUATIONS);
+---
+
+<Layout title="方程 差分宇宙模拟工具">
+  {sortedEquations.map((i) => <EquationCategory equations={i} />)}
+</Layout>

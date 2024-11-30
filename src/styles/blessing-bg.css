@@ -1,0 +1,84 @@
+.data-\[pressed\]\:blessing-blue[data-pressed="true"],
+.blessing-blue {
+  background: linear-gradient(0.49turn, #40456d, #487abc);
+}
+
+.blessing-blue-up {
+  background: radial-gradient(
+      circle at bottom,
+      rgb(109, 171, 252, 0.71) 20%,
+      transparent
+    ), linear-gradient(0.49turn, #40456d, #487abc);
+}
+
+.data-\[pressed\]\:blessing-gold[data-pressed="true"],
+.blessing-gold {
+  background: linear-gradient(0.49turn, #936159, #c7a671);
+}
+
+.blessing-gold-up {
+  background: radial-gradient(
+      circle at bottom,
+      rgba(245, 203, 140, 0.71) 20%,
+      transparent
+    ), linear-gradient(0.49turn, #936159, #c7a671);
+}
+
+.data-\[pressed\]\:blessing-gray[data-pressed="true"],
+.blessing-gray {
+  background: linear-gradient(0.49turn, #434553, #818186);
+}
+
+.blessing-gray-up {
+  background: radial-gradient(
+      circle at bottom,
+      rgba(185, 185, 185, 0.71) 20%,
+      transparent
+    ), linear-gradient(0.49turn, #434553, #818186);
+}
+
+.data-\[pressed\]\:blessing-ultimate[data-pressed="true"],
+.blessing-ultimate {
+  background: linear-gradient(0.49turn, #93734c, #ffffaa);
+}
+
+.blessing-ultimate-up {
+  background: radial-gradient(
+      circle at bottom,
+      rgba(255, 241, 162, 0.71) 20%,
+      transparent
+    ), linear-gradient(0.49turn, #93734c, #ffffaa);
+}
+
+.data-\[pressed\]\:blessing-purple[data-pressed="true"],
+.blessing-purple {
+  background: linear-gradient(0.49turn, #444069, #9467cb);
+}
+
+.blessing-purple-up {
+  background: radial-gradient(
+      circle at bottom,
+      rgba(203, 112, 255, 0.71) 20%,
+      transparent
+    ), linear-gradient(0.49turn, #444069, #9467cb);
+}
+
+.data-\[pressed\]\:blessing-desc[data-pressed="true"],
+.blessing-desc {
+  background: linear-gradient(0.49turn, #406946, #67cbad);
+}
+
+
+
+.data-\[pressed\]\:blessing-negative[data-pressed="true"],
+.blessing-negative {
+  background: linear-gradient(0.49turn, #2d2727, #342323, #4b1b1b);
+}
+
+.blessing-negative-up {
+  background: radial-gradient(
+      circle at bottom,
+      rgba(152, 22, 22, 0.71) 20%,
+      transparent
+    ), linear-gradient(0.49turn, #2d2727, #342323, #4b1b1b);
+}

@@ -22,12 +22,20 @@ enum BlessingEquationEr {
   Critical = 16,
 }
 
+enum CurioType {
+  Gray = 1,
+  Blue = 2,
+  Gold = 3,
+  Negative = 4,
+  Weighted = 5,
+}
+
 interface Buff {
   type: BuffType
 }
 
 interface Blessing extends Buff {
-  _id?: number
+  _id: number
   type: BuffType.Blessing
   /** 祝福等级 */
   rarity: BlessingRarity
@@ -43,11 +51,11 @@ interface Blessing extends Buff {
 }
 
 interface BlessingEquation extends Buff {
-  _id?: number
+  _id: number
   path: Path
   type: BuffType.Equation
   rarity: BlessingRarity
-  icon: string
+  icon?: string
   name: string
   desc: string
   effects: Array<BlessingExtra>
@@ -69,6 +77,15 @@ type RelatedBlessing = Blessing & {
   intersection?: GainType[]
 }
 
-export { BuffType, BlessingRarity, BlessingEquationEr }
+interface Curio {
+  _id: number
+  name: string
+  desc: string
+  icon: string
+  ver: string
+  type: CurioType
+}
 
-export type { BlessingEquation, Blessing, Buff, RelatedEquation, RelatedBlessing }
+export { BuffType, BlessingRarity, BlessingEquationEr, CurioType }
+
+export type { BlessingEquation, Blessing, Buff, RelatedEquation, RelatedBlessing, Curio }

@@ -1,0 +1,75 @@
+---
+import ThemeSwitch from "./ThemeSwitch.astro";
+---
+
+<header class="flex items-center justify-center w-full py-2 gap-2">
+    <a href="/" class="title-btn home" title="主页">
+        <div class="icon i-carbon-home" />
+        <span>主页</span>
+    </a>
+    <a href="/blessings" class="title-btn blessings" title="祝福">
+        <div class="icon i-carbon-carbon-for-ibm-product" />
+        <span>祝福</span>
+    </a>
+    <a href="/equations" class="title-btn equations" title="方程">
+        <div class="icon i-carbon-function-math" />
+        <span>方程</span>
+    </a>
+    <a href="/curios" class="title-btn curios" title="奇物">
+        <div class="icon i-carbon-ticket" />
+        <span>奇物</span>
+    </a>
+    <a href="/recommendations" class="title-btn recommendations" title="推荐">
+        <div class="icon i-carbon-thumbs-up" />
+        <span>推荐</span>
+    </a>
+    <ThemeSwitch defaultTheme="dark" strategy="button">
+        <button class="title-btn theme" title="主题">
+            <div class="icon light i-carbon-sun" />
+            <div class="icon dark i-carbon-asleep-filled" />
+            <span>主题</span>
+        </button>
+    </ThemeSwitch>
+</header>
+
+<script>
+    // 获取当前页面路由，并使这个路由对应的按钮高亮
+    const currentPath = window.location.pathname;
+    const buttons = document.querySelectorAll("a.title-btn");
+    for (const b of buttons) {
+        if ((b as HTMLAnchorElement).href.includes(currentPath)) {
+            b.classList.add("router-active");
+            break;
+        }
+    }
+</script>
+
+<style>
+    .title-btn {
+        @apply text-base;
+        @apply flex items-center gap-1;
+        padding: 0.5rem 1rem;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        border-radius: 0.25rem;
+        background: var(--bg-secondary);
+        color: var(--fg);
+        text-decoration: none;
+    }
+    .title-btn span {
+        @apply hidden sm:block;
+    }
+    .icon.light {
+        @apply block dark:hidden;
+    }
+    .icon.dark {
+        @apply block light:hidden;
+    }
+    .title-btn:hover {
+        background: var(--bg-secondary-hover);
+    }
+    .router-active {
+        background: var(--bg-secondary-hover);
+    }
+</style>

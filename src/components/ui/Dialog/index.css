@@ -1,0 +1,3 @@
+button.dialogTrigger {
+    @apply border-none outline-none cursor-pointer;
+}

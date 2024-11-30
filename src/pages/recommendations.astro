@@ -1,0 +1,100 @@
+---
+import EquationCategory from "@/components/EquationCategory";
+import Layout from "../layouts/Layout.astro";
+import "@/styles/scroll-bar.css";
+import type { BlessingEquation } from "@/libs/du/types";
+import { EQUATIONS } from "@/libs/du/equations";
+import type { Blessing } from "@/libs/du/types";
+import { BLESSINGS } from "@/libs/du/blessings";
+import BlessingCategory from "@/components/BlessingCategory";
+interface Recommendation {
+  title: string;
+  desc?: string;
+  equations: number[];
+  blessings: number[];
+}
+
+const recommendations: Recommendation[] = [
+  {
+    title: "超击破",
+    equations: [670500, 671520, 671500, 671570, 672520, 672510, 672540],
+    blessings: [],
+  },
+
+  {
+    title: "追击",
+    equations: [670640, 671260, 671650, 671680, 671060, 672670, 671360],
+    blessings: [615630, 615631, 615640, 615644, 615645, 615654],
+  },
+  {
+    title: "持续伤害",
+    equations: [
+      670280, 670210, 671210, 671230, 671120, 672200, 672240, 672230, 671820,
+    ],
+    blessings: [],
+  },
+  {
+    title: "持续伤害 冻结",
+    desc: "详情见「田宫良子ol」视频介绍。",
+    equations: [670280, 670210, 671210, 671170, 671230, 671120, 672510],
+    blessings: [],
+  },
+  {
+    title: "持续伤害 沉默猎手 血罪灵 爆破",
+    desc: "沉默猎手累计血罪灵暴击的 DOT 伤害，通过激雷乐队和悠游模因多次结算，达到快速击杀的效果，详情见「田宫良子ol」视频介绍。",
+    equations: [670140, 672240, 671210, 671170, 671120, 671510, 672410],
+    blessings: [],
+  },
+  {
+    title: "烧血",
+    equations: [
+      670350, 672530, 672360, 671340, 671370, 670320, 672340, 672360, 671360,
+      671350,
+    ],
+    blessings: [615330, 615331, 615332, 615341, 615350, 615552],
+  },
+  {
+    title: "存护反震",
+    equations: [670010, 671080, 671500, 672010, 672050, 672200, 672030],
+    blessings: [],
+  },
+  {
+    title: "孢子",
+    desc: "详情见「墨色长安」视频介绍。",
+    equations: [670720, 671670, 672670, 671700, 671780, 671740, 672720, 672371],
+    blessings: [615741, 615740, 615731, 615730],
+  },
+];
+---
+
+<Layout title="推荐 差分宇宙模拟工具">
+  <p class="text-fg-secondary text-sm text-center">
+    本页仅为常规打法推荐，不能作为包过攻略。
+  </p>
+  {
+    recommendations.map((r) => {
+      const foundEq: BlessingEquation[] = EQUATIONS.filter((i) =>
+        r.equations.includes(i._id),
+      ).sort((a, b) => b.er - a.er);
+      const foundBl: Blessing[] = BLESSINGS.filter((i) =>
+        r.blessings.includes(i._id),
+      ).sort((a, b) => b.rarity - a.rarity);
+      return (
+        <div class="my-8">
+          <h2>{r.title}</h2>
+          <p class="text-fg-secondary text-sm">{r.desc}</p>
+          {foundEq.length > 0 && (
+            <EquationCategory equations={foundEq} withTitle={false} />
+          )}
+          {foundBl.length > 0 && (
+            <BlessingCategory
+              blessings={foundBl}
+              withTitle={false}
+              client:idle
+            />
+          )}
+        </div>
+      );
+    })
+  }
+</Layout>

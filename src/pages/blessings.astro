@@ -1,0 +1,12 @@
+---
+import BlessingView from "@/components/BlessingCategory/BlessingView";
+import Layout from "../layouts/Layout.astro";
+import { BLESSINGS } from "@/libs/du/blessings";
+import { sortAndSplitBlessings } from "@/libs/search/sort";
+
+const blessingCates = sortAndSplitBlessings(BLESSINGS);
+---
+
+<Layout title="祝福 差分宇宙模拟工具">
+  <BlessingView blessingCategory={blessingCates} client:idle />
+</Layout>

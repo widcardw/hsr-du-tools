@@ -1,0 +1,82 @@
+---
+
+
+---
+
+<footer>
+    <button id="dialogTrigger">
+        <div class="i-carbon-information"></div>
+    </button>
+</footer>
+
+<dialog id="dialog" class="dialog">
+    <h3>关于</h3>
+    <p>已经更新至 2.7 版本.</p>
+    <p>
+        本网站源码可在{" "}
+        <a
+            href="https://github.com/widcardw/hsr-du-tools"
+            target="_blank"
+            rel="noreferrer"
+        >
+            GitHub
+        </a>{" "}
+        查看，若有任何建议或问题，包括但不限于：样式问题、适配问题、Tag 校对，请于{" "}
+        <a
+            href="https://github.com/widcardw/hsr-du-tools/issues"
+            target="_blank"
+            rel="noreferrer"
+        >
+            issue
+        </a>{" "}
+        板块反馈，或发送邮件到{" "}
+        <a
+            href="mailto:widcardw@foxmail.com"
+            target="_blank"
+            rel="noreferrer"
+        >
+            widcardw@foxmail.com</a>.
+    </p>
+    <p>
+        使用技术栈：<a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a>,{" "}
+        <a href="https://solidjs.com" target="_blank" rel="noreferrer">Solidjs</a>,{" "}
+        <a href="https://unocss.dev" target="_blank" rel="noreferrer">UnoCSS</a>,{" "}
+        <a href="https://netlify.com" target="_blank" rel="noreferrer">Netlify</a>.
+    </p>
+    <p>特别感谢：HoYoverse, YuHengCup, Mar-7th, Fandom.</p>
+</dialog>
+
+<script>
+    const dialog = document.getElementById("dialog")! as HTMLDialogElement;
+    const dialogTrigger = document.getElementById(
+        "dialogTrigger",
+    )! as HTMLButtonElement;
+
+    dialogTrigger.addEventListener("click", () => {
+        dialog.showModal();
+    });
+
+    // close the dialog when the user clicks outside of it
+    dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) {
+            dialog.close();
+        }
+    });
+</script>
+
+<style>
+    footer {
+        text-align: center;
+        @apply py-4rem;
+    }
+    button#dialogTrigger {
+        @apply bg-transparent border-none outline-none cursor-pointer text-1rem text-white;
+        @apply hover:text-blue;
+    }
+    .dialog a {
+        color: var(--fg);
+    }
+    .dialog a:hover {
+        color: var(--primary);
+    }
+</style>
