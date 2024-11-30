@@ -118,7 +118,7 @@ const Home: Component = () => {
 
   return (
     <>
-      <div class="text-2xl text-center font-bold">搜索</div>
+      <div class="text-2xl text-center font-bold mt-6">差分宇宙 模拟工具</div>
       {/* 搜索按钮 */}
       <div class="grid grid-cols-3 md:grid-cols-5 gap-2 justify-center my-4">
         {/* 标签选择对话框 */}
