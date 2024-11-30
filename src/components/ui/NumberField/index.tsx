@@ -10,7 +10,7 @@ const NumberField: Component<{
   maxValue?: number
   minValue?: number
   class?: string
-  size?: 'small' | 'medium' | 'large',
+  size?: 'small' | 'medium' | 'large'
 }> = (props) => {
   const mp = mergeProps(
     {
@@ -20,13 +20,15 @@ const NumberField: Component<{
       minValue: Number.MIN_SAFE_INTEGER,
       onChange: () => {},
       class: '',
-      size: 'medium'
+      size: 'medium',
     },
     props,
   )
 
   const [value, setValue] = createSignal(mp.defaultValue)
-  const cls = clsx('number-field',
+  const cls = clsx(
+    'number-field',
+    'text-fg',
     mp.size === 'small' && 'text-sm py-1 rounded',
     mp.size === 'medium' && 'text-base py-2 rounded-md',
     mp.size === 'large' && 'text-lg py-3 rounded-lg',

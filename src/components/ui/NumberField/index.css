@@ -8,12 +8,12 @@
 } */
 
 input.number-field {
-    border: 1px solid var(--bg-secondary-transparent);
-    background: var(--bg);
-    outline: none;
-    transition: border 0.2s ease-in-out;
+  border: 1px solid var(--bg-secondary-transparent);
+  background: var(--bg);
+  outline: none;
+  transition: border 0.2s ease-in-out;
 }
 
 input.number-field:focus {
-    border: 1px solid var(--fg-tertiary);
+  border: 1px solid var(--fg-tertiary);
 }
