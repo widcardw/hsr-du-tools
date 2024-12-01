@@ -34,7 +34,7 @@ import ThemeSwitch from "./ThemeSwitch.astro";
 
 <script is:inline>
   // 获取当前页面路由，并使这个路由对应的按钮高亮
-  const currentPath = window.location.pathname;
+  let currentPath = window.location.pathname.replace(/\/$/, '');
   /** @type {NodeListOf<HTMLAnchorElement>} */
   const buttons = document.querySelectorAll("a.title-btn");
   for (const b of buttons) {
