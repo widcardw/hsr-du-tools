@@ -50,7 +50,12 @@ body {
   scroll-behavior: smooth;
 }
 
-body {
+[data-theme="light"] body {
+  background: url("/bg-light.webp") no-repeat center center;
+  background-attachment: fixed;
+}
+
+[data-theme="dark"] body {
   background: url("/bg.webp") no-repeat center center;
   background-attachment: fixed;
 }

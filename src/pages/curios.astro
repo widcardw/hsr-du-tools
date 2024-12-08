@@ -5,6 +5,7 @@ import { PARTITIONED_CURIOS } from "@/libs/du/curios";
 ---
 
 <Layout title="奇物 差分宇宙模拟工具">
+  <p class="text-center text-sm text-fg-secondary">注：破解版奇物未实装</p>
   {
     PARTITIONED_CURIOS.map((curioCate) => (
       <CurioCategory type={Number(curioCate[0].type)} curios={curioCate} />

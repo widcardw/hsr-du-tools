@@ -7,6 +7,10 @@ import { EQUATIONS } from "@/libs/du/equations";
 import type { Blessing } from "@/libs/du/types";
 import { BLESSINGS } from "@/libs/du/blessings";
 import BlessingCategory from "@/components/BlessingCategory";
+
+import "@/styles/blessing-bg.css";
+import CollectionBuffDialog from "@/components/ui/Dialog/CollectionBuff";
+
 interface Recommendation {
   title: string;
   desc?: string;
@@ -69,8 +73,13 @@ const recommendations: Recommendation[] = [
 
 <Layout title="推荐 差分宇宙模拟工具">
   <p class="text-fg-secondary text-sm text-center">
-    本页仅为常规打法推荐，不能作为包过攻略。<a href="https://github.com/widcardw/hsr-du-tools/discussions" target="_blank">阵容投稿</a>
+    本页仅为常规打法推荐，不能作为包过攻略。<a
+      href="https://github.com/widcardw/hsr-du-tools/discussions"
+      target="_blank">阵容投稿</a
+    >
   </p>
+  <span>将藏品布设于概率艺术馆，可以获得一定的加成。</span>
+  <CollectionBuffDialog client:idle />
   {
     recommendations.map((r) => {
       const foundEq: BlessingEquation[] = EQUATIONS.filter((i) =>
