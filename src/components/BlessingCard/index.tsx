@@ -104,7 +104,7 @@ const BlessingCard: Component<{
       </div>
       <div
         class={clsx(
-          'text-0.75rem text-center select-none',
+          'text-0.75rem text-center select-none', 'cursor-pointer',
           'bg-fg',
           upgraded() ? 'text-yellow-600' : 'text-bg',
         )}
