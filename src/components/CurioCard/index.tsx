@@ -39,6 +39,7 @@ const CurioCard: Component<{
           src={`/curio/${props.curio.icon}.png.webp`}
           alt={props.curio.name}
           class={clsx('w-60%', `${CURIO_BG_MAP[props.curio.type]}-img`)}
+          loading='lazy'
         />
       </div>
       <div

@@ -69,6 +69,7 @@ const EquationCard: Component<{
                 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
                 `${Equation_BG_MAP[props.equation.er]}-img`,
               )}
+              loading='lazy'
             />
           }
         >
@@ -80,6 +81,7 @@ const EquationCard: Component<{
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               `${Equation_BG_MAP[props.equation.er]}-img`,
             )}
+            loading='lazy'
           />
           <img
             src={`/eq-simp/r${Object.keys(props.equation.need)
@@ -91,6 +93,7 @@ const EquationCard: Component<{
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               `${Equation_BG_MAP[props.equation.er]}-img`,
             )}
+            loading='lazy'
           />
         </Show>
       </div>
@@ -112,6 +115,7 @@ const EquationCard: Component<{
               <img
                 src={`/path${PATH_ICON_MAP[Number(it[0]) as Path]}`}
                 alt={it[0]}
+                loading='lazy'
                 class="w-6 h-6 light:invert"
               />
               <span>{it[1]}</span>

@@ -28,6 +28,7 @@ const GainButton: Component<{
         src={GAIN_MAP[props.gain][2]}
         alt={props.gain.toString()}
         class="w-5 h-5 light:drop-shadow light:drop-shadow-color-fg-tertiary"
+        loading='lazy'
       />
       <span>{GAIN_MAP[props.gain][1]}</span>
     </ToggleButton>

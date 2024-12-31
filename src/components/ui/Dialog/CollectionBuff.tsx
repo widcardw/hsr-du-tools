@@ -115,6 +115,7 @@ const CollectionBuffDialog = () => {
                 src={`/collection/${i.image}`}
                 alt={i.name}
                 class="w-5rem h-5rem"
+                loading='lazy'
               />
             </div>
             <div>

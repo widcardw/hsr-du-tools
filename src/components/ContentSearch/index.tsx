@@ -250,7 +250,7 @@ const Home: Component = () => {
                 mustContainGains().includes(gain) && 'blessing-gray',
               )}
             >
-              <img src={GAIN_MAP[gain][2]} alt="" class="w-5 h-5" />
+              <img src={GAIN_MAP[gain][2]} alt="" class="w-5 h-5" loading='lazy' />
               <span>{GAIN_MAP[gain][1]}</span>
               <div
                 class="cursor-pointer i-carbon-close"

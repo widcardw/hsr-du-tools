@@ -58,6 +58,7 @@ const BlessingCard: Component<{
           src={`/blessing${props.blessing.icon}`}
           alt={PATH_MAP[props.blessing.path]}
           class={clsx('w-60%')}
+          loading='lazy'
         />
       </div>
       <div
