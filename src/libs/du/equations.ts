@@ -687,7 +687,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       '123': 3,
     },
     er: 6,
-    rel: [GainType.DoT_By_Char, GainType.MON_in_NEG_EFFECT, GainType.HEAL],
+    rel: [GainType.DoT_By_Char, GainType.MON_in_NEG_EFFECT, GainType.HEAL, GainType.DewDropDmg],
     type: BuffType.Equation,
   },
   {
@@ -708,6 +708,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       GainType.FollowUpAtk,
       GainType.Aftertaste,
       GainType.AdditionalDmg,
+      GainType.DewDropDmg,
     ],
     type: BuffType.Equation,
   },
@@ -991,6 +992,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       GainType.HEAL,
       GainType.CutToughness,
       GainType.BreakEfficiency,
+      GainType.DewDropDmg,
       GainType.DewDropCharge,
       GainType.HitWeak,
       GainType.Break,
@@ -1263,7 +1265,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       '125': 3,
     },
     er: 4,
-    rel: [GainType.Grit, GainType.HEAL],
+    rel: [GainType.Grit, GainType.HEAL, GainType.DewDropDmg],
     type: BuffType.Equation,
   },
   {
@@ -1308,7 +1310,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       '126': 3,
     },
     er: 4,
-    rel: [GainType.Aftertaste, GainType.FollowUpAtk, GainType.HEAL],
+    rel: [GainType.Aftertaste, GainType.FollowUpAtk, GainType.HEAL, GainType.DewDropDmg],
     type: BuffType.Equation,
   },
   {
