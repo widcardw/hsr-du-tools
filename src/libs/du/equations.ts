@@ -359,7 +359,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       '123': 4,
     },
     er: 6,
-    rel: [GainType.DewDropDmg, GainType.Freeze, GainType.AdditionalDmg],
+    rel: [GainType.DewDropCharge, GainType.DewDropDmg, GainType.Freeze, GainType.AdditionalDmg],
     type: BuffType.Equation,
   },
   {
@@ -555,6 +555,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       GainType.FollowUpAtk,
       GainType.HEAL,
       GainType.Healing,
+      GainType.ConsumeHp,
       GainType.Aftertaste,
     ],
     type: BuffType.Equation,
@@ -1280,7 +1281,7 @@ const equations: Array<BlessingEquation> = sortAllEquations([
       '128': 2,
     },
     er: 4,
-    rel: [GainType.UltimateAtk, GainType.HEAL, GainType.Brain_in_a_Vat_Charge],
+    rel: [GainType.UltimateAtk, GainType.ConsumeHp, GainType.Brain_in_a_Vat_Charge],
     type: BuffType.Equation,
   },
   {
