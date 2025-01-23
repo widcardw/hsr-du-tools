@@ -1,7 +1,7 @@
 import BlessingCategory from './index'
 
 import { type Component, For, createSignal } from 'solid-js'
-import ToggleButton from '../ui/ToggleButton'
+import ToggleButton from '@/components/ui/ToggleButton'
 import type { Blessing } from '@/libs/du/types'
 
 const BlessingView: Component<{

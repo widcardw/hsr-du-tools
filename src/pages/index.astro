@@ -1,8 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import ContentSearch from "@/components/ContentSearch";
+const mainVersion = "v2.7";
 ---
 
-<Layout title="主页 差分宇宙模拟工具">
-  <ContentSearch client:idle />
+<Layout title="">
+  <p>Redirecting to {mainVersion}...</p>
 </Layout>
+
+<script is:inline define:vars={{ mainVersion }}>
+  window.location.pathname = `/${mainVersion}`;
+</script>

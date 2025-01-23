@@ -1,62 +1,101 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import BaseHeader from '../header/BaseHeader.astro';
+import Footer from "@/components/Footer.astro";
+import BaseHeader from "@/header/BaseHeader.astro";
 
 interface Props {
-	title: string;
-	className?: string;
+  title: string;
+  className?: string;
 }
 
-const { title, className = '' } = Astro.props;
+const { title, className = "" } = Astro.props;
+import ThemeSwitch from "@/components/ThemeSwitch.astro";
+import VersionNavigator from "@/components/VersionNavigator";
+
+const versions = ["v2.7", "v3.1"];
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHeader />
-		<meta charset="UTF-8" />
-		<meta name="description" content="差分宇宙 模拟工具" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div id="stars2" />
-		<div id="stars3" />
-		<Header />
-		<main class={className}>
-			<slot />
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHeader />
+    <meta charset="UTF-8" />
+    <meta name="description" content="差分宇宙 模拟工具" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <nav class="navigator">
+      <VersionNavigator versions={versions} client:idle />
+      <ThemeSwitch defaultTheme="dark" strategy="button">
+        <button class="title-btn theme" title="主题">
+          <div class="icon light i-carbon-sun"></div>
+          <div class="icon dark i-carbon-asleep-filled"></div>
+          <span>主题</span>
+        </button>
+      </ThemeSwitch>
+    </nav>
+    <main class={className}>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-	main {
-		@apply px-2 sm:px-4;
-		max-width: 1000px;
-		margin: 0 auto;
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+  main {
+    @apply px-2 sm:px-4;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .navigator {
+    @apply flex items-center justify-center w-full pt-2 gap-2;
+  }
+  .title-btn {
+    @apply text-base;
+    @apply flex items-center gap-1;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0.25rem;
+    background: var(--bg-secondary);
+    color: var(--fg);
+    text-decoration: none;
+  }
+  .title-btn span {
+    @apply hidden sm:block;
+  }
+  .icon.light {
+    @apply block dark:hidden;
+  }
+  .icon.dark {
+    @apply block light:hidden;
+  }
+  .title-btn:hover {
+    background: var(--bg-secondary-hover);
+  }
 </style>

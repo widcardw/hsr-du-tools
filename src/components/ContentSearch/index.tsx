@@ -2,8 +2,8 @@ import EquationCard from '@/components/EquationCard'
 import Button from '@/components/ui/Button'
 
 import ToggleButton from '@/components/ui/ToggleButton'
-import { GAIN_MAP, type GainType } from '@/libs/du/constants'
-import { EQUATIONS } from '@/libs/du/equations'
+import { GAIN_MAP } from '@/pages/v2.7/data/constants'
+import { EQUATIONS } from '@/pages/v2.7/data/equations'
 import {
   BlessingEquationEr,
   BlessingRarity,
@@ -15,7 +15,7 @@ import { type Component, For, Show, createMemo, createSignal } from 'solid-js'
 
 import '@/styles/blessing-bg.css'
 import BlessingCard from '@/components/BlessingCard'
-import { SORTED_BLESSINGS } from '@/libs/du/blessings'
+import { SORTED_BLESSINGS } from '@/pages/v2.7/data/blessings'
 import { LAYOUT } from '@/libs/du/layout'
 import { makePersisted } from '@solid-primitives/storage'
 import BlessingRarityEnableToggle from './home-comps/BlessingRarityEnableToggle'
@@ -33,6 +33,7 @@ import {
   setEnableEqSearch,
   setErFilter,
 } from './home-comps/data'
+import type { GainType } from '@/libs/du/constants'
 
 const Home: Component = () => {
   const MIXED_EQUATIONS = EQUATIONS.filter(

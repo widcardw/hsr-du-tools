@@ -1,4 +1,5 @@
-import { CurioType, type Curio } from './types'
+import { partitionAllCurios } from '@/libs/du/curio-utils'
+import type { Curio } from '@/libs/du/types'
 
 const CURIOS: Curio[] = [
   {
@@ -1275,30 +1276,7 @@ const CURIOS: Curio[] = [
   },
 ]
 
-const curio_type_to_desc = {
-  [CurioType.Gray]: '一星奇物',
-  [CurioType.Blue]: '二星奇物',
-  [CurioType.Gold]: '三星奇物',
-  [CurioType.Weighted]: '加权奇物',
-  [CurioType.Negative]: '负面奇物',
-}
-
-function partitionAllCurios(curios: Curio[]): Curio[][] {
-  const res: Record<CurioType, Curio[]> = {
-    [CurioType.Weighted]: [],
-    [CurioType.Gold]: [],
-    [CurioType.Blue]: [],
-    [CurioType.Gray]: [],
-    [CurioType.Negative]: [],
-  }
-  
-  for (const curio of curios) {
-    res[curio.type].push(curio)
-  }
-
-  return [res[CurioType.Weighted], res[CurioType.Gold], res[CurioType.Blue], res[CurioType.Gray], res[CurioType.Negative]]
-}
 
 const PARTITIONED_CURIOS = partitionAllCurios(CURIOS)
 
-export { CURIOS, curio_type_to_desc, partitionAllCurios, PARTITIONED_CURIOS }
+export { CURIOS, partitionAllCurios, PARTITIONED_CURIOS }

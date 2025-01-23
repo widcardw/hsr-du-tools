@@ -1,14 +1,4 @@
-// import {
-//   Dialog,
-//   DialogContent,
-//   DialogDescription,
-//   DialogFooter,
-//   DialogHeader,
-//   DialogTitle,
-//   DialogTrigger,
-// } from '@/components/ui/dialog'
 import type { GainType } from '@/libs/du/constants'
-// import type { DialogTriggerProps } from '@kobalte/core/dialog'
 import clsx from 'clsx'
 import {
   type Component,
@@ -86,7 +76,7 @@ const MustContainDialog: Component<{
       }}
     >
       <h3 class="text-fg">标签列表</h3>
-      <p class="fg-secondary text-sm">选择必须包含的标签</p>
+      <p class="text-fg-secondary text-sm">选择必须包含的标签</p>
       <Show
         when={selectedGains().length > 0}
         fallback={

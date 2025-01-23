@@ -1,6 +1,6 @@
-import { sortAllBlessings } from '../search/sort'
-import { BlessingExtra, GainType } from './constants'
-import { type Blessing, BuffType } from './types'
+import { sortAllBlessings } from '@/libs/search/sort'
+import { BlessingExtra, GainType } from '@/libs/du/constants'
+import { type Blessing, BuffType } from '@/libs/du/types'
 
 const blessings: Array<Blessing> = [
   // TODO

@@ -1,15 +1,15 @@
 ---
 import EquationCategory from "@/components/EquationCategory";
-import Layout from "../layouts/Layout.astro";
-import "@/styles/scroll-bar.css";
+import Layout from "./ui/Layout2-7.astro";
 import type { BlessingEquation } from "@/libs/du/types";
-import { EQUATIONS } from "@/libs/du/equations";
+import { EQUATIONS } from "./data/equations";
 import type { Blessing } from "@/libs/du/types";
-import { BLESSINGS } from "@/libs/du/blessings";
+import { BLESSINGS } from "./data/blessings";
 import BlessingCategory from "@/components/BlessingCategory";
+import CollectionBuffDialog from "@/components/ui/Dialog/CollectionBuff";
 
 import "@/styles/blessing-bg.css";
-import CollectionBuffDialog from "@/components/ui/Dialog/CollectionBuff";
+import "@/styles/scroll-bar.css";
 
 interface Recommendation {
   title: string;

@@ -1,4 +1,5 @@
-import { GAIN_MAP, type GainType, PATH_MAP } from '@/libs/du/constants'
+import { GAIN_MAP } from '@/pages/v2.7/data/constants'
+import { type GainType, PATH_MAP } from '@/libs/du/constants'
 import { type Blessing, BlessingRarity } from '@/libs/du/types'
 import clsx from 'clsx'
 import {
@@ -58,7 +59,7 @@ const BlessingCard: Component<{
           src={`/blessing${props.blessing.icon}`}
           alt={PATH_MAP[props.blessing.path]}
           class={clsx('w-60%')}
-          loading='lazy'
+          loading="lazy"
         />
       </div>
       <div
@@ -105,7 +106,8 @@ const BlessingCard: Component<{
       </div>
       <div
         class={clsx(
-          'text-0.75rem text-center select-none', 'cursor-pointer',
+          'text-0.75rem text-center select-none',
+          'cursor-pointer',
           'bg-fg',
           upgraded() ? 'text-yellow-600' : 'text-bg',
         )}

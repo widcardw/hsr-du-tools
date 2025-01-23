@@ -1,4 +1,4 @@
-import { curio_type_to_desc } from '@/libs/du/curios'
+import { CURIO_TYPE_TO_DESC } from '@/libs/du/curio-utils'
 import type { Curio, CurioType } from '@/libs/du/types'
 import clsx from 'clsx'
 import { For, type Component } from 'solid-js'
@@ -11,7 +11,7 @@ const CurioCategory: Component<{
   return (
     <div class="my-6">
       <div class="text-2xl font-bold text-center my-4">
-        {curio_type_to_desc[props.type]}
+        {CURIO_TYPE_TO_DESC[props.type]}
       </div>
       <div
         class={clsx(

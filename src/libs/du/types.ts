@@ -1,4 +1,5 @@
-import type { BlessingExtra, GainType, Path } from './constants'
+import type { BlessingExtra, GainType } from './constants'
+import type { Path } from './constants'
 
 enum BuffType {
   Blessing = 1,
@@ -88,4 +89,11 @@ interface Curio {
 
 export { BuffType, BlessingRarity, BlessingEquationEr, CurioType }
 
-export type { BlessingEquation, Blessing, Buff, RelatedEquation, RelatedBlessing, Curio }
+export type {
+  BlessingEquation,
+  Blessing,
+  Buff,
+  RelatedEquation,
+  RelatedBlessing,
+  Curio,
+}

@@ -1,0 +1,76 @@
+---
+// import ThemeSwitch from "@/components/ThemeSwitch.astro";
+---
+
+<header class="flex items-center justify-center w-full py-2 gap-2">
+  <a href="/v2.7" class="title-btn home" title="主页">
+    <div class="icon i-carbon-home"></div>
+    <span>主页</span>
+  </a>
+  <a href="/v2.7/blessings" class="title-btn blessings" title="祝福">
+    <div class="icon i-carbon-carbon-for-ibm-product"></div>
+    <span>祝福</span>
+  </a>
+  <a href="/v2.7/equations" class="title-btn equations" title="方程">
+    <div class="icon i-carbon-function-math"></div>
+    <span>方程</span>
+  </a>
+  <a href="/v2.7/curios" class="title-btn curios" title="奇物">
+    <div class="icon i-carbon-ticket"></div>
+    <span>奇物</span>
+  </a>
+  <a href="/v2.7/recommendations" class="title-btn recommendations" title="推荐">
+    <div class="icon i-carbon-thumbs-up"></div>
+    <span>推荐</span>
+  </a>
+  <!-- <ThemeSwitch defaultTheme="dark" strategy="button">
+    <button class="title-btn theme" title="主题">
+      <div class="icon light i-carbon-sun"></div>
+      <div class="icon dark i-carbon-asleep-filled"></div>
+      <span>主题</span>
+    </button>
+  </ThemeSwitch> -->
+</header>
+
+<script is:inline>
+  // 获取当前页面路由，并使这个路由对应的按钮高亮
+  let currentPath = window.location.pathname.replace(/\/$/, '');
+  /** @type {NodeListOf<HTMLAnchorElement>} */
+  const buttons = document.querySelectorAll("a.title-btn");
+  for (const b of buttons) {
+    if (b.href.includes(currentPath)) {
+      b.classList.add("router-active");
+      break;
+    }
+  }
+</script>
+
+<style>
+  .title-btn {
+    @apply text-base;
+    @apply flex items-center gap-1;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0.25rem;
+    background: var(--bg-secondary);
+    color: var(--fg);
+    text-decoration: none;
+  }
+  .title-btn span {
+    @apply hidden sm:block;
+  }
+  .icon.light {
+    @apply block dark:hidden;
+  }
+  .icon.dark {
+    @apply block light:hidden;
+  }
+  .title-btn:hover {
+    background: var(--bg-secondary-hover);
+  }
+  .router-active {
+    background: var(--bg-secondary-hover);
+  }
+</style>

@@ -1,6 +1,6 @@
-import { sortAllEquations } from '../search/sort'
-import { GainType } from './constants'
-import { type BlessingEquation, BlessingEquationEr, BuffType } from './types'
+import { sortAllEquations } from '@/libs/search/sort'
+import { GainType } from '@/libs/du/constants'
+import { type BlessingEquation, BlessingEquationEr, BuffType } from '@/libs/du/types'
 
 const equations: Array<BlessingEquation> = sortAllEquations([
   {

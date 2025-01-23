@@ -1,12 +1,9 @@
 import clsx from 'clsx'
 import { BlessingEquationEr, type BlessingEquation } from '@/libs/du/types'
 import { For, Show, type Component } from 'solid-js'
-import {
-  GAIN_MAP,
-  PATH_ICON_MAP,
-  type GainType,
-  type Path,
-} from '@/libs/du/constants'
+import { GAIN_MAP } from '@/pages/v2.7/data/constants'
+import type { GainType } from '@/libs/du/constants'
+import { type Path, PATH_ICON_MAP } from '@/libs/du/constants'
 import Badge from '../ui/Badge'
 
 import '@/styles/blessing-bg.css'
@@ -45,19 +42,6 @@ const EquationCard: Component<{
           'h-8rem sm:h-6rem md:h-8rem',
         )}
       >
-        {/* 旧版 */}
-        {/* <img
-            src={`/equation${props.equation.icon}`}
-            alt={props.equation.name}
-            class={clsx(
-              // props.equation.er === BlessingEquationEr.Critical
-              //   ? 'w-41.5%'
-              //   : 'w-70%',
-              'h-4rem sm:h-6rem md:h-8rem',
-              'mx-a block',
-              `${Equation_BG_MAP[props.equation.er]}-img`
-            )}
-          /> */}
         <Show
           when={props.equation.er !== BlessingEquationEr.Critical}
           fallback={
@@ -69,7 +53,7 @@ const EquationCard: Component<{
                 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
                 `${Equation_BG_MAP[props.equation.er]}-img`,
               )}
-              loading='lazy'
+              loading="lazy"
             />
           }
         >
@@ -81,7 +65,7 @@ const EquationCard: Component<{
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               `${Equation_BG_MAP[props.equation.er]}-img`,
             )}
-            loading='lazy'
+            loading="lazy"
           />
           <img
             src={`/eq-simp/r${Object.keys(props.equation.need)
@@ -93,7 +77,7 @@ const EquationCard: Component<{
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               `${Equation_BG_MAP[props.equation.er]}-img`,
             )}
-            loading='lazy'
+            loading="lazy"
           />
         </Show>
       </div>
@@ -115,7 +99,7 @@ const EquationCard: Component<{
               <img
                 src={`/path${PATH_ICON_MAP[Number(it[0]) as Path]}`}
                 alt={it[0]}
-                loading='lazy'
+                loading="lazy"
                 class="w-6 h-6 light:invert"
               />
               <span>{it[1]}</span>
