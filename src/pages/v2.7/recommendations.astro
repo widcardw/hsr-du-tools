@@ -5,6 +5,7 @@ import type { BlessingEquation } from "@/libs/du/types";
 import { EQUATIONS } from "./data/equations";
 import type { Blessing } from "@/libs/du/types";
 import { BLESSINGS } from "./data/blessings";
+import { GAIN_MAP } from "./data/constants";
 import BlessingCategory from "@/components/BlessingCategory";
 import CollectionBuffDialog from "@/components/ui/Dialog/CollectionBuff";
 
@@ -93,7 +94,7 @@ const recommendations: Recommendation[] = [
           <h2>{r.title}</h2>
           <p class="text-fg-secondary text-sm">{r.desc}</p>
           {foundEq.length > 0 && (
-            <EquationCategory equations={foundEq} withTitle={false} />
+            <EquationCategory equations={foundEq} withTitle={false} gain_map={GAIN_MAP} />
           )}
           {foundBl.length > 0 && (
             <BlessingCategory

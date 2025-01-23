@@ -1,4 +1,5 @@
 ---
+import { GAIN_MAP } from "./data/constants";
 import { EQUATIONS } from "./data/equations";
 import Layout from "./ui/Layout2-7.astro";
 import EquationCategory from "@/components/EquationCategory";
@@ -8,5 +9,5 @@ const sortedEquations = sortAndSplitEquations(EQUATIONS);
 ---
 
 <Layout title="方程 差分宇宙模拟工具">
-  {sortedEquations.map((i) => <EquationCategory equations={i} />)}
+  {sortedEquations.map((i) => <EquationCategory equations={i} gain_map={GAIN_MAP} />)}
 </Layout>

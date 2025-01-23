@@ -1,10 +1,12 @@
-import type { GainType } from '@/libs/du/constants'
+import type { GainType, Side } from '@/libs/du/constants'
 import { type Component, For, createEffect, createSignal, on } from 'solid-js'
-import { allGains } from './data'
+// import { allGains } from './data'
 import GainButton from './GainButton'
 import { Dialog, DialogTrigger } from '@/components/ui/Dialog'
 
 const TagSelectDialog: Component<{
+  allGains: GainType[]
+  gain_map: Record<GainType, [Side, string, string]>
   initGains: GainType[]
   onChange: (gains: GainType[]) => void
 }> = (props) => {
@@ -41,12 +43,13 @@ const TagSelectDialog: Component<{
     >
       <h3 class="text-fg">标签列表</h3>
       <div class="max-h-400px of-y-auto">
-        <For each={allGains}>
+        <For each={props.allGains}>
           {(gain) => (
             <GainButton
               pressed={selectedGains().includes(gain)}
               gain={gain}
               onChange={(v) => tempGainChange(gain, v)}
+              gain_map={props.gain_map}
             />
           )}
         </For>

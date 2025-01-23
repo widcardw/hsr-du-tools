@@ -2,11 +2,13 @@ import EquationCard from '@/components/EquationCard'
 import Button from '@/components/ui/Button'
 
 import ToggleButton from '@/components/ui/ToggleButton'
-import { GAIN_MAP } from '@/pages/v2.7/data/constants'
-import { EQUATIONS } from '@/pages/v2.7/data/equations'
+// import { GAIN_MAP } from '@/pages/v2.7/data/constants'
+// import { EQUATIONS } from '@/pages/v2.7/data/equations'
 import {
   BlessingEquationEr,
   BlessingRarity,
+  type Blessing,
+  type BlessingEquation,
   type RelatedBlessing,
   type RelatedEquation,
 } from '@/libs/du/types'
@@ -15,7 +17,7 @@ import { type Component, For, Show, createMemo, createSignal } from 'solid-js'
 
 import '@/styles/blessing-bg.css'
 import BlessingCard from '@/components/BlessingCard'
-import { SORTED_BLESSINGS } from '@/pages/v2.7/data/blessings'
+// import { SORTED_BLESSINGS } from '@/pages/v2.7/data/blessings'
 import { LAYOUT } from '@/libs/du/layout'
 import { makePersisted } from '@solid-primitives/storage'
 import BlessingRarityEnableToggle from './home-comps/BlessingRarityEnableToggle'
@@ -33,10 +35,14 @@ import {
   setEnableEqSearch,
   setErFilter,
 } from './home-comps/data'
-import type { GainType } from '@/libs/du/constants'
+import type { GainType, Side } from '@/libs/du/constants'
 
-const Home: Component = () => {
-  const MIXED_EQUATIONS = EQUATIONS.filter(
+const Home: Component<{
+  gain_map: Record<GainType, [Side, string, string]>
+  sorted_blessings: Blessing[]
+  equations: BlessingEquation[]
+}> = (props) => {
+  const MIXED_EQUATIONS = props.equations.filter(
     (i) => i.er !== BlessingEquationEr.Critical,
   )
   const [selectedGains, setSelectedGains] = createSignal<GainType[]>([])
@@ -48,6 +54,8 @@ const Home: Component = () => {
       name: 'du-layout',
     },
   )
+
+  const allGains = Object.keys(props.gain_map).map((i) => Number(i) as GainType)
 
   const relatedEquations = createMemo<RelatedEquation[]>(() => {
     if (!enableEqSearch()) return []
@@ -80,12 +88,12 @@ const Home: Component = () => {
   const relatedBlessings = createMemo<RelatedBlessing[]>(() => {
     if (!enableBlSearch()) return []
     if (selectedGains().length === 0)
-      return SORTED_BLESSINGS.filter((i) => blRarityFilter[i.rarity])
+      return props.sorted_blessings.filter((i) => blRarityFilter[i.rarity])
 
     const sg = selectedGains()
     const mg = mustContainGains()
     const filteredBlessings: RelatedBlessing[] = []
-    for (const bl of SORTED_BLESSINGS) {
+    for (const bl of props.sorted_blessings) {
       const intersection = bl.rel.filter((g) => {
         if (mg.length > 0 && mg.some((j) => !bl.rel.includes(j))) return false
         return sg.includes(g)
@@ -124,8 +132,10 @@ const Home: Component = () => {
       <div class="grid grid-cols-3 md:grid-cols-5 gap-2 justify-center my-4">
         {/* 标签选择对话框 */}
         <TagSelectDialog
+          allGains={allGains}
           initGains={selectedGains()}
           onChange={setSelectedGains}
+          gain_map={props.gain_map}
         />
         {/* 关键字数量 */}
         <TagIntersectionCntField initCnt={interCnt()} onChange={setInterCnt} />
@@ -134,6 +144,7 @@ const Home: Component = () => {
           initGains={selectedGains()}
           mustContainGains={mustContainGains()}
           onChange={setMustContainGains}
+          gain_map={props.gain_map}
         />
 
         {/* 清空 */}
@@ -251,8 +262,8 @@ const Home: Component = () => {
                 mustContainGains().includes(gain) && 'blessing-gray',
               )}
             >
-              <img src={GAIN_MAP[gain][2]} alt="" class="w-5 h-5" loading='lazy' />
-              <span>{GAIN_MAP[gain][1]}</span>
+              <img src={props.gain_map[gain][2]} alt="" class="w-5 h-5" loading='lazy' />
+              <span>{props.gain_map[gain][1]}</span>
               <div
                 class="cursor-pointer i-carbon-close"
                 onClick={() =>
@@ -290,6 +301,7 @@ const Home: Component = () => {
                     hilitedTag={equation.intersection}
                     noDesc={eqNoDesc()}
                     onTagClick={onQueriedTagClick}
+                    gain_map={props.gain_map}
                   />
                 </div>
               )}

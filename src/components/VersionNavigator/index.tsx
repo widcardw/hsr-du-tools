@@ -12,7 +12,7 @@ const VersionNavigator: Component<{ versions: Array<string> }> = (props) => {
       trigger={
         <DialogTrigger class="flex items-center gap-1">
           <div class="i-carbon-version" />
-          <span class="hidden sm:block">{curVer()}</span>
+          <span class="hidden sm:block">版本</span>
         </DialogTrigger>
       }
     >

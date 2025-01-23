@@ -1,4 +1,4 @@
-import { PATH_MAP } from '@/libs/du/constants'
+import { type GainType, PATH_MAP, type Side } from '@/libs/du/constants'
 import type { BlessingEquation } from '@/libs/du/types'
 import clsx from 'clsx'
 import { type Component, For, Show } from 'solid-js'
@@ -7,6 +7,7 @@ import EquationCard from '../EquationCard'
 const EquationCategory: Component<{
   equations: BlessingEquation[]
   withTitle?: boolean
+  gain_map: Record<GainType, [Side, string, string]>
 }> = (props) => {
   return (
     <Show
@@ -27,7 +28,9 @@ const EquationCategory: Component<{
           )}
         >
           <For each={props.equations}>
-            {(equation) => <EquationCard equation={equation} />}
+            {(equation) => (
+              <EquationCard equation={equation} gain_map={props.gain_map} />
+            )}
           </For>
         </div>
       </div>

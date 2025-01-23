@@ -1,8 +1,16 @@
 ---
 import Layout from "./ui/Layout2-7.astro";
 import ContentSearch from "@/components/ContentSearch";
+import { GAIN_MAP } from "./data/constants";
+import { EQUATIONS } from "./data/equations";
+import { SORTED_BLESSINGS } from "./data/blessings";
 ---
 
 <Layout title="主页 差分宇宙模拟工具">
-  <ContentSearch client:idle />
+  <ContentSearch
+    gain_map={GAIN_MAP}
+    equations={EQUATIONS}
+    sorted_blessings={SORTED_BLESSINGS}
+    client:idle
+  />
 </Layout>

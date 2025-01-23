@@ -1,11 +1,11 @@
-import { GAIN_MAP } from '@/pages/v2.7/data/constants'
+// import { GAIN_MAP } from '@/pages/v2.7/data/constants'
 import { BlessingEquationEr, BlessingRarity } from '@/libs/du/types'
 import { makePersisted } from '@solid-primitives/storage'
 import { createSignal } from 'solid-js'
 import { createStore } from 'solid-js/store'
-import type { GainType } from '@/libs/du/constants'
+// import type { GainType } from '@/libs/du/constants'
 
-const allGains = Object.keys(GAIN_MAP).map((i) => Number(i) as GainType)
+// const allGains = Object.keys(GAIN_MAP).map((i) => Number(i) as GainType)
 
 /** 方程等级过滤 */
 const [erFilter, setErFilter] = makePersisted(
@@ -38,7 +38,7 @@ const [enableBlSearch, setEnableBlSearch] = makePersisted(createSignal(false), {
 })
 
 export {
-  allGains,
+  // allGains,
   erFilter,
   setErFilter,
   blRarityFilter,

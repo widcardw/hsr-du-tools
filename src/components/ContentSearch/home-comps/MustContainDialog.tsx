@@ -1,4 +1,4 @@
-import type { GainType } from '@/libs/du/constants'
+import type { GainType, Side } from '@/libs/du/constants'
 import clsx from 'clsx'
 import {
   type Component,
@@ -15,6 +15,7 @@ const MustContainDialog: Component<{
   initGains: GainType[]
   mustContainGains: GainType[]
   onChange: (gains: GainType[]) => void
+  gain_map: Record<GainType, [Side, string, string]>
 }> = (props) => {
   const [_dlgOpen, setDlgOpen] = createSignal(false)
   const [selectedGains, setSelectedGains] = createSignal<GainType[]>(
@@ -93,6 +94,7 @@ const MustContainDialog: Component<{
                 pressed={mustContainGains().includes(gain)}
                 gain={gain}
                 onChange={(v) => tempAddMustContainGainChange(gain, v)}
+                gain_map={props.gain_map}
               />
             )}
           </For>
