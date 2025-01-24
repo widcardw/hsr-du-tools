@@ -1,7 +1,19 @@
 ---
 import Layout from "./_ui/Layout3-1.astro";
+import ContentSearch from "@/components/ContentSearch";
+import { GAIN_MAP } from "./_data/gains";
+import { equations } from "./_data/equations";
+import { blessings } from "./_data/blessings";
+import { sortAllBlessings, sortAllEquations } from "@/libs/search/sort";
+const EQUATIONS = sortAllEquations(equations)
+const SORTED_BLESSINGS = sortAllBlessings(blessings)
 ---
 
-<Layout title="v3.1">
-  施工中，可先查看祝福、方程标签。
+<Layout title="主页 差分宇宙模拟工具">
+  <ContentSearch
+    gain_map={GAIN_MAP}
+    equations={EQUATIONS}
+    sorted_blessings={SORTED_BLESSINGS}
+    client:idle
+  />
 </Layout>

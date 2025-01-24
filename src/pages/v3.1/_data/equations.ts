@@ -1,4 +1,5 @@
 import { type BlessingEquation, BuffType } from '@/libs/du/types'
+import { GainType } from './gains'
 
 const equations: BlessingEquation[] = [
   {
@@ -13,7 +14,7 @@ const equations: BlessingEquation[] = [
       '121': 16,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Freeze, GainType.AdditionalDmg],
     er: 16,
   },
   {
@@ -28,7 +29,7 @@ const equations: BlessingEquation[] = [
       '122': 16,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.DoT, GainType.DotDetonate],
     er: 16,
   },
   {
@@ -43,7 +44,7 @@ const equations: BlessingEquation[] = [
       '124': 16,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.SuccessiveAction],
     er: 16,
   },
   {
@@ -58,7 +59,7 @@ const equations: BlessingEquation[] = [
       '125': 16,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.ConsumeHp, GainType.HEAL, GainType.Healing],
     er: 16,
   },
   {
@@ -73,7 +74,7 @@ const equations: BlessingEquation[] = [
       '126': 16,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.FollowUpAtk, GainType.Aftertaste],
     er: 16,
   },
   {
@@ -88,7 +89,7 @@ const equations: BlessingEquation[] = [
       '127': 16,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.SuccessiveAction, GainType.Kill],
     er: 16,
   },
   {
@@ -103,7 +104,7 @@ const equations: BlessingEquation[] = [
       '128': 16,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.DamageSpread, GainType.ENERGY_Charge],
     er: 16,
   },
   {
@@ -118,7 +119,7 @@ const equations: BlessingEquation[] = [
       '129': 16,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.MakeBreak],
     er: 16,
   },
   {
@@ -134,7 +135,7 @@ const equations: BlessingEquation[] = [
       '125': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.BreakDmg, GainType.Harmony, GainType.Destruction, GainType.DestructionCharge, GainType.AdditionalDmg],
     er: 8,
   },
   {
@@ -150,7 +151,7 @@ const equations: BlessingEquation[] = [
       '122': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.MakeBreak, GainType.Harmony, GainType.HitWeak, GainType.DoT, GainType.DotDetonate],
     er: 8,
   },
   {
@@ -166,7 +167,7 @@ const equations: BlessingEquation[] = [
       '125': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Destruction, GainType.AdditionalDmg, GainType.Rememberance, GainType.DestructionCharge],
     er: 8,
   },
   {
@@ -182,7 +183,7 @@ const equations: BlessingEquation[] = [
       '124': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.SuccessiveAction, GainType.AdditionalDmg, GainType.Rememberance],
     er: 8,
   },
   {
@@ -198,7 +199,7 @@ const equations: BlessingEquation[] = [
       '121': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Freeze, GainType.DoT, GainType.DamageSpread, GainType.Rememberance, GainType.Kill, GainType.AdditionalDmg],
     er: 8,
   },
   {
@@ -214,7 +215,7 @@ const equations: BlessingEquation[] = [
       '128': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.UltimateAtk, GainType.ENERGY_Charge, GainType.Nihility],
     er: 8,
   },
   {
@@ -230,7 +231,7 @@ const equations: BlessingEquation[] = [
       '128': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.BeHit, GainType.CounterAtk, GainType.UltimateAtk, GainType.Destruction],
     er: 8,
   },
   {
@@ -246,7 +247,7 @@ const equations: BlessingEquation[] = [
       '126': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.HEAL, GainType.ConsumeHp, GainType.Aftertaste, GainType.Healing],
     er: 8,
   },
   {
@@ -262,7 +263,7 @@ const equations: BlessingEquation[] = [
       '124': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.FollowUpAtk, GainType.Aftertaste, GainType.SuccessiveAction],
     er: 8,
   },
   {
@@ -278,7 +279,7 @@ const equations: BlessingEquation[] = [
       '129': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.FollowUpAtk, GainType.CutToughness, GainType.MakeBreak, GainType.Aftertaste],
     er: 8,
   },
   {
@@ -294,7 +295,7 @@ const equations: BlessingEquation[] = [
       '127': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.SuccessiveAction, GainType.Kill, GainType.AdditionalDmg, GainType.CRITDMG, GainType.SPD, GainType.PropagationBless],
     er: 8,
   },
   {
@@ -310,7 +311,7 @@ const equations: BlessingEquation[] = [
       '122': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.CriticalBoost, GainType.Kill, GainType.AdditionalDmg, GainType.Nihility, GainType.NihilityCharge],
     er: 8,
   },
   {
@@ -326,7 +327,7 @@ const equations: BlessingEquation[] = [
       '127': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.UltimateAtk, GainType.AdditionalDmg, GainType.NomralAtk, GainType.SkillAtk],
     er: 8,
   },
   {
@@ -342,7 +343,7 @@ const equations: BlessingEquation[] = [
       '126': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.UltimateAtk, GainType.Aftertaste, GainType.Brain_in_a_Vat],
     er: 8,
   },
   {
@@ -358,7 +359,7 @@ const equations: BlessingEquation[] = [
       '121': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.PropagationBless, GainType.PropagationBlessCharge, GainType.AdditionalDmg, GainType.Rememberance],
     er: 8,
   },
   {
@@ -374,7 +375,7 @@ const equations: BlessingEquation[] = [
       '129': 4,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.PropagationBless, GainType.MON_act_delay, GainType.AdditionalDmg, GainType.MakeBreak],
     er: 8,
   },
   {
@@ -390,7 +391,7 @@ const equations: BlessingEquation[] = [
       '127': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.HitWeak, GainType.SuperBreakDmg, GainType.PropagationBless],
     er: 6,
   },
   {
@@ -406,7 +407,7 @@ const equations: BlessingEquation[] = [
       '125': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.BREAK, GainType.Shield, GainType.Destruction],
     er: 6,
   },
   {
@@ -422,7 +423,7 @@ const equations: BlessingEquation[] = [
       '122': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Harmony, GainType.MON_in_NEG_EFFECT, GainType.AdditionalDmg],
     er: 6,
   },
   {
@@ -438,7 +439,7 @@ const equations: BlessingEquation[] = [
       '124': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.BeHit, GainType.SPD, GainType.CriticalBoost],
     er: 6,
   },
   {
@@ -454,7 +455,7 @@ const equations: BlessingEquation[] = [
       '129': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Rememberance, GainType.HEAL, GainType.MakeBreak],
     er: 6,
   },
   {
@@ -470,7 +471,7 @@ const equations: BlessingEquation[] = [
       '126': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Rememberance, GainType.ATK, GainType.FollowUpAtk, GainType.Aftertaste],
     er: 6,
   },
   {
@@ -486,7 +487,7 @@ const equations: BlessingEquation[] = [
       '124': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.CRIT, GainType.DoT],
     er: 6,
   },
   {
@@ -502,7 +503,7 @@ const equations: BlessingEquation[] = [
       '126': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Nihility, GainType.FollowUpAtk],
     er: 6,
   },
   {
@@ -518,7 +519,7 @@ const equations: BlessingEquation[] = [
       '128': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.UltimateAtk, GainType.Nihility, GainType.NihilityCharge],
     er: 6,
   },
   {
@@ -534,7 +535,7 @@ const equations: BlessingEquation[] = [
       '127': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.DestructionCharge, GainType.Destruction, GainType.PropagationBless, GainType.NomralAtk, GainType.SkillAtk],
     er: 6,
   },
   {
@@ -550,7 +551,7 @@ const equations: BlessingEquation[] = [
       '122': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Destruction, GainType.DoT],
     er: 6,
   },
   {
@@ -566,7 +567,7 @@ const equations: BlessingEquation[] = [
       '129': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.MakeBreak, GainType.DestructionCharge, GainType.Destruction],
     er: 6,
   },
   {
@@ -582,7 +583,7 @@ const equations: BlessingEquation[] = [
       '122': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.FollowUpAtk, GainType.MON_in_NEG_EFFECT],
     er: 6,
   },
   {
@@ -598,7 +599,7 @@ const equations: BlessingEquation[] = [
       '128': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.FollowUpAtk, GainType.Brain_in_a_Vat, GainType.Aftertaste],
     er: 6,
   },
   {
@@ -614,7 +615,7 @@ const equations: BlessingEquation[] = [
       '125': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.ConsumeHp, GainType.Aftertaste, GainType.Healing],
     er: 6,
   },
   {
@@ -630,7 +631,7 @@ const equations: BlessingEquation[] = [
       '126': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.CRIT, GainType.AdditionalDmg, GainType.FollowUpAtk, GainType.Aftertaste],
     er: 6,
   },
   {
@@ -646,7 +647,7 @@ const equations: BlessingEquation[] = [
       '127': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.SuccessiveAction, GainType.DMG_Gain, GainType.PropagationBless],
     er: 6,
   },
   {
@@ -662,7 +663,7 @@ const equations: BlessingEquation[] = [
       '121': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.CriticalBoost, GainType.SPD],
     er: 6,
   },
   {
@@ -678,7 +679,7 @@ const equations: BlessingEquation[] = [
       '124': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.MakeBreak, GainType.Brain_in_a_Vat_Charge, GainType.Brain_in_a_Vat, GainType.ENERGY_Charge, GainType.Kill],
     er: 6,
   },
   {
@@ -694,7 +695,7 @@ const equations: BlessingEquation[] = [
       '125': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.UltimateAtk, GainType.ConsumeHp, GainType.DMG_Gain],
     er: 6,
   },
   {
@@ -710,7 +711,7 @@ const equations: BlessingEquation[] = [
       '121': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.MemElfAtk, GainType.Brain_in_a_Vat_Charge, GainType.Brain_in_a_Vat, GainType.UltimateAtk, GainType.DMG_Gain],
     er: 6,
   },
   {
@@ -726,7 +727,7 @@ const equations: BlessingEquation[] = [
       '128': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.PropagationBless, GainType.UltimateAtk, GainType.AdditionalDmg],
     er: 6,
   },
   {
@@ -742,7 +743,7 @@ const equations: BlessingEquation[] = [
       '121': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.PropagationBless, GainType.MemElfAtk],
     er: 6,
   },
   {
@@ -758,7 +759,7 @@ const equations: BlessingEquation[] = [
       '129': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.MakeBreak, GainType.Point, GainType.NomralAtk, GainType.SkillAtk, GainType.CutToughness, GainType.Harmony],
     er: 6,
   },
   {
@@ -774,7 +775,7 @@ const equations: BlessingEquation[] = [
       '124': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.BreakEfficiency, GainType.MakeBreak, GainType.SPD, GainType.ATK],
     er: 4,
   },
   {
@@ -790,7 +791,7 @@ const equations: BlessingEquation[] = [
       '126': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Harmony, GainType.FollowUpAtk],
     er: 4,
   },
   {
@@ -806,7 +807,7 @@ const equations: BlessingEquation[] = [
       '122': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.MON_in_NEG_EFFECT, GainType.Harmony, GainType.HitWeak],
     er: 4,
   },
   {
@@ -822,7 +823,7 @@ const equations: BlessingEquation[] = [
       '121': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Rememberance, GainType.BREAK],
     er: 4,
   },
   {
@@ -838,7 +839,7 @@ const equations: BlessingEquation[] = [
       '129': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Rememberance, GainType.DMG_Gain],
     er: 4,
   },
   {
@@ -854,7 +855,7 @@ const equations: BlessingEquation[] = [
       '127': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.MemElfAtk, GainType.NomralAtk, GainType.SkillAtk],
     er: 4,
   },
   {
@@ -870,7 +871,7 @@ const equations: BlessingEquation[] = [
       '124': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.SPD, GainType.CRITDMG],
     er: 4,
   },
   {
@@ -886,7 +887,7 @@ const equations: BlessingEquation[] = [
       '128': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Rememberance, GainType.UltimateAtk, GainType.MemElfAtk],
     er: 4,
   },
   {
@@ -902,7 +903,7 @@ const equations: BlessingEquation[] = [
       '125': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.DoT],
     er: 4,
   },
   {
@@ -918,7 +919,7 @@ const equations: BlessingEquation[] = [
       '121': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.DoT_By_Char, GainType.Rememberance, GainType.DoT],
     er: 4,
   },
   {
@@ -934,7 +935,7 @@ const equations: BlessingEquation[] = [
       '128': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Kill, GainType.DoT, GainType.ENERGY_Charge],
     er: 4,
   },
   {
@@ -950,7 +951,7 @@ const equations: BlessingEquation[] = [
       '127': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Nihility, GainType.NihilityCharge, GainType.Point],
     er: 4,
   },
   {
@@ -966,7 +967,7 @@ const equations: BlessingEquation[] = [
       '126': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Destruction, GainType.FollowUpAtk, GainType.Healing],
     er: 4,
   },
   {
@@ -975,14 +976,14 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_6.png',
     Name: '金血愚子',
-    Desc: "敌方目标被消灭时，使【<u class='infou'>耀变</u>】 充能效率提高<color style='color:#f29e38;'> 15% </color>，最多叠加<color style='color:#f29e38;'> 4 </color>层。并使我方全体回复等同于生命上限<color style='color:#f29e38;'> 30% </color>的生命值。",
+    Desc: "敌方目标被消灭时，使【<u class='infou'>耀变</u>】充能效率提高<color style='color:#f29e38;'> 15% </color>，最多叠加<color style='color:#f29e38;'> 4 </color>层。并使我方全体回复等同于生命上限<color style='color:#f29e38;'> 30% </color>的生命值。",
     Effects: [61000051],
     Need: {
       '125': 2,
       '124': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Kill, GainType.DestructionCharge, GainType.Destruction, GainType.Healing],
     er: 4,
   },
   {
@@ -998,7 +999,7 @@ const equations: BlessingEquation[] = [
       '122': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.RESIST, GainType.Destruction, GainType.AdditionalDmg],
     er: 4,
   },
   {
@@ -1014,7 +1015,7 @@ const equations: BlessingEquation[] = [
       '129': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Shield, GainType.MakeBreak],
     er: 4,
   },
   {
@@ -1030,7 +1031,7 @@ const equations: BlessingEquation[] = [
       '125': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.FollowUpAtk, GainType.Destruction],
     er: 4,
   },
   {
@@ -1040,7 +1041,7 @@ const equations: BlessingEquation[] = [
     Icon: '/RogueFormulaIcon_Main_7.png',
     Name: '逐浪海妖',
     Desc: "我方目标造成的追加攻击伤害提高<color style='color:#f29e38;'> 50% </color>，发动追加攻击后，有<color style='color:#f29e38;'> 30% </color>固定概率恢复1个战技点。",
-    Effects: [],
+    Effects: [GainType.FollowUpAtk, GainType.Aftertaste, GainType.Point],
     Need: {
       '126': 2,
       '127': 2,
@@ -1062,7 +1063,7 @@ const equations: BlessingEquation[] = [
       '128': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.UltimateAtk, GainType.Aftertaste],
     er: 4,
   },
   {
@@ -1078,7 +1079,7 @@ const equations: BlessingEquation[] = [
       '129': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Aftertaste, GainType.CutToughness],
     er: 4,
   },
   {
@@ -1094,7 +1095,7 @@ const equations: BlessingEquation[] = [
       '128': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.CriticalBoost, GainType.CRITDMG],
     er: 4,
   },
   {
@@ -1110,7 +1111,7 @@ const equations: BlessingEquation[] = [
       '129': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.HitWeak, GainType.CriticalBoost, GainType.CRIT, GainType.CRITDMG],
     er: 4,
   },
   {
@@ -1126,7 +1127,7 @@ const equations: BlessingEquation[] = [
       '125': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Shield, GainType.BeHit],
     er: 4,
   },
   {
@@ -1142,7 +1143,7 @@ const equations: BlessingEquation[] = [
       '122': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Nihility, GainType.CRITDMG],
     er: 4,
   },
   {
@@ -1158,7 +1159,7 @@ const equations: BlessingEquation[] = [
       '127': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Point, GainType.UltimateAtk],
     er: 4,
   },
   {
@@ -1174,7 +1175,7 @@ const equations: BlessingEquation[] = [
       '121': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.UltimateAtk, GainType.Rememberance, GainType.SPD, GainType.ATK],
     er: 4,
   },
   {
@@ -1190,7 +1191,7 @@ const equations: BlessingEquation[] = [
       '126': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.UltimateAtk, GainType.ENERGY_Charge, GainType.ATK, GainType.Aftertaste],
     er: 4,
   },
   {
@@ -1206,7 +1207,7 @@ const equations: BlessingEquation[] = [
       '124': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Brain_in_a_Vat, GainType.ATK],
     er: 4,
   },
   {
@@ -1222,7 +1223,7 @@ const equations: BlessingEquation[] = [
       '125': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.NomralAtk, GainType.SkillAtk, GainType.ConsumeHp, GainType.Point],
     er: 4,
   },
   {
@@ -1238,7 +1239,7 @@ const equations: BlessingEquation[] = [
       '122': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.PropagationBless, GainType.AdditionalDmg, GainType.MON_in_NEG_EFFECT],
     er: 4,
   },
   {
@@ -1254,7 +1255,7 @@ const equations: BlessingEquation[] = [
       '121': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.MemElfAtk, GainType.PropagationBlessCharge, GainType.PropagationBless, GainType.Point],
     er: 4,
   },
   {
@@ -1270,7 +1271,7 @@ const equations: BlessingEquation[] = [
       '126': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.Point, GainType.Aftertaste],
     er: 4,
   },
 ]
