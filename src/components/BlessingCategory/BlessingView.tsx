@@ -3,7 +3,7 @@ import BlessingCategory from './index'
 import { type Component, For, createSignal } from 'solid-js'
 import ToggleButton from '@/components/ui/ToggleButton'
 import type { Blessing } from '@/libs/du/types'
-import type { GainMapType, Side } from '@/libs/du/constants'
+import type { GainMapType } from '@/libs/du/constants'
 
 const BlessingView: Component<{
   blessingCategory: Blessing[][]

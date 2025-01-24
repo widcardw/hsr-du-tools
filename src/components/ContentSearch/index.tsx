@@ -35,7 +35,7 @@ import {
   setEnableEqSearch,
   setErFilter,
 } from './home-comps/data'
-import type { GainMapType, GainType, Side } from '@/libs/du/constants'
+import type { GainMapType } from '@/libs/du/constants'
 
 const Home: Component<{
   gain_map: GainMapType<number>
@@ -45,9 +45,9 @@ const Home: Component<{
   const MIXED_EQUATIONS = props.equations.filter(
     (i) => i.er !== BlessingEquationEr.Critical,
   )
-  const [selectedGains, setSelectedGains] = createSignal<GainType[]>([])
+  const [selectedGains, setSelectedGains] = createSignal<number[]>([])
   const [interCnt, setInterCnt] = createSignal(1)
-  const [mustContainGains, setMustContainGains] = createSignal<GainType[]>([])
+  const [mustContainGains, setMustContainGains] = createSignal<number[]>([])
   const [layout, setLayout] = makePersisted(
     createSignal<keyof typeof LAYOUT>(0),
     {
@@ -55,7 +55,7 @@ const Home: Component<{
     },
   )
 
-  const allGains = Object.keys(props.gain_map).map((i) => Number(i) as GainType)
+  const allGains = Object.keys(props.gain_map).map((i) => Number(i) as number)
 
   const relatedEquations = createMemo<RelatedEquation[]>(() => {
     if (!enableEqSearch()) return []
@@ -108,7 +108,7 @@ const Home: Component<{
     return filteredBlessings
   })
 
-  const onQueriedTagClick = (gain: GainType, v: boolean) => {
+  const onQueriedTagClick = (gain: number, v: boolean) => {
     if (v) setSelectedGains((p) => [...p, gain])
     else {
       setSelectedGains((p) => p.filter((i) => i !== gain))

@@ -1,5 +1,5 @@
 import ToggleButton from '@/components/ui/ToggleButton'
-import type { GainMapType, GainType } from '@/libs/du/constants'
+import type { GainMapType } from '@/libs/du/constants'
 // import { GAIN_MAP } from '@/pages/v2.7/data/constants'
 
 import { type Component, createEffect, createSignal, on } from 'solid-js'

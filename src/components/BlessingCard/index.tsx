@@ -1,5 +1,5 @@
 // import { GAIN_MAP } from '@/pages/v2.7/_data/constants'
-import { type GainMapType, type GainType, PATH_MAP, type Side } from '@/libs/du/constants'
+import { type GainMapType, PATH_MAP } from '@/libs/du/constants'
 import { type Blessing, BlessingRarity } from '@/libs/du/types'
 import clsx from 'clsx'
 import {

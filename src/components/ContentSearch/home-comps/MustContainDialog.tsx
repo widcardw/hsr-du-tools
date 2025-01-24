@@ -1,4 +1,4 @@
-import type { GainMapType, GainType, Side } from '@/libs/du/constants'
+import type { GainMapType } from '@/libs/du/constants'
 import clsx from 'clsx'
 import {
   type Component,
@@ -48,7 +48,7 @@ const MustContainDialog: Component<{
     ),
   )
 
-  const tempAddMustContainGainChange = (gain: GainType, v: boolean) => {
+  const tempAddMustContainGainChange = (gain: number, v: boolean) => {
     if (v) setMustContainGains((prev) => [...prev, gain])
     else setMustContainGains((prev) => prev.filter((i) => i !== gain))
   }

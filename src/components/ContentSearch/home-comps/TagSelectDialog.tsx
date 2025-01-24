@@ -1,4 +1,4 @@
-import type { GainMapType, GainType, Side } from '@/libs/du/constants'
+import type { GainMapType } from '@/libs/du/constants'
 import { type Component, For, createEffect, createSignal, on } from 'solid-js'
 // import { allGains } from './data'
 import GainButton from './GainButton'

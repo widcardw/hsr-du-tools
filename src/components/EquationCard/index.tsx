@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 import { BlessingEquationEr, type BlessingEquation } from '@/libs/du/types'
 import { For, Show, type Component } from 'solid-js'
-import { GAIN_MAP } from '@/pages/v2.7/_data/constants'
-import type { GainMapType, GainType, Side } from '@/libs/du/constants'
+// import { GAIN_MAP } from '@/pages/v2.7/_data/constants'
+import type { GainMapType } from '@/libs/du/constants'
 import { type Path, PATH_ICON_MAP } from '@/libs/du/constants'
 import Badge from '../ui/Badge'
 
@@ -20,9 +20,9 @@ const Equation_BG_MAP = {
 
 const EquationCard: Component<{
   equation: BlessingEquation
-  hilitedTag?: GainType[]
+  hilitedTag?: number[]
   noDesc?: boolean
-  onTagClick?: (gain: GainType, v: boolean) => void
+  onTagClick?: (gain: number, v: boolean) => void
   gain_map: GainMapType<number>
 }> = (props) => {
   return (

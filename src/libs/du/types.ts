@@ -1,4 +1,3 @@
-import type { BlessingExtra } from './constants'
 import type { Path } from './constants'
 
 enum BuffType {
