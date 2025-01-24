@@ -1,4 +1,4 @@
-import type { BlessingExtra, GainType } from './constants'
+import type { BlessingExtra } from './constants'
 import type { Path } from './constants'
 
 enum BuffType {
@@ -32,50 +32,50 @@ enum CurioType {
 }
 
 interface Buff {
-  type: BuffType
+  Type: BuffType
 }
 
 interface Blessing extends Buff {
   _id: number
-  type: BuffType.Blessing
+  Type: BuffType.Blessing
   /** 祝福等级 */
-  rarity: BlessingRarity
-  icon: string
-  name: string
+  Rarity: BlessingRarity
+  Icon: string
+  Name: string
   /** 命途 */
-  path: Path
+  Path: Path
   /** 祝福效果（强化前/强化后） */
-  desc: [string, string]
-  effects: Array<BlessingExtra>
+  Desc: [string, string]
+  Effects: Array<number>
   /** （手动）相关增益 */
-  rel: GainType[]
+  rel: number[] // GainType[]
 }
 
 interface BlessingEquation extends Buff {
   _id: number
-  path: Path
-  type: BuffType.Equation
-  rarity: BlessingRarity
-  icon?: string
-  name: string
-  desc: string
-  effects: Array<BlessingExtra>
+  Path: Path
+  Type: BuffType.Equation
+  Rarity: BlessingRarity
+  Icon?: string
+  Name: string
+  Desc: string
+  Effects: Array<number>
   /** （手动）相关增益 */
-  rel: GainType[]
+  rel: number[]
   /** 方程等级 */
   er: BlessingEquationEr
   /** 方程所需祝福数量 */
-  need: {
+  Need: {
     [k in Path]?: number
   }
 }
 
 type RelatedEquation = BlessingEquation & {
-  intersection?: GainType[]
+  intersection?: number[]
 }
 
 type RelatedBlessing = Blessing & {
-  intersection?: GainType[]
+  intersection?: number[]
 }
 
 interface Curio {

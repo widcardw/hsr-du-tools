@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 import { BlessingEquationEr, type BlessingEquation } from '@/libs/du/types'
 import { For, Show, type Component } from 'solid-js'
-import { GAIN_MAP } from '@/pages/v2.7/data/constants'
-import type { GainType, Side } from '@/libs/du/constants'
+import { GAIN_MAP } from '@/pages/v2.7/_data/constants'
+import type { GainMapType, GainType, Side } from '@/libs/du/constants'
 import { type Path, PATH_ICON_MAP } from '@/libs/du/constants'
 import Badge from '../ui/Badge'
 
@@ -23,7 +23,7 @@ const EquationCard: Component<{
   hilitedTag?: GainType[]
   noDesc?: boolean
   onTagClick?: (gain: GainType, v: boolean) => void
-  gain_map: Record<GainType, [Side, string, string]>
+  gain_map: GainMapType<number>
 }> = (props) => {
   return (
     <div
@@ -47,8 +47,8 @@ const EquationCard: Component<{
           when={props.equation.er !== BlessingEquationEr.Critical}
           fallback={
             <img
-              src={`/hoshinokami/${props.equation.path}.webp`}
-              alt={props.equation.name}
+              src={`/hoshinokami/${props.equation.Path}.webp`}
+              alt={props.equation.Name}
               class={clsx(
                 'w-70%',
                 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
@@ -59,8 +59,8 @@ const EquationCard: Component<{
           }
         >
           <img
-            src={`/eq-simp/l${props.equation.path}.webp`}
-            alt={props.equation.name}
+            src={`/eq-simp/l${props.equation.Path}.webp`}
+            alt={props.equation.Name}
             class={clsx(
               'w-70%',
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
@@ -69,10 +69,10 @@ const EquationCard: Component<{
             loading="lazy"
           />
           <img
-            src={`/eq-simp/r${Object.keys(props.equation.need)
+            src={`/eq-simp/r${Object.keys(props.equation.Need)
               .map((i) => Number(i))
-              .find((i) => i !== props.equation.path)}.webp`}
-            alt={props.equation.name}
+              .find((i) => i !== props.equation.Path)}.webp`}
+            alt={props.equation.Name}
             class={clsx(
               'w-70%',
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
@@ -86,13 +86,13 @@ const EquationCard: Component<{
       <div
         class={clsx('font-bold text-center', 'whitespace-nowrap', 'truncate')}
       >
-        {props.equation.name}
+        {props.equation.Name}
       </div>
       {/* 所需祝福数量 */}
       <div class="flex justify-center gap-1 items-center">
         <For
-          each={Object.entries(props.equation.need).sort((_, b) =>
-            Number(b[0]) === props.equation.path ? 1 : -1,
+          each={Object.entries(props.equation.Need).sort((_, b) =>
+            Number(b[0]) === props.equation.Path ? 1 : -1,
           )}
         >
           {(it) => (
@@ -112,7 +112,7 @@ const EquationCard: Component<{
       <Show when={props.noDesc !== true}>
         <div
           class={clsx('text-sm text-center', 'h-7rem of-y-auto')}
-          innerHTML={props.equation.desc}
+          innerHTML={props.equation.Desc}
         />
       </Show>
 

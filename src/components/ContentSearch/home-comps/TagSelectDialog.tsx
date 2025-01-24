@@ -1,16 +1,16 @@
-import type { GainType, Side } from '@/libs/du/constants'
+import type { GainMapType, GainType, Side } from '@/libs/du/constants'
 import { type Component, For, createEffect, createSignal, on } from 'solid-js'
 // import { allGains } from './data'
 import GainButton from './GainButton'
 import { Dialog, DialogTrigger } from '@/components/ui/Dialog'
 
 const TagSelectDialog: Component<{
-  allGains: GainType[]
-  gain_map: Record<GainType, [Side, string, string]>
-  initGains: GainType[]
-  onChange: (gains: GainType[]) => void
+  allGains: number[] // GainType[]
+  gain_map: GainMapType<number>
+  initGains: number[]
+  onChange: (gains: number[]) => void
 }> = (props) => {
-  const [selectedGains, setSelectedGains] = createSignal<GainType[]>(
+  const [selectedGains, setSelectedGains] = createSignal<number[]>(
     props.initGains,
   )
 
@@ -21,7 +21,7 @@ const TagSelectDialog: Component<{
     ),
   )
 
-  const tempGainChange = (gain: GainType, v: boolean) => {
+  const tempGainChange = (gain: number, v: boolean) => {
     if (v) {
       setSelectedGains((gains) => [...gains, gain])
     } else {

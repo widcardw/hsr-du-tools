@@ -1,4 +1,4 @@
-import { type GainType, PATH_MAP, type Side } from '@/libs/du/constants'
+import { type GainMapType, PATH_MAP } from '@/libs/du/constants'
 import type { BlessingEquation } from '@/libs/du/types'
 import clsx from 'clsx'
 import { type Component, For, Show } from 'solid-js'
@@ -7,7 +7,7 @@ import EquationCard from '../EquationCard'
 const EquationCategory: Component<{
   equations: BlessingEquation[]
   withTitle?: boolean
-  gain_map: Record<GainType, [Side, string, string]>
+  gain_map: GainMapType<number>
 }> = (props) => {
   return (
     <Show
@@ -17,7 +17,7 @@ const EquationCategory: Component<{
       <div class="max-w-1200px mx-auto">
         <Show when={props.withTitle !== false}>
           <div class="text-2xl font-bold text-center my-4">
-            {PATH_MAP[props.equations[0].path]}
+            {PATH_MAP[props.equations[0].Path]}
           </div>
         </Show>
         <div

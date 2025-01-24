@@ -1,6 +1,7 @@
-import { GainType, Side, type BlessingExtra } from "@/libs/du/constants";
+import {  Side, type BlessingExtra, type GainMapType } from "@/libs/du/constants";
+import { GainType } from "./gain_types";
 
-const GAIN_MAP: Record<GainType, [Side, string, string]> = {
+const GAIN_MAP: GainMapType<GainType> = {
   [GainType.Knight]: [Side.Self, '存护', '/path/IconProfessionKnightMiddle.webp'],
   [GainType.Memory]: [Side.Self, '记忆', '/path/IconProfessionMemoryMiddle.webp'],
   [GainType.Warlock]: [Side.Self, '虚无', '/path/IconProfessionWarlockMiddle.webp'],

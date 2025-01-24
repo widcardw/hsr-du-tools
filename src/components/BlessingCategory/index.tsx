@@ -1,4 +1,4 @@
-import { PATH_MAP } from '@/libs/du/constants'
+import { type GainMapType, PATH_MAP } from '@/libs/du/constants'
 import type { Blessing } from '@/libs/du/types'
 import clsx from 'clsx'
 import {
@@ -16,6 +16,7 @@ const BlessingCategory: Component<{
   up?: boolean
   showDesc?: boolean
   withTitle?: boolean
+  gain_map: GainMapType<number>
 }> = (props) => {
   const [up, setUp] = createSignal(props.up ?? false)
   const [showDesc, setShowDesc] = createSignal(props.showDesc ?? true)
@@ -35,7 +36,7 @@ const BlessingCategory: Component<{
     <div class="my-6">
       <Show when={props.withTitle !== false}>
         <div class="text-2xl font-bold text-center my-4">
-          {PATH_MAP[props.blessings[0].path]}
+          {PATH_MAP[props.blessings[0].Path]}
         </div>
       </Show>
       <div
@@ -47,7 +48,12 @@ const BlessingCategory: Component<{
       >
         <For each={props.blessings}>
           {(blessing) => (
-            <BlessingCard blessing={blessing} up={up()} noDesc={!showDesc()} />
+            <BlessingCard
+              blessing={blessing}
+              up={up()}
+              noDesc={!showDesc()}
+              gain_map={props.gain_map}
+            />
           )}
         </For>
       </div>

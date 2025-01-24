@@ -1,0 +1,24 @@
+---
+import type { PathEffects } from "../_data/effects";
+import { PATH_MAP } from "@/libs/du/constants";
+import clsx from "clsx";
+
+interface Props {
+  item: PathEffects;
+}
+
+const { item } = Astro.props;
+---
+
+<div class="bg-bg rounded p-4 border border-solid border-bg-secondary">
+  <img
+    src={`/path/${item._id}.webp`}
+    alt={PATH_MAP[item._id]}
+    class={clsx("w-60px sm:w-80px md:w-100px block mx-auto", "light:invert")}
+  />
+  <p class="font-bold">{item.E1.Name}</p>
+  <p class="text-sm text-fg-secondary">{item.E1.Desc}</p>
+  <p class="font-bold">{item.E2.Name}</p>
+  <p class="text-sm text-fg-secondary">{item.E2.Desc}</p>
+</div>
+

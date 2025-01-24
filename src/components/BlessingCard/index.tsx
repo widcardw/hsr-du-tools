@@ -1,5 +1,5 @@
-import { GAIN_MAP } from '@/pages/v2.7/data/constants'
-import { type GainType, PATH_MAP } from '@/libs/du/constants'
+// import { GAIN_MAP } from '@/pages/v2.7/_data/constants'
+import { type GainMapType, type GainType, PATH_MAP, type Side } from '@/libs/du/constants'
 import { type Blessing, BlessingRarity } from '@/libs/du/types'
 import clsx from 'clsx'
 import {
@@ -26,9 +26,10 @@ const BLESSING_BG_MAP = {
 const BlessingCard: Component<{
   blessing: Blessing
   up?: boolean
-  hilitedTag?: GainType[]
+  hilitedTag?: number[]
   noDesc?: boolean
-  onTagClick?: (gain: GainType, v: boolean) => void
+  onTagClick?: (gain: number, v: boolean) => void
+  gain_map: GainMapType<number>
 }> = (props) => {
   const [upgraded, setUpgrade] = createSignal(false)
   createEffect(
@@ -51,28 +52,28 @@ const BlessingCard: Component<{
         class={clsx(
           'p-2 flex items-center justify-center',
           upgraded()
-            ? `${BLESSING_BG_MAP[props.blessing.rarity]}-up`
-            : BLESSING_BG_MAP[props.blessing.rarity],
+            ? `${BLESSING_BG_MAP[props.blessing.Rarity]}-up`
+            : BLESSING_BG_MAP[props.blessing.Rarity],
         )}
       >
         <img
-          src={`/blessing${props.blessing.icon}`}
-          alt={PATH_MAP[props.blessing.path]}
+          src={`/blessing${props.blessing.Icon}`}
+          alt={PATH_MAP[props.blessing.Path]}
           class={clsx('w-60%')}
           loading="lazy"
         />
       </div>
       <div
         class={clsx('font-bold text-center', 'whitespace-nowrap', 'truncate')}
-        title={props.blessing.name}
+        title={props.blessing.Name}
       >
-        {props.blessing.name}
+        {props.blessing.Name}
       </div>
       <Show when={props.noDesc !== true}>
         <div
           class={clsx('text-sm text-center', 'h-7rem of-y-auto')}
           innerHTML={
-            upgraded() ? props.blessing.desc[1] : props.blessing.desc[0]
+            upgraded() ? props.blessing.Desc[1] : props.blessing.Desc[0]
           }
         />
       </Show>
@@ -85,7 +86,7 @@ const BlessingCard: Component<{
             'no-scroll-bar tag-container',
           )}
         >
-          <For each={Array.from(props.blessing.rel)}>
+          <For each={props.blessing.rel}>
             {(it) => {
               const hilited = props.hilitedTag?.includes(it)
               return (
@@ -97,7 +98,7 @@ const BlessingCard: Component<{
                   )}
                   onClick={() => props.onTagClick?.(it, !hilited)}
                 >
-                  {GAIN_MAP[it][1]}
+                  {props.gain_map[it][1]}
                 </Badge>
               )
             }}

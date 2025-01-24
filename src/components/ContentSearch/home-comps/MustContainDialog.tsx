@@ -1,4 +1,4 @@
-import type { GainType, Side } from '@/libs/du/constants'
+import type { GainMapType, GainType, Side } from '@/libs/du/constants'
 import clsx from 'clsx'
 import {
   type Component,
@@ -12,17 +12,17 @@ import GainButton from './GainButton'
 import { Dialog, DialogTrigger } from '@/components/ui/Dialog'
 
 const MustContainDialog: Component<{
-  initGains: GainType[]
-  mustContainGains: GainType[]
-  onChange: (gains: GainType[]) => void
-  gain_map: Record<GainType, [Side, string, string]>
+  initGains: number[] // GainType[]
+  mustContainGains: number[]
+  onChange: (gains: number[]) => void
+  gain_map: GainMapType<number>
 }> = (props) => {
   const [_dlgOpen, setDlgOpen] = createSignal(false)
-  const [selectedGains, setSelectedGains] = createSignal<GainType[]>(
+  const [selectedGains, setSelectedGains] = createSignal<number[]>(
     props.initGains,
   )
 
-  const [mustContainGains, setMustContainGains] = createSignal<GainType[]>(
+  const [mustContainGains, setMustContainGains] = createSignal<number[]>(
     props.mustContainGains,
   )
 

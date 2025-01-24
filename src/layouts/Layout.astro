@@ -10,8 +10,7 @@ interface Props {
 const { title, className = "" } = Astro.props;
 import ThemeSwitch from "@/components/ThemeSwitch.astro";
 import VersionNavigator from "@/components/VersionNavigator";
-
-const versions = ["v2.7", "v3.1"];
+import { versions } from "@/versions";
 ---
 
 <!doctype html>

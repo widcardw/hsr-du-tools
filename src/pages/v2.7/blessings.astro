@@ -1,12 +1,17 @@
 ---
 import BlessingView from "@/components/BlessingCategory/BlessingView";
-import Layout from "./ui/Layout2-7.astro";
-import { BLESSINGS } from "./data/blessings";
+import Layout from "./_ui/Layout2-7.astro";
+import { BLESSINGS } from "./_data/blessings";
 import { sortAndSplitBlessings } from "@/libs/search/sort";
+import { GAIN_MAP } from "./_data/constants";
 
 const blessingCates = sortAndSplitBlessings(BLESSINGS);
 ---
 
 <Layout title="祝福 差分宇宙模拟工具">
-  <BlessingView blessingCategory={blessingCates} client:idle />
+  <BlessingView
+    blessingCategory={blessingCates}
+    gain_map={GAIN_MAP}
+    client:idle
+  />
 </Layout>

@@ -1,14 +1,14 @@
 import ToggleButton from '@/components/ui/ToggleButton'
-import type { GainType, Side } from '@/libs/du/constants'
+import type { GainMapType, GainType } from '@/libs/du/constants'
 // import { GAIN_MAP } from '@/pages/v2.7/data/constants'
 
 import { type Component, createEffect, createSignal, on } from 'solid-js'
 
 const GainButton: Component<{
-  gain: GainType
+  gain: number // GainType
   pressed: boolean
   onChange: (v: boolean) => void
-  gain_map: Record<GainType, [Side, string, string]>
+  gain_map: GainMapType<number>
 }> = (props) => {
   const [p, setP] = createSignal(props.pressed)
   createEffect(

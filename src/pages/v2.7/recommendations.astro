@@ -1,11 +1,11 @@
 ---
 import EquationCategory from "@/components/EquationCategory";
-import Layout from "./ui/Layout2-7.astro";
+import Layout from "./_ui/Layout2-7.astro";
 import type { BlessingEquation } from "@/libs/du/types";
-import { EQUATIONS } from "./data/equations";
+import { EQUATIONS } from "./_data/equations";
 import type { Blessing } from "@/libs/du/types";
-import { BLESSINGS } from "./data/blessings";
-import { GAIN_MAP } from "./data/constants";
+import { BLESSINGS } from "./_data/blessings";
+import { GAIN_MAP } from "./_data/constants";
 import BlessingCategory from "@/components/BlessingCategory";
 import CollectionBuffDialog from "@/components/ui/Dialog/CollectionBuff";
 
@@ -88,7 +88,7 @@ const recommendations: Recommendation[] = [
       ).sort((a, b) => b.er - a.er);
       const foundBl: Blessing[] = BLESSINGS.filter((i) =>
         r.blessings.includes(i._id),
-      ).sort((a, b) => b.rarity - a.rarity);
+      ).sort((a, b) => b.Rarity - a.Rarity);
       return (
         <div class="my-8">
           <h2>{r.title}</h2>

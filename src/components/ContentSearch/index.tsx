@@ -35,10 +35,10 @@ import {
   setEnableEqSearch,
   setErFilter,
 } from './home-comps/data'
-import type { GainType, Side } from '@/libs/du/constants'
+import type { GainMapType, GainType, Side } from '@/libs/du/constants'
 
 const Home: Component<{
-  gain_map: Record<GainType, [Side, string, string]>
+  gain_map: GainMapType<number>
   sorted_blessings: Blessing[]
   equations: BlessingEquation[]
 }> = (props) => {
@@ -88,7 +88,7 @@ const Home: Component<{
   const relatedBlessings = createMemo<RelatedBlessing[]>(() => {
     if (!enableBlSearch()) return []
     if (selectedGains().length === 0)
-      return props.sorted_blessings.filter((i) => blRarityFilter[i.rarity])
+      return props.sorted_blessings.filter((i) => blRarityFilter[i.Rarity])
 
     const sg = selectedGains()
     const mg = mustContainGains()
@@ -330,6 +330,7 @@ const Home: Component<{
                   hilitedTag={blessing.intersection}
                   noDesc={blNoDesc()}
                   onTagClick={onQueriedTagClick}
+                  gain_map={props.gain_map}
                 />
               )}
             </For>

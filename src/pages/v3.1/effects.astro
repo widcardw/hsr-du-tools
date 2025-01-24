@@ -1,0 +1,11 @@
+---
+import Layout from "./_ui/Layout3-1.astro";
+import { pathEffects } from "./_data/effects";
+import PathEffectCard from "./_ui/PathEffectCard.astro";
+---
+
+<Layout title="命途特性 差分宇宙模拟工具">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {pathEffects.map((item) => <PathEffectCard item={item} />)}
+  </div>
+</Layout>
