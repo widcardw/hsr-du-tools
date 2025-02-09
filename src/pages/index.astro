@@ -1,9 +1,15 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { mainVersion } from "@/versions";
+import { mainVersion, versions } from "@/versions";
 ---
 
 <Layout title="差分宇宙 模拟工具">
+  <p>All versions:</p>
+  <ul>
+    {versions.map(version => (
+      <li><a href={`/${version}`}>{version}</a></li>
+    ))}
+  </ul>
   <p>Redirecting to {mainVersion}...</p>
 </Layout>
 
