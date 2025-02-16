@@ -24,12 +24,12 @@ const TITAN: TitanType[] = [
     Blessings: [
       {
         Name: '万径相连',
-        Desc: "处于白昼时，我方目标最终伤害提高<color style='color:#f29e38;'> 25% </color>。进入白昼时激活我方全体终结技。",
+        Desc: "处于白昼时，我方目标最终伤害提高<color style='color:#f29e38;'> 20% </color>。进入白昼时激活我方全体终结技。",
         Extra: [],
       },
       {
         Name: '童话，关于黎明',
-        Desc: "白昼占比增加<color style='color:#f29e38;'> 25% </color>，白昼时我方目标最终伤害额外提高<color style='color:#f29e38;'> 30% </color>。",
+        Desc: "白昼占比增加<color style='color:#f29e38;'> 25% </color>，白昼时我方目标最终伤害额外提高<color style='color:#f29e38;'> 20% </color>。",
         Extra: [],
       },
       {
@@ -44,7 +44,7 @@ const TITAN: TitanType[] = [
       },
       {
         Name: '预言，带来纷争',
-        Desc: "白昼占比增加<color style='color:#f29e38;'> 25% </color>，白昼时我方目标最终伤害额外提高<color style='color:#f29e38;'> 40% </color>。",
+        Desc: "白昼占比增加<color style='color:#f29e38;'> 25% </color>，白昼时我方目标最终伤害额外提高<color style='color:#f29e38;'> 25% </color>。",
         Extra: [],
       },
       {
@@ -54,7 +54,7 @@ const TITAN: TitanType[] = [
       },
       {
         Name: '预言，再续神话',
-        Desc: "处于白昼时，我方目标每次施放终结技时，造成的最终伤害提高<color style='color:#f29e38;'> 5% </color>，昼夜切换后重置。",
+        Desc: "处于白昼时，我方目标每次施放终结技时，造成的最终伤害提高<color style='color:#f29e38;'> 4% </color>，单个昼夜内最多叠加<color style='color:#f29e38;'> 60% </color>，昼夜切换后重置。",
         Extra: [],
       },
     ],
@@ -67,12 +67,12 @@ const TITAN: TitanType[] = [
     Blessings: [
       {
         Name: '捷足飞贼',
-        Desc: "战斗中消灭精英敌人可以获得<color style='color:#f29e38;'> 50 </color>宇宙碎片，该效果每场战斗最多触发1次。处于黑夜时，对精英敌人的最终伤害提高<color style='color:#f29e38;'> 30% </color>。",
+        Desc: "战斗中消灭精英敌人可以获得额外<color style='color:#f29e38;'> 50 </color>宇宙碎片，该效果每场战斗最多触发1次。处于黑夜时，对精英敌人的最终伤害提高<color style='color:#f29e38;'> 30% </color>，受到精英敌人的伤害降低<color style='color:#f29e38;'> 10% </color>。",
         Extra: [],
       },
       {
         Name: '扯谎不眨眼',
-        Desc: "黑夜占比增加<color style='color:#f29e38;'> 25% </color>。处于黑夜时，击杀精英敌人获得的宇宙碎片提高<color style='color:#f29e38;'> 50% </color>。首个昼夜切换后该效果失效。",
+        Desc: "黑夜占比增加<color style='color:#f29e38;'> 25% </color>。处于黑夜时，消灭精英敌人获得的额外宇宙碎片提高<color style='color:#f29e38;'> 35 </color>。首个昼夜切换后该效果失效。",
         Extra: [],
       },
       {
@@ -82,7 +82,7 @@ const TITAN: TitanType[] = [
       },
       {
         Name: '诈窃不留痕',
-        Desc: "每场战斗中，可以通过消灭精英敌人获得宇宙碎片的次数提高<color style='color:#f29e38;'> 2 </color>次。",
+        Desc: "基础效果中，消灭精英敌人获得额外宇宙碎片的次数提高<color style='color:#f29e38;'> 2 </color>次。",
         Extra: [],
       },
       {
@@ -92,7 +92,7 @@ const TITAN: TitanType[] = [
       },
       {
         Name: '宝库难防家贼',
-        Desc: "击杀精英获得的宇宙碎片提高<color style='color:#f29e38;'> 100% </color>。",
+        Desc: "基础效果中，击杀精英获得的宇宙碎片提高<color style='color:#f29e38;'> 100 </color>。",
         Extra: [],
       },
       {
@@ -120,7 +120,7 @@ const TITAN: TitanType[] = [
       },
       {
         Name: '剑为人怨',
-        Desc: "激活效果所需降低的生命值比例提高<color style='color:#f29e38;'> 40% </color>，激活效果后，我方目标在黑夜时造成的最终伤害额外提高<color style='color:#f29e38;'> 40% </color>。",
+        Desc: "激活效果所需降低的生命值比例提高<color style='color:#f29e38;'> 40% </color>，激活效果后，我方目标在黑夜时造成的最终伤害额外提高<color style='color:#f29e38;'> 30% </color>。",
         Extra: [],
       },
       {
@@ -135,12 +135,12 @@ const TITAN: TitanType[] = [
       },
       {
         Name: '弑杀，无道暴君',
-        Desc: "激活效果后，黑夜中每降低1%生命值，使回复量提高<color style='color:#f29e38;'> 0% </color>，造成的最终伤害提高<color style='color:#f29e38;'> 0% </color>，昼夜切换后重置。",
+        Desc: "激活效果后，黑夜中每降低 10% 生命值，使回复量提高<color style='color:#f29e38;'> 1% </color>，造成的最终伤害提高<color style='color:#f29e38;'> 1% </color>，单个昼夜内最多提高<color style='color:#f29e38;'> 40% </color>回复量和<color style='color:#f29e38;'> 40% </color>最终伤害，昼夜切换后重置。",
         Extra: [],
       },
       {
         Name: '弑杀，狂乱神明',
-        Desc: "激活效果后，黑夜中我方目标生命上限提高，数值等同于当前生命上限的<color style='color:#f29e38;'> 25% </color>",
+        Desc: "激活效果后，黑夜中我方目标生命上限提高，数值等同于当前生命上限的<color style='color:#f29e38;'> 20% </color>",
         Extra: [],
       },
     ],
@@ -153,7 +153,7 @@ const TITAN: TitanType[] = [
     Blessings: [
       {
         Name: '与死合掌',
-        Desc: "处于黑夜时，我方目标生命上限提高<color style='color:#f29e38;'> 40% </color>。生命降低后下一次攻击造成的最终伤害提高<color style='color:#f29e38;'> 40% </color>。",
+        Desc: "处于黑夜时，我方目标生命上限提高<color style='color:#f29e38;'> 30% </color>。生命降低后下一次攻击造成的最终伤害提高<color style='color:#f29e38;'> 50% </color>。",
         Extra: [],
       },
       {
@@ -178,12 +178,12 @@ const TITAN: TitanType[] = [
       },
       {
         Name: '枯枝发的新芽',
-        Desc: "处于黑夜时，我方目标每累计降低<color style='color:#f29e38;'> 10% </color>生命值，使生命上限提高<color style='color:#f29e38;'> 1.5% </color>，昼夜切换后重置。",
+        Desc: "处于黑夜时，我方目标每累计降低<color style='color:#f29e38;'> 50% </color>生命值，使生命上限提高<color style='color:#f29e38;'> 4% </color>，单个昼夜内最多叠加<color style='color:#f29e38;'> 80% </color>，昼夜切换后重置。",
         Extra: [],
       },
       {
         Name: '归途上的蝴蝶',
-        Desc: "我方目标每次生命值降低后，使造成的最终伤害提高<color style='color:#f29e38;'> 2.5% </color>，单次行动内最多触发1次，昼夜切换后重置。",
+        Desc: "我方目标每次生命值降低后，使造成的最终伤害提高<color style='color:#f29e38;'> 2% </color>，单次行动内最多触发1次，单个昼夜内最多叠加<color style='color:#f29e38;'> 60% </color>，昼夜切换后重置。",
         Extra: [],
       },
     ],
@@ -196,7 +196,7 @@ const TITAN: TitanType[] = [
     Blessings: [
       {
         Name: '金织如梦',
-        Desc: "处于白昼时，我方全体目标累计攻击<color style='color:#f29e38;'> 5 </color>次后激活效果：白昼中速度提高<color style='color:#f29e38;'> 40% </color>，昼夜切换后重置。",
+        Desc: "处于白昼时，我方全体目标累计攻击<color style='color:#f29e38;'> 8 </color>次后激活效果：白昼中速度提高<color style='color:#f29e38;'> 40% </color>，昼夜切换后重置。",
         Extra: [],
       },
       {
@@ -206,27 +206,27 @@ const TITAN: TitanType[] = [
       },
       {
         Name: '轮舞的华服',
-        Desc: "激活效果所需的攻击次数减少<color style='color:#f29e38;'> 3 </color>次，激活时我方全体目标行动提前 100% 。",
+        Desc: "激活效果所需的攻击次数减少<color style='color:#f29e38;'> 6 </color>次，激活时我方全体目标行动提前 100% 。",
         Extra: [],
       },
       {
         Name: '染血的华服',
-        Desc: "激活效果所需的攻击次数增加<color style='color:#f29e38;'> 5 </color>次，激活后速度额外提高<color style='color:#f29e38;'> 60% </color>。",
+        Desc: "激活效果所需的攻击次数增加<color style='color:#f29e38;'> 8 </color>次，激活后速度额外提高<color style='color:#f29e38;'> 50% </color>。",
         Extra: [],
       },
       {
         Name: '纺织浪漫之丝',
-        Desc: "白昼占比增加<color style='color:#f29e38;'> 25% </color>，激活效果后我方目标在白昼时速度额外提高<color style='color:#f29e38;'> 50% </color>。",
+        Desc: "白昼占比增加<color style='color:#f29e38;'> 25% </color>，激活效果后我方目标在白昼时速度额外提高<color style='color:#f29e38;'> 30% </color>。",
         Extra: [],
       },
       {
         Name: '纺织美丽之丝',
-        Desc: "激活效果后，白昼时我方目标每次施放攻击后使自身速度额外提高<color style='color:#f29e38;'> 3% </color>，昼夜切换后重置。",
+        Desc: "激活效果后，白昼时我方目标每次施放攻击后使自身速度额外提高<color style='color:#f29e38;'> 2% </color>，单个昼夜内最多叠加<color style='color:#f29e38;'> 60% </color>，昼夜切换后重置。",
         Extra: [],
       },
       {
         Name: '纺织命运之丝',
-        Desc: "激活效果后，白昼时每有1点速度，使自身造成的最终伤害提高<color style='color:#f29e38;'> 0.2% </color>。",
+        Desc: "激活效果后，白昼时每有 100 点速度，使自身造成的最终伤害提高<color style='color:#f29e38;'> 20% </color>。",
         Extra: [],
       },
     ],
@@ -239,12 +239,12 @@ const TITAN: TitanType[] = [
     Blessings: [
       {
         Name: '无休欢宴',
-        Desc: "处于白昼时，我方目标最终伤害提高<color style='color:#f29e38;'> 25% </color>，敌方目标陷入【绝唱】：每回合开始时，受到<color style='color:#f29e38;'> 400% </color><u class='infou'>基础伤害</u>的物理属性附加伤害。",
+        Desc: "处于白昼时，敌方目标受到的最终伤害提高<color style='color:#f29e38;'> 25% </color>，敌方目标陷入【绝唱】：每回合开始时，受到<color style='color:#f29e38;'> 400% </color><u class='infou'>基础伤害</u>的物理属性附加伤害。",
         Extra: [61000500],
       },
       {
         Name: '永续的狂欢',
-        Desc: "白昼占比增加<color style='color:#f29e38;'> 25% </color>，白昼时我方目标造成的最终伤害提高<color style='color:#f29e38;'> 30% </color>。",
+        Desc: "白昼占比增加<color style='color:#f29e38;'> 25% </color>，白昼时敌方目标受到的最终伤害提高<color style='color:#f29e38;'> 20% </color>。",
         Extra: [],
       },
       {
@@ -254,17 +254,17 @@ const TITAN: TitanType[] = [
       },
       {
         Name: '流转的诗篇',
-        Desc: '【绝唱】视为【裂伤】，每回合开始时造成持续伤害。',
+        Desc: "【绝唱】视为【裂伤】，【绝唱】的伤害倍率提高原倍率的<color style='color:#f29e38;'> 100% </color>, 每回合开始时造成持续伤害。",
         Extra: [],
       },
       {
         Name: '沉醉者的挽歌',
-        Desc: "白昼占比增加<color style='color:#f29e38;'> 25% </color>，白昼时我方目标造成的最终伤害提高<color style='color:#f29e38;'> 40% </color>。",
+        Desc: "白昼占比增加<color style='color:#f29e38;'> 25% </color>，白昼时我方目标造成的最终伤害提高<color style='color:#f29e38;'> 25% </color>。",
         Extra: [],
       },
       {
         Name: '离愁者的挽歌',
-        Desc: "处于白昼时，【绝唱】的伤害倍率提高原倍率的<color style='color:#f29e38;'> 100% </color>。每次造成伤害，都会使伤害提高原倍率的<color style='color:#f29e38;'> 5% </color>，昼夜切换后重置。",
+        Desc: "处于白昼时，【绝唱】每次造成伤害，其伤害都会提高原倍率的<color style='color:#f29e38;'> 5% </color>，单个昼夜内最多叠加<color style='color:#f29e38;'> 200% </color>，昼夜切换后重置。",
         Extra: [],
       },
       {

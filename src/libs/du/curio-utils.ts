@@ -18,7 +18,7 @@ function partitionAllCurios(curios: Curio[]): Curio[][] {
   }
 
   for (const curio of curios) {
-    res[curio.type].push(curio)
+    res[curio.Type].push(curio)
   }
 
   return [

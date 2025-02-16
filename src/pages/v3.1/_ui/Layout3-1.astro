@@ -1,14 +1,15 @@
 ---
 interface Props {
-  title: string;
+  title: string
 }
-import LayoutBase from "@/layouts/Layout.astro";
-import Header from "./Header.astro";
-const { title } = Astro.props;
+import LayoutBase from '@/layouts/Layout.astro'
+import Header from './Header.astro'
+const { title } = Astro.props
 ---
 
 <LayoutBase title={title}>
   <Header />
-  <p class="text-sm text-fg-secondary text-center">施工中，数据为内测版本，可能会有较大变动，不保证准确</p>
+  <p class="text-sm text-fg-secondary text-center">施工中，数据为内测版本，不保证准确，精确内容请在
+  <a href="https://mhyurl.cn/9eSIXyPB8" target="_blank">官方页面</a> 查看。</p>
   <slot />
 </LayoutBase>

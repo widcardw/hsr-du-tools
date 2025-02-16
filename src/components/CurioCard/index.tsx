@@ -1,4 +1,4 @@
-import { CurioType, type Curio } from '@/libs/du/types'
+import { type Curio, CurioType } from '@/libs/du/types'
 import clsx from 'clsx'
 import type { Component } from 'solid-js'
 
@@ -31,26 +31,26 @@ const CurioCard: Component<{
       <div
         class={clsx(
           'p-2 flex items-center justify-center',
-          CURIO_BG_MAP[props.curio.type],
+          CURIO_BG_MAP[props.curio.Type],
           'h-8rem sm:h-6rem md:h-8rem',
         )}
       >
         <img
-          src={`/curio/${props.curio.icon}.webp`}
-          alt={props.curio.name}
-          class={clsx('w-60%', `${CURIO_BG_MAP[props.curio.type]}-img`)}
-          loading='lazy'
+          src={`/curio/${props.curio.Icon}.webp`}
+          alt={props.curio.Name}
+          class={clsx('w-60%', `${CURIO_BG_MAP[props.curio.Type]}-img`)}
+          loading="lazy"
         />
       </div>
       <div
         class={clsx('font-bold text-center', 'whitespace-nowrap', 'truncate')}
-        title={props.curio.name}
+        title={props.curio.Name}
       >
-        {props.curio.name}
+        {props.curio.Name}
       </div>
       <div
         class={clsx('text-sm text-center', 'h-7rem of-y-auto')}
-        innerHTML={props.curio.desc}
+        innerHTML={props.curio.Desc}
       />
     </div>
   )

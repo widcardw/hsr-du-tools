@@ -1,13 +1,13 @@
 ---
-import CurioCategory from "@/components/CurioCategory";
-import Layout from "./_ui/Layout2-7.astro";
-import { PARTITIONED_CURIOS } from "./_data/curios";
+import CurioCategory from '@/components/CurioCategory/index.astro'
+import { PARTITIONED_CURIOS } from './_data/curios'
+import Layout from './_ui/Layout2-7.astro'
 ---
 
 <Layout title="奇物 差分宇宙模拟工具">
   {
     PARTITIONED_CURIOS.map((curioCate) => (
-      <CurioCategory type={Number(curioCate[0].type)} curios={curioCate} />
+      <CurioCategory type={Number(curioCate[0].Type)} curios={curioCate} />
     ))
   }
 </Layout>

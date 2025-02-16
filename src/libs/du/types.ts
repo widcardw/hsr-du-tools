@@ -79,11 +79,11 @@ type RelatedBlessing = Blessing & {
 
 interface Curio {
   _id: number
-  name: string
-  desc: string
-  icon: string
-  ver: string
-  type: CurioType
+  Name: string
+  Desc: string
+  Icon: string
+  Ver?: string
+  Type: CurioType
 }
 
 export { BuffType, BlessingRarity, BlessingEquationEr, CurioType }

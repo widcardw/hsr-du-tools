@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets'
+import { type Curio, CurioType } from '@/libs/du/types'
+import clsx from 'clsx'
+
+import '@/styles/scroll-bar.css'
+import '@/styles/blessing-bg.css'
+import '@/styles/scrollable-tags.css'
+import '@/styles/eq-shadow.css'
+
+const CURIO_BG_MAP = {
+  [CurioType.Blue]: 'blessing-blue',
+  [CurioType.Gray]: 'blessing-gray',
+  [CurioType.Gold]: 'blessing-gold',
+  [CurioType.Weighted]: 'blessing-ultimate',
+  [CurioType.Negative]: 'blessing-negative',
+}
+
+interface Props {
+  curio: Curio
+}
+
+const { curio } = Astro.props
+---
+
+<div
+  class={clsx(
+    'border-1 border-solid light:border-zinc-700 dark:border-zinc-500',
+    'shadow-md dark:shadow-zinc-700',
+    'p-1',
+    'space-y-1',
+    'bg-bg',
+  )}
+>
+  <div
+    class={clsx(
+      'p-2 flex items-center justify-center',
+      CURIO_BG_MAP[curio.Type],
+      'h-8rem sm:h-6rem md:h-8rem',
+    )}
+  >
+    <Image
+      src={`/curio/${curio.Icon}.webp`}
+      alt={curio.Name}
+      width="100"
+      height="100"
+      class={clsx(`${CURIO_BG_MAP[curio.Type]}-img`)}
+    />
+  </div>
+  <div
+    class={clsx('font-bold text-center', 'whitespace-nowrap', 'truncate')}
+    title={curio.Name}
+  >
+    {curio.Name}
+  </div>
+  <div
+    class={clsx('text-sm text-center', 'h-7rem of-y-auto')}
+    set:html={curio.Desc}
+  />
+</div>
