@@ -1171,7 +1171,7 @@ const equations: BlessingEquation[] = [
       '127': 2,
     },
     Type: BuffType.Equation,
-    rel: [],
+    rel: [GainType.FollowUpAtk, GainType.Aftertaste, GainType.Point],
     er: 4,
   },
   {
