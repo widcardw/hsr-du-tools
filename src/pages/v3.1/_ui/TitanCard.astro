@@ -1,19 +1,23 @@
 ---
-import clsx from "clsx";
-import type { TitanType } from "../_data/titan";
-import { Fragment } from "astro/jsx-runtime";
+import { Image } from 'astro:assets'
+import { Fragment } from 'astro/jsx-runtime'
+import clsx from 'clsx'
+import type { TitanType } from '../_data/titan'
 
 interface Props {
   item: TitanType
 }
 
-const { item } = Astro.props;
+const { item } = Astro.props
 ---
 
 <div class="bg-bg rounded p-4 border border-solid border-bg-secondary">
-  <img
+  <Image
     src={`/titan/${item.Img.replace('.png', '')}.webp`}
-    class={clsx("w-60px sm:w-80px md:w-100px block mx-auto", "light:invert")}
+    alt={item.Titan}
+    width="156.5"
+    height="242.5"
+    class={clsx("block mx-auto")}
   />
   <p class="font-bold text-center">{item.Titan}</p>
   {

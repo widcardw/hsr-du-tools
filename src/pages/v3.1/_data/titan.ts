@@ -235,7 +235,7 @@ const TITAN: TitanType[] = [
     _id: 122,
     Titan: '「满溢之杯」',
     Avatar: '海瑟音',
-    Img: 'IconRogueTournTitanAvatarlanos.png',
+    Img: 'IconRogueTournTitanAvatarPhageina',
     Blessings: [
       {
         Name: '无休欢宴',
