@@ -5,10 +5,10 @@ import ToggleButton from '@/components/ui/ToggleButton'
 // import { GAIN_MAP } from '@/pages/v2.7/data/constants'
 // import { EQUATIONS } from '@/pages/v2.7/data/equations'
 import {
-  BlessingEquationEr,
-  BlessingRarity,
   type Blessing,
   type BlessingEquation,
+  BlessingEquationEr,
+  BlessingRarity,
   type RelatedBlessing,
   type RelatedEquation,
 } from '@/libs/du/types'
@@ -17,6 +17,7 @@ import { type Component, For, Show, createMemo, createSignal } from 'solid-js'
 
 import '@/styles/blessing-bg.css'
 import BlessingCard from '@/components/BlessingCard'
+import type { GainMapType } from '@/libs/du/constants'
 // import { SORTED_BLESSINGS } from '@/pages/v2.7/data/blessings'
 import { LAYOUT } from '@/libs/du/layout'
 import { makePersisted } from '@solid-primitives/storage'
@@ -35,7 +36,6 @@ import {
   setEnableEqSearch,
   setErFilter,
 } from './home-comps/data'
-import type { GainMapType } from '@/libs/du/constants'
 
 const Home: Component<{
   gain_map: GainMapType<number>
@@ -262,7 +262,13 @@ const Home: Component<{
                 mustContainGains().includes(gain) && 'blessing-gray',
               )}
             >
-              <img src={props.gain_map[gain][2]} alt="" class="w-5 h-5" loading='lazy' />
+              <img
+                src={props.gain_map[gain][2]}
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              />
               <span>{props.gain_map[gain][1]}</span>
               <div
                 class="cursor-pointer i-carbon-close"

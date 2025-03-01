@@ -1,6 +1,5 @@
 import ToggleButton from '@/components/ui/ToggleButton'
 import type { GainMapType } from '@/libs/du/constants'
-// import { GAIN_MAP } from '@/pages/v2.7/data/constants'
 
 import { type Component, createEffect, createSignal, on } from 'solid-js'
 
@@ -30,8 +29,9 @@ const GainButton: Component<{
       <img
         src={props.gain_map[props.gain][2]}
         alt={props.gain.toString()}
-        class="w-5 h-5 light:drop-shadow light:drop-shadow-color-fg-tertiary"
-        loading="lazy"
+        width="20"
+        height="20"
+        class="light:drop-shadow light:drop-shadow-color-fg-tertiary"
       />
       <span>{props.gain_map[props.gain][1]}</span>
     </ToggleButton>

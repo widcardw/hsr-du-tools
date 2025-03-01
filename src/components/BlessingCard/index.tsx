@@ -59,9 +59,11 @@ const BlessingCard: Component<{
         <img
           src={`/blessing${props.blessing.Icon}`}
           alt={PATH_MAP[props.blessing.Path]}
-          class={clsx('w-60%')}
+          width="80"
+          height="80"
           loading="lazy"
         />
+        {/* legacy: w-60% */}
       </div>
       <div
         class={clsx('font-bold text-center', 'whitespace-nowrap', 'truncate')}

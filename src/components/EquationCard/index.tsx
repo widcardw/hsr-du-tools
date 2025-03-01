@@ -1,9 +1,9 @@
-import clsx from 'clsx'
-import { BlessingEquationEr, type BlessingEquation } from '@/libs/du/types'
-import { For, Show, type Component } from 'solid-js'
 // import { GAIN_MAP } from '@/pages/v2.7/_data/constants'
 import type { GainMapType } from '@/libs/du/constants'
-import { type Path, PATH_ICON_MAP } from '@/libs/du/constants'
+import { PATH_ICON_MAP, type Path } from '@/libs/du/constants'
+import { type BlessingEquation, BlessingEquationEr } from '@/libs/du/types'
+import clsx from 'clsx'
+import { type Component, For, Show } from 'solid-js'
 import Badge from '../ui/Badge'
 
 import '@/styles/blessing-bg.css'
@@ -40,7 +40,7 @@ const EquationCard: Component<{
         class={clsx(
           'p-2 relative',
           `${Equation_BG_MAP[props.equation.er]}-up`,
-          'h-8rem sm:h-6rem md:h-8rem',
+          'h-[160px]',
         )}
       >
         <Show
@@ -49,8 +49,9 @@ const EquationCard: Component<{
             <img
               src={`/hoshinokami/${props.equation.Path}.webp`}
               alt={props.equation.Name}
+              width="184"
+              height="138.4"
               class={clsx(
-                'w-70%',
                 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
                 `${Equation_BG_MAP[props.equation.er]}-img`,
               )}
@@ -61,8 +62,9 @@ const EquationCard: Component<{
           <img
             src={`/eq-simp/l${props.equation.Path}.webp`}
             alt={props.equation.Name}
+            width="184"
+            height="138.4"
             class={clsx(
-              'w-70%',
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               `${Equation_BG_MAP[props.equation.er]}-img`,
             )}
@@ -73,8 +75,9 @@ const EquationCard: Component<{
               .map((i) => Number(i))
               .find((i) => i !== props.equation.Path)}.webp`}
             alt={props.equation.Name}
+            width="184"
+            height="138.4"
             class={clsx(
-              'w-70%',
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               `${Equation_BG_MAP[props.equation.er]}-img`,
             )}

@@ -32,7 +32,7 @@ const CurioCard: Component<{
         class={clsx(
           'p-2 flex items-center justify-center',
           CURIO_BG_MAP[props.curio.Type],
-          'h-8rem sm:h-6rem md:h-8rem',
+          'h-[100px]',
         )}
       >
         <img
