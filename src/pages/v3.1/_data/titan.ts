@@ -4,7 +4,7 @@ interface TitanBlessing {
   Extra: Array<number>
 }
 
-interface TitanType {
+interface _TitanType {
   _id: number
   /** 称呼 */
   Titan: string
@@ -15,7 +15,18 @@ interface TitanType {
   Blessings: Array<TitanBlessing>
 }
 
-const TITAN: TitanType[] = [
+interface TitanType {
+  _id: number
+  /** 称呼 */
+  Titan: string
+  /** 对应任务头像 */
+  Avatar: string
+  /** 图像路径 */
+  Img: string
+  Blessings: Array<{ level: string; titan: TitanBlessing[] }>
+}
+
+const TITAN: _TitanType[] = [
   {
     _id: 121,
     Titan: '「万径之门」',
@@ -276,4 +287,38 @@ const TITAN: TitanType[] = [
   },
 ]
 
-export { TITAN, type TitanBlessing, type TitanType }
+const levelIndexSlices = [
+  [0, 1],
+  [1, 4],
+  [4, 7],
+]
+
+const levelSplitTitan: TitanType[] = []
+
+for (const titan of TITAN) {
+  const obj: TitanType = { ...titan, Blessings: [] }
+  for (const i in levelIndexSlices) {
+    const s = levelIndexSlices[i]
+    let level = ''
+    switch (Number(i)) {
+      case 0:
+        level = '基本效果'
+        break
+      case 1:
+        level = '中阶效果'
+        break
+      case 2:
+        level = '高阶效果'
+        break
+    }
+    obj.Blessings.push({ level, titan: titan.Blessings.slice(s[0], s[1]) })
+  }
+  levelSplitTitan.push(obj)
+}
+
+export {
+  levelSplitTitan as TITAN,
+  type TitanBlessing,
+  type _TitanType,
+  type TitanType,
+}

@@ -1,11 +1,11 @@
 ---
-import Layout from "./_ui/Layout3-1.astro";
-import { TITAN } from "./_data/titan";
-import TitanCard from "./_ui/TitanCard.astro";
+import { TITAN } from './_data/titan'
+import Layout from './_ui/Layout3-1.astro'
+import TitanCard from './_ui/TitanCard.astro'
 ---
 
-<Layout title="泰坦 差分宇宙模拟工具">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<Layout title="金血 差分宇宙模拟工具">
+  <div class="grid grid-cols-1 gap-4">
     {TITAN.map(i => <TitanCard item={i} />)}
   </div>
 </Layout>
