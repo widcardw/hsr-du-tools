@@ -1429,4 +1429,9 @@ const equations: BlessingEquation[] = [
   },
 ]
 
+equations.forEach((e) => {
+  const paths = Object.keys(e.Need).map((i) => Number(i))
+  e.rel.push(e.Path as number as GainType, ...paths.filter((i) => i !== e.Path))
+})
+
 export { equations }

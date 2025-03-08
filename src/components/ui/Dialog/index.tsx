@@ -1,14 +1,14 @@
 import {
+  type Accessor,
+  type Component,
+  type JSX,
+  type Setter,
   createContext,
   createEffect,
   createSignal,
   mergeProps,
   on,
   useContext,
-  type Accessor,
-  type Component,
-  type JSX,
-  type Setter,
 } from 'solid-js'
 
 import './index.css'
@@ -31,8 +31,9 @@ const Dialog: Component<{
   const [dialogRef, setDialogRef] = createSignal<HTMLDialogElement>()
 
   function closeOnClickOutSide(ev: MouseEvent) {
-    if (ev.target === dialogRef()) {
-      dialogRef()?.close()
+    const dialogElement = dialogRef()
+    if (dialogElement && ev.target === dialogElement) {
+      dialogElement.close()
       openSignal[1](false)
     }
   }
@@ -51,7 +52,11 @@ const Dialog: Component<{
   return (
     <DialogContext.Provider value={openSignal}>
       {props.trigger}
-      <dialog ref={(r) => setDialogRef(r)} onClick={closeOnClickOutSide} class={props.class}>
+      <dialog
+        ref={(r) => setDialogRef(r)}
+        onClick={closeOnClickOutSide}
+        class={props.class}
+      >
         {props.children}
       </dialog>
     </DialogContext.Provider>
