@@ -60,7 +60,7 @@ const TITAN: _TitanType[] = [
       },
       {
         Name: '预言，留下希望',
-        Desc: "处于白昼时，我方目标攻击每击中1名敌方目标，下回合开始时回复同于生命上限<color style='color:#f29e38;'> 8% </color>的生命值，最多叠加<color style='color:#f29e38;'> 10 </color>次。",
+        Desc: "处于白昼时，我方目标攻击每击中1名敌方目标，下回合开始时回复同于生命上限<color style='color:#f29e38;'> 6% </color>的生命值，最多叠加<color style='color:#f29e38;'> 10 </color>次。",
         Extra: [],
       },
       {
@@ -108,7 +108,7 @@ const TITAN: _TitanType[] = [
       },
       {
         Name: '谎言亦需雕琢',
-        Desc: "本次差分宇宙中，每触发1次该祝福的获得宇宙碎片效果，处于黑夜时，施放攻击后，对攻击目标造成<color style='color:#f29e38;'> 40% </color>攻击力的附加伤害。",
+        Desc: "本次差分宇宙中，每触发1次该祝颂的获得宇宙碎片效果，处于黑夜时，施放攻击后，对攻击目标造成<color style='color:#f29e38;'> 40% </color>攻击力的附加伤害。",
         Extra: [],
       },
     ],
@@ -141,7 +141,7 @@ const TITAN: _TitanType[] = [
       },
       {
         Name: '弑杀，万千仇敌',
-        Desc: "黑夜占比增加<color style='color:#f29e38;'> 25% </color>，黑夜中我方目标生命降低后，下一次攻击造成的最终伤害额外提高<color style='color:#f29e38;'> 40% </color>。",
+        Desc: "黑夜占比增加<color style='color:#f29e38;'> 25% </color>，激活效果后，我方目标在黑夜时造成的最终伤害额外提高<color style='color:#f29e38;'> 40% </color>。",
         Extra: [],
       },
       {
@@ -151,7 +151,7 @@ const TITAN: _TitanType[] = [
       },
       {
         Name: '弑杀，狂乱神明',
-        Desc: "激活效果后，黑夜中我方目标生命上限提高，数值等同于当前生命上限的<color style='color:#f29e38;'> 20% </color>",
+        Desc: "激活效果后，黑夜中我方目标生命上限提高，数值等同于当前生命上限的<color style='color:#f29e38;'> 16% </color>",
         Extra: [],
       },
     ],
@@ -184,12 +184,12 @@ const TITAN: _TitanType[] = [
       },
       {
         Name: '荒冢前的繁花',
-        Desc: "黑夜占比增加<color style='color:#f29e38;'> 25% </color>，黑夜中我方目标生命上限额外提高<color style='color:#f29e38;'> 50% </color>。",
+        Desc: "黑夜占比增加<color style='color:#f29e38;'> 25% </color>，黑夜中我方目标生命上限额外提高<color style='color:#f29e38;'> 45% </color>。",
         Extra: [],
       },
       {
         Name: '枯枝发的新芽',
-        Desc: "处于黑夜时，我方目标每累计降低<color style='color:#f29e38;'> 50% </color>生命值，使生命上限提高<color style='color:#f29e38;'> 4% </color>，单个昼夜内最多叠加<color style='color:#f29e38;'> 80% </color>，昼夜切换后重置。",
+        Desc: "处于黑夜时，我方目标每累计降低<color style='color:#f29e38;'> 50% </color>生命值，使生命上限提高<color style='color:#f29e38;'> 5% </color>，单个昼夜内最多叠加<color style='color:#f29e38;'> 65% </color>，昼夜切换后重置。",
         Extra: [],
       },
       {
@@ -246,7 +246,7 @@ const TITAN: _TitanType[] = [
     _id: 122,
     Titan: '「满溢之杯」',
     Avatar: '海瑟音',
-    Img: 'IconRogueTournTitanAvatarPhageina',
+    Img: 'IconRogueTournTitanAvatarPhageina.png',
     Blessings: [
       {
         Name: '无休欢宴',

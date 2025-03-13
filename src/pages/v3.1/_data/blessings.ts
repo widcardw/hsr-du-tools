@@ -95,8 +95,8 @@ const blessings: Blessing[] = [
     Icon: '/IconRogueMemory01.webp',
     Name: '领悟：浅海悼词',
     Desc: [
-      "每层【<u class='infou'>执念</u>】额外使造成的伤害提高<color style='color:#f29e38;'> 0.2% </color>。",
       "每层【<u class='infou'>执念</u>】额外使造成的伤害提高<color style='color:#f29e38;'> 0.3% </color>。",
+      "每层【<u class='infou'>执念</u>】额外使造成的伤害提高<color style='color:#f29e38;'> 0.4% </color>。",
     ],
     Effects: [61000049],
   },
@@ -649,7 +649,7 @@ const blessings: Blessing[] = [
     Name: '激箭流星远',
     Desc: [
       "我方目标速度提高<color style='color:#f29e38;'> 5% </color>，全队每经过<color style='color:#f29e38;'> 12 </color>个回合后，当前我方目标行动提前 100% 。",
-      "我方目标速度提高<color style='color:#f29e38;'> 10% </color>，全队每经过<color style='color:#f29e38;'> 10 </color>个回合后，当前我方目标行动提前 100% 。",
+      "我方目标速度提高<color style='color:#f29e38;'> 12% </color>，全队每经过<color style='color:#f29e38;'> 12 </color>个回合后，当前我方目标行动提前 100% 。",
     ],
     Effects: [],
   },
@@ -774,7 +774,7 @@ const blessings: Blessing[] = [
     Icon: '/IconRogueWarrior03.webp',
     Name: '无毛超光速暴涨',
     Desc: [
-      "【<u class='infou'>耀变</u>】充能效率提高<color style='color:#f29e38;'> 20% </color>，回合开始时清除【<u class='infou'>耀变</u>】的比例变为<color style='color:#f29e38;'> 45% </color>。",
+      "【<u class='infou'>耀变</u>】充能效率提高<color style='color:#f29e38;'> 20% </color>，回合开始时清除【<u class='infou'>耀变</u>】的比例变为<color style='color:#f29e38;'> 55% </color>。",
       "【<u class='infou'>耀变</u>】充能效率提高<color style='color:#f29e38;'> 30% </color>，回合开始时清除【<u class='infou'>耀变</u>】的比例变为<color style='color:#f29e38;'> 50% </color>。",
     ],
     Effects: [61000051],
@@ -886,8 +886,8 @@ const blessings: Blessing[] = [
     Icon: '/IconRogueWarrior02.webp',
     Name: '受迫性跃迁',
     Desc: [
-      "我方目标受到攻击或消耗生命值后，若当前生命值百分比小于<color style='color:#f29e38;'> 35% </color>，回复等同于生命上限<color style='color:#f29e38;'> 12% </color>的生命值，单次行动内最多通过该方式回复等同于生命上限<color style='color:#f29e38;'> 100% </color>的生命值。",
-      "我方目标受到攻击或消耗生命值后，若当前生命值百分比小于<color style='color:#f29e38;'> 35% </color>，回复等同于生命上限<color style='color:#f29e38;'> 20% </color>的生命值，单次行动内最多通过该方式回复等同于生命上限<color style='color:#f29e38;'> 100% </color>的生命值。",
+      "我方目标受到攻击或消耗生命值后，若当前生命值百分比小于<color style='color:#f29e38;'> 35% </color>，回复等同于生命上限<color style='color:#f29e38;'> 12% </color>的生命值，单次行动内最多通过该方式回复等同于生命上限<color style='color:#f29e38;'> 36% </color>的生命值。",
+      "我方目标受到攻击或消耗生命值后，若当前生命值百分比小于<color style='color:#f29e38;'> 35% </color>，回复等同于生命上限<color style='color:#f29e38;'> 20% </color>的生命值，单次行动内最多通过该方式回复等同于生命上限<color style='color:#f29e38;'> 50% </color>的生命值。",
     ],
     Effects: [],
   },
@@ -1222,8 +1222,8 @@ const blessings: Blessing[] = [
     Icon: '/IconRogueJoy03.webp',
     Name: '《遗世避难所》',
     Desc: [
+      "我方目标发动追加攻击后，恢复<color style='color:#f29e38;'> 4 </color>点能量，该效果每回合最多触发<color style='color:#f29e38;'> 1 </color>次。",
       "我方目标发动追加攻击后，恢复<color style='color:#f29e38;'> 6 </color>点能量，该效果每回合最多触发<color style='color:#f29e38;'> 1 </color>次。",
-      "我方目标发动追加攻击后，恢复<color style='color:#f29e38;'> 8 </color>点能量，该效果每回合最多触发<color style='color:#f29e38;'> 1 </color>次。",
     ],
     Effects: [],
   },
@@ -1316,7 +1316,7 @@ const blessings: Blessing[] = [
     Icon: '/IconRoguePropagation01.webp',
     Name: '布勒水滴',
     Desc: [
-      "我方目标消耗战技点后，我方全体暴击伤害提高<color style='color:#f29e38;'> 2% </color>，最多叠加<color style='color:#f29e38;'> 35 </color>层，施放终结技后，下次消耗战技点后视为额外消耗一点。",
+      "我方目标消耗战技点后，我方全体暴击伤害提高<color style='color:#f29e38;'> 2% </color>，最多叠加<color style='color:#f29e38;'> 35 </color>层，施放终结技后，下次消耗战技点后视为额外消耗1点。",
       "我方目标消耗或获得战技点后，我方全体暴击伤害提高<color style='color:#f29e38;'> 3% </color>，最多叠加<color style='color:#f29e38;'> 35 </color>层，施放终结技后，下次消耗或获得战技点后视为额外消耗或获得1点。",
     ],
     Effects: [],
@@ -1353,7 +1353,7 @@ const blessings: Blessing[] = [
     Name: '几丁质',
     Desc: [
       "我方目标攻击力提高<color style='color:#f29e38;'> 30% </color>。进入战斗时，为【<u class='infou'>魂茧</u>】额外充能<color style='color:#f29e38;'> 30% </color>。",
-      "我方目标攻击力提高<color style='color:#f29e38;'> 45% </color>。进入战斗时，为【<u class='infou'>魂茧</u>】额外充能<color style='color:#f29e38;'> 45% </color>。",
+      "我方目标攻击力提高<color style='color:#f29e38;'> 50% </color>。进入战斗时，为【<u class='infou'>魂茧</u>】额外充能<color style='color:#f29e38;'> 35% </color>。",
     ],
     Effects: [61000052],
   },
@@ -1380,8 +1380,8 @@ const blessings: Blessing[] = [
     Icon: '/IconRoguePropagation01.webp',
     Name: '担孢子',
     Desc: [
-      "【<u class='infou'>蝶魄</u>】状态下，普攻战技伤害的抗性穿透提高<color style='color:#f29e38;'> 14% </color>。",
-      "【<u class='infou'>蝶魄</u>】状态下，普攻战技伤害的抗性穿透提高<color style='color:#f29e38;'> 21% </color>。",
+      "【<u class='infou'>蝶魄</u>】状态下，普攻/战技伤害的全属性抗性穿透提高<color style='color:#f29e38;'> 14% </color>。",
+      "【<u class='infou'>蝶魄</u>】状态下，普攻/战技伤害的全属性抗性穿透提高<color style='color:#f29e38;'> 21% </color>。",
     ],
     Effects: [61000052],
   },
@@ -1631,8 +1631,8 @@ const blessings: Blessing[] = [
     Icon: '/IconRogueMage01.webp',
     Name: '解析：程序记忆',
     Desc: [
-      "我方目标使用【<u class='infou'>罐中脑</u>】施放终结技时，我方全体造成的伤害提高<color style='color:#f29e38;'> 36% </color>，持续2回合。",
-      "我方目标使用【<u class='infou'>罐中脑</u>】施放终结技时，我方全体造成的伤害提高<color style='color:#f29e38;'> 54% </color>，持续2回合。",
+      "我方目标使用【<u class='infou'>罐中脑</u>】施放终结技时，我方全体造成的伤害提高<color style='color:#f29e38;'> 36% </color>，持续<color style='color:#f29e38;'> 2 </color>回合。",
+      "我方目标使用【<u class='infou'>罐中脑</u>】施放终结技时，我方全体造成的伤害提高<color style='color:#f29e38;'> 54% </color>，持续<color style='color:#f29e38;'> 2 </color>回合。",
     ],
     Effects: [61000044],
   },

@@ -1,16 +1,16 @@
 import json5
 
 def merge_blessings():
-    with open("_todo_merge/blessing_new.json5", 'r') as fnew, \
-        open("_todo_merge/blessing_old.json5", 'r') as fold, \
-        open('_todo_merge/blessing_merged.json5', 'w') as fout:
+    with open("_todo_merge/blessings_new.json5", 'r') as fnew, \
+        open("_todo_merge/blessings_old.json5", 'r') as fold, \
+        open('_todo_merge/blessings_merged.json5', 'w') as fout:
             jnew = json5.load(fnew)
             jold = json5.load(fold)
 
-            # jnew_id = set(map(lambda x: x['_id'], jnew))
-            # jold_id = set(map(lambda x: x['_id'], jold))
+            jnew_id = set(map(lambda x: x['_id'], jnew))
+            jold_id = set(map(lambda x: x['_id'], jold))
 
-            # print(jold_id.difference(jnew_id))
+            print(jold_id.difference(jnew_id))
 
             for i in range(len(jold)):
                 new_desc = jnew[i]['Desc']  # 保证排好序

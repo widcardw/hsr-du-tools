@@ -8,7 +8,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_2.png',
     Name: '岁月之神迹',
-    Desc: "可消耗 100 点能量施放技能与命途「记忆」产生临界回响，对敌方全体目标造成冰属性伤害，并使其大概率陷入冻结状态，持续<color style='color:#f29e38;'> 1 </color>回合。该冻结状态下，受到忆灵攻击后，会额外受到等同于生命上限<color style='color:#f29e38;'> 10% </color>的真实伤害。敌方目标每次陷入该冻结状态后，最多触发<color style='color:#f29e38;'> 4 </color>次该伤害。",
+    Desc: "可消耗 100 点能量施放技能与命途「记忆」产生临界回响，对敌方全体目标造成冰属性伤害，并使其大概率陷入冻结状态，持续<color style='color:#f29e38;'> 1 </color>回合。该冻结状态下，受到忆灵攻击后，会额外受到等同于生命上限<color style='color:#f29e38;'> 8% </color>的真实伤害。敌方目标每次陷入该冻结状态后，最多触发<color style='color:#f29e38;'> 4 </color>次该伤害。",
     Effects: [],
     Need: {
       '121': 16,
@@ -53,7 +53,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_6.png',
     Name: '天空之神迹',
-    Desc: "可消耗 100 点能量施放技能与命途「毁灭」产生临界回响，对敌方全体目标造成火属性伤害，消耗我方全体生命值至<color style='color:#f29e38;'> 60% </color>，并使我方全体生命值上限提高<color style='color:#f29e38;'> 75% </color>，在回合开始时回复自身已消耗生命值的<color style='color:#f29e38;'> 100% </color>，持续<color style='color:#f29e38;'> 4 </color>回合。",
+    Desc: "可消耗 100 点能量施放技能与命途「毁灭」产生临界回响，对敌方全体目标造成火属性伤害，消耗我方全体生命值至<color style='color:#f29e38;'> 60% </color>，并使我方全体生命值上限提高<color style='color:#f29e38;'> 100% </color>，在回合开始时回复自身已消耗生命值的<color style='color:#f29e38;'> 100% </color>，持续<color style='color:#f29e38;'> 4 </color>回合。",
     Effects: [],
     Need: {
       '125': 16,
@@ -68,7 +68,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_7.png',
     Name: '诡计之神迹',
-    Desc: "可消耗 100 点能量施放技能与命途「欢愉」产生临界回响，对敌方全体目标造成<color style='color:#f29e38;'> 5 </color>~<color style='color:#f29e38;'> 10 </color>次随机属性的追加攻击伤害，并使我方全体的普攻/战技/终结技伤害被视为追加攻击伤害，持续<color style='color:#f29e38;'> 1 </color>回合。",
+    Desc: "可消耗 100 点能量施放技能与命途「欢愉」产生临界回响，对敌方全体目标造成<color style='color:#f29e38;'> 5 </color>~<color style='color:#f29e38;'> 10 </color>次随机属性的追加攻击伤害，并使我方全体的普攻/战技/终结技伤害被视为追加攻击伤害，持续<color style='color:#f29e38;'> 2 </color>回合。",
     Effects: [],
     Need: {
       '126': 16,
@@ -98,7 +98,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_9.png',
     Name: '理性之神迹',
-    Desc: "可消耗 100 点能量施放技能与命途「智识」产生临界回响，对敌方全体目标造成少量虚数属性伤害，并将生命上限最高的敌方目标与其他敌方目标连接，使敌方全体陷入【<u class='infou'>中枢链接</u>】状态，并为我方全体恢复等同于能量上限<color style='color:#f29e38;'> 50% </color>的能量。",
+    Desc: "可消耗 100 点能量施放技能与命途「智识」产生临界回响，对敌方全体目标造成少量虚数属性伤害，并将生命上限最高的敌方目标与其他敌方目标连接，使敌方全体陷入【<u class='infou'>中枢链接</u>】状态，并为我方全体恢复等同于能量上限<color style='color:#f29e38;'> 100% </color>的能量。",
     Effects: [61000303],
     Need: {
       '128': 16,
@@ -128,7 +128,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_10.png',
     Name: '逐火同盟',
-    Desc: "敌方目标受到击破伤害时，额外受到<color style='color:#f29e38;'> 3 </color>次等同于【<u class='infou'>和音</u>】上限<color style='color:#f29e38;'> 35% </color>的伤害，并为我方全体充能等同于各自生命上限的<color style='color:#f29e38;'> 60% </color>的【<u class='infou'>耀变</u>】，该效果敌方目标每回合最多触发1次。",
+    Desc: "敌方目标受到击破伤害时，额外受到<color style='color:#f29e38;'> 3 </color>次等同于【<u class='infou'>和音</u>】上限<color style='color:#f29e38;'> 35% </color>的伤害，并为我方全体充能等同于各自生命上限的<color style='color:#f29e38;'> 25% </color>的【<u class='infou'>耀变</u>】，该效果敌方目标每回合最多触发1次。",
     Effects: [61000053, 61000051],
     Need: {
       '129': 6,
@@ -172,7 +172,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_2.png',
     Name: '哀歌祭祷',
-    Desc: "行动序列上出现【断灭花】：记录我方获得的【<u class='infou'>耀变</u>】，行动时，对敌方全体目标造成等同于记录值<color style='color:#f29e38;'> 6000% </color>+<color style='color:#f29e38;'> 2000% </color><u class='infou'>基础伤害</u>的火属性伤害并清空记录值， 我方每有1层【<u class='infou'>执念</u>】，速度提高<color style='color:#f29e38;'> 1% </color>。我方目标进入战斗或陷入无法战斗状态/忆灵被召唤或消失时，为我方全体目标充能等同于生命上限<color style='color:#f29e38;'> 50% </color>的【<u class='infou'>耀变</u>】。",
+    Desc: "行动序列上出现【断灭花】：记录我方获得的【<u class='infou'>耀变</u>】，行动时，对敌方全体目标造成等同于记录值<color style='color:#f29e38;'> 5000% </color>+<color style='color:#f29e38;'> 3000% </color><u class='infou'>基础伤害</u>的火属性伤害并清空记录值， 我方每有1层【<u class='infou'>执念</u>】，速度提高<color style='color:#f29e38;'> 1% </color>。我方目标进入战斗或陷入无法战斗状态/忆灵被召唤或消失时，为我方全体目标充能等同于生命上限<color style='color:#f29e38;'> 25% </color>的【<u class='infou'>耀变</u>】。",
     Effects: [61000051, 61000500, 61000049],
     Need: {
       '121': 6,
@@ -193,7 +193,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_2.png',
     Name: '护誓者',
-    Desc: "我方全体累计<color style='color:#f29e38;'> 12 </color>次回合结束时，编队中的第1位角色及其忆灵行动提前 100% ，且在之后的<color style='color:#f29e38;'> 1 </color>回合，回合结束后使自身获得额外回合，在该额外回合内施放攻击后，对攻击目标造成等同于攻击力<color style='color:#f29e38;'> 300% </color>的附加伤害，我方每有1层【<u class='infou'>执念</u>】，该伤害倍率提高原倍率的<color style='color:#f29e38;'> 2% </color>。",
+    Desc: "我方全体累计<color style='color:#f29e38;'> 12 </color>次回合结束时，编队中的第1位角色及其忆灵行动提前 100% ，且在之后的<color style='color:#f29e38;'> 1 </color>回合，回合结束后使自身获得额外回合，在该额外回合内施放攻击后，对攻击目标造成等同于攻击力<color style='color:#f29e38;'> 600% </color>的附加伤害，我方每有1层【<u class='infou'>执念</u>】，该伤害倍率提高原倍率的<color style='color:#f29e38;'> 1% </color>。",
     Effects: [61000049],
     Need: {
       '121': 6,
@@ -213,7 +213,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_3.png',
     Name: '年轮刻工',
-    Desc: "敌方目标陷入冻结和持续伤害状态时，有<color style='color:#f29e38;'> 150% </color>的基础概率将该效果扩散给相邻目标，无相邻目标时扩散给自身，单次行动内同一目标只能扩散1次相同效果。单个敌方目标每累计扩散<color style='color:#f29e38;'> 20 </color>次或被消灭，使该目标与相邻目标受到<color style='color:#f29e38;'> 2000% </color><u class='infou'>基础伤害</u>的冰属性伤害，我方每有1层【<u class='infou'>执念</u>】，伤害提高<color style='color:#f29e38;'> 1% </color>。",
+    Desc: "敌方目标陷入冻结和持续伤害状态时，有<color style='color:#f29e38;'> 150% </color>的基础概率将该效果扩散给相邻目标，无相邻目标时扩散给自身，单次行动内同一目标只能扩散1次相同效果。单个敌方目标每累计扩散<color style='color:#f29e38;'> 15 </color>次或被消灭，使该目标与相邻目标受到<color style='color:#f29e38;'> 2000% </color><u class='infou'>基础伤害</u>的冰属性伤害，我方每有1层【<u class='infou'>执念</u>】，伤害提高<color style='color:#f29e38;'> 1% </color>。",
     Effects: [61000500, 61000049],
     Need: {
       '122': 6,
@@ -273,7 +273,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_6.png',
     Name: '纷争剧作家',
-    Desc: "我方目标累计损失等同于生命上限<color style='color:#f29e38;'> 100% </color>的生命值，或从无法战斗状态恢复时，对敌方全体造成等同于生命上限<color style='color:#f29e38;'> 400% </color>的【<u class='infou'>回味</u>】伤害。角色回合开始时，消耗生命上限的<color style='color:#f29e38;'> 5% </color>，每次触发后使该值提高<color style='color:#f29e38;'> 5% </color>。我方角色首次陷入无法战斗状态时，使当前生命值回复至生命上限的<color style='color:#f29e38;'> 100% </color>，且之后回合开始不再消耗生命值。",
+    Desc: "我方目标累计损失等同于生命上限<color style='color:#f29e38;'> 100% </color>的生命值，或从无法战斗状态恢复时，对敌方全体造成等同于生命上限<color style='color:#f29e38;'> 350% </color>的【<u class='infou'>回味</u>】伤害。角色回合开始时，消耗生命上限的<color style='color:#f29e38;'> 5% </color>，每次触发后使该值提高<color style='color:#f29e38;'> 5% </color>。我方角色首次陷入无法战斗状态时，使当前生命值回复至生命上限的<color style='color:#f29e38;'> 100% </color>，且之后回合开始不再消耗生命值。",
     Effects: [61000054],
     Need: {
       '125': 6,
@@ -310,7 +310,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_7.png',
     Name: '无泪花园',
-    Desc: "追加攻击可无视弱点属性额外削减<color style='color:#f29e38;'> 10 </color>点韧性值。我方目标击破敌方目标弱点时，对敌方全体目标造成<color style='color:#f29e38;'> 2 </color>次等同于攻击力<color style='color:#f29e38;'> 120% </color>的【<u class='infou'>回味</u>】伤害，敌方目标每1点韧性上限将使该伤害提高<color style='color:#f29e38;'> 2% </color>。",
+    Desc: "我方目标发动追加攻击后可无视弱点属性额外削减<color style='color:#f29e38;'> 10 </color>点韧性值。我方目标击破敌方目标弱点时，对敌方全体目标造成<color style='color:#f29e38;'> 2 </color>次等同于攻击力<color style='color:#f29e38;'> 150% </color>的【<u class='infou'>回味</u>】伤害，敌方目标每1点韧性上限将使该伤害倍率提高原倍率的<color style='color:#f29e38;'> 1% </color>。",
     Effects: [61000054],
     Need: {
       '126': 6,
@@ -354,7 +354,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_5.png',
     Name: '灰河代理',
-    Desc: "我方全体每获得<color style='color:#f29e38;'> 10 </color>层【<u class='infou'>会心</u>】或消灭敌方目标后，射出<color style='color:#f29e38;'> 10 </color>根光矢攻击随机敌方目标，每支光矢造成<color style='color:#f29e38;'> 300% </color><u class='infou'>基础伤害</u>的风属性伤害，每个光矢会使【<u class='infou'>呢喃</u>】产生原伤害<color style='color:#f29e38;'> 40% </color>的伤害，并使【<u class='infou'>呢喃</u>】获得等同于我方角色攻击力之和的<color style='color:#f29e38;'> 20% </color>的充能。",
+    Desc: "我方全体每获得<color style='color:#f29e38;'> 10 </color>层【<u class='infou'>会心</u>】或消灭敌方目标后，射出<color style='color:#f29e38;'> 10 </color>根光矢攻击随机敌方目标，每支光矢造成<color style='color:#f29e38;'> 300% </color><u class='infou'>基础伤害</u>的风属性伤害，每个光矢会使【<u class='infou'>呢喃</u>】产生原伤害<color style='color:#f29e38;'> 30% </color>的伤害，并使【<u class='infou'>呢喃</u>】获得等同于我方角色攻击力之和的<color style='color:#f29e38;'> 20% </color>的充能。",
     Effects: [61000055, 61000500, 61000050],
     Need: {
       '124': 6,
@@ -397,7 +397,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_9.png',
     Name: '戏偶师',
-    Desc: "我方全体在非【超频】状态下累计施放<color style='color:#f29e38;'> 6 </color>次终结技后，获得【超频】状态：施放终结技发动攻击后，对攻击目标造成<color style='color:#f29e38;'> 3 </color>次等同于攻击者<color style='color:#f29e38;'> 100% </color>攻击力的【<u class='infou'>回味</u>】伤害，施放终结技后退出该状态，编队中的第1位角色激活终结技并将【<u class='infou'>罐中脑</u>】充能至<color style='color:#f29e38;'> 200% </color>，且在施放<color style='color:#f29e38;'> 3 </color>次终结技后才退出该状态。",
+    Desc: "我方全体在非【超频】状态下累计施放<color style='color:#f29e38;'> 6 </color>次终结技后，获得【超频】状态：施放终结技发动攻击后，对攻击目标造成<color style='color:#f29e38;'> 3 </color>次等同于攻击者<color style='color:#f29e38;'> 130% </color>攻击力的【<u class='infou'>回味</u>】伤害，施放终结技后退出该状态，编队中的第1位角色激活终结技并将【<u class='infou'>罐中脑</u>】充能至<color style='color:#f29e38;'> 200% </color>，且在施放<color style='color:#f29e38;'> 4 </color>次终结技后才退出该状态。",
     Effects: [61000054, 61000044],
     Need: {
       '128': 6,
@@ -487,7 +487,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_10.png',
     Name: '枯萎病人',
-    Desc: "敌方目标受到【<u class='infou'>和音</u>】伤害时，额外受到1次等同于原伤害<color style='color:#f29e38;'> 75% </color>的【<u class='infou'>和音</u>】伤害，每陷入1个负面状态，该伤害额外提高<color style='color:#f29e38;'> 4% </color>，最多提高<color style='color:#f29e38;'> 40% </color>。",
+    Desc: "敌方目标受到【<u class='infou'>和音</u>】伤害时，额外受到1次等同于原伤害<color style='color:#f29e38;'> 75% </color>的【<u class='infou'>和音</u>】伤害，每陷入1个负面状态，该伤害额外提高<color style='color:#f29e38;'> 2% </color>，最多提高<color style='color:#f29e38;'> 40% </color>。",
     Effects: [61000053],
     Need: {
       '129': 4,
@@ -556,7 +556,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_3.png',
     Name: '处刑人',
-    Desc: "敌方目标受到的持续伤害可以暴击，暴击率/暴击伤害等同于角色暴击率/暴击伤害之和的<color style='color:#f29e38;'> 20% </color>，暴击伤害最高不超过<color style='color:#f29e38;'> 120% </color>。",
+    Desc: "敌方目标受到的持续伤害可以暴击，暴击率/暴击伤害等同于我方全体角色暴击率/暴击伤害之和的<color style='color:#f29e38;'> 20% </color>，暴击伤害最高不超过<color style='color:#f29e38;'> 120% </color>。",
     Effects: [],
     Need: {
       '122': 4,
@@ -642,7 +642,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_6.png',
     Name: '悬锋伙友',
-    Desc: "我方目标击破敌方目标弱点时，充能等同于生命上限<color style='color:#f29e38;'> 50% </color>的【<u class='infou'>耀变</u>】，若所有敌方目标都处于弱点击破状态，我方目标回合开始时不清空【<u class='infou'>耀变</u>】。",
+    Desc: "我方目标击破敌方目标弱点时，充能等同于生命上限<color style='color:#f29e38;'> 25% </color>的【<u class='infou'>耀变</u>】，若所有敌方目标都处于弱点击破状态，我方目标回合开始时不清除【<u class='infou'>耀变</u>】。",
     Effects: [61000051],
     Need: {
       '125': 4,
@@ -690,7 +690,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_7.png',
     Name: '笑面刽子手',
-    Desc: "我方目标施放攻击后，若生命值百分比大于<color style='color:#f29e38;'> 60% </color>，则消耗<color style='color:#f29e38;'> 10% </color>最大生命值并造成1次等同于自身生命上限<color style='color:#f29e38;'> 120% </color>的【<u class='infou'>回味</u>】伤害。",
+    Desc: "我方目标施放攻击后，若生命值百分比大于<color style='color:#f29e38;'> 60% </color>，则消耗<color style='color:#f29e38;'> 5% </color>最大生命值并造成1次等同于自身生命上限<color style='color:#f29e38;'> 120% </color>的【<u class='infou'>回味</u>】伤害。",
     Effects: [61000054],
     Need: {
       '126': 4,
@@ -706,7 +706,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_5.png',
     Name: '巡游乐团',
-    Desc: "我方目标施放攻击造成暴击伤害后，在攻击后造成1次等同于原伤害1%~<color style='color:#f29e38;'> 40% </color>的真实伤害，若为追加攻击，则造成原伤害1%~<color style='color:#f29e38;'> 60% </color>的真实伤害",
+    Desc: "我方目标施放攻击造成暴击伤害后，在攻击后造成1次等同于原伤害<color style='color:#f29e38;'> 1% </color>~<color style='color:#f29e38;'> 50% </color>的真实伤害，若为追加攻击，则造成原伤害<color style='color:#f29e38;'> 1% </color>~<color style='color:#f29e38;'> 70% </color>的真实伤害",
     Effects: [],
     Need: {
       '124': 4,
@@ -1196,7 +1196,7 @@ const equations: BlessingEquation[] = [
     Rarity: 4,
     Icon: '/RogueFormulaIcon_Main_7.png',
     Name: '沉醉之船',
-    Desc: "我方目标造成的【<u class='infou'>回味</u>】伤害，可以无视弱点属性削减敌方目标<color style='color:#f29e38;'> 2 </color>点韧性值，单次攻击内对每名敌方目标最多触发<color style='color:#f29e38;'> 5 </color>次该效果。",
+    Desc: "我方目标造成的【<u class='infou'>回味</u>】伤害，可以无视弱点属性削减敌方目标<color style='color:#f29e38;'> 1 </color>点韧性值，单次攻击内对每名敌方目标最多触发<color style='color:#f29e38;'> 10 </color>次该效果。",
     Effects: [61000054],
     Need: {
       '126': 2,
