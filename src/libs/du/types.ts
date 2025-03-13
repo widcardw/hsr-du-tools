@@ -84,6 +84,7 @@ interface Curio {
   Icon: string
   Ver?: string
   Type: CurioType
+  Story?: string
 }
 
 export { BuffType, BlessingRarity, BlessingEquationEr, CurioType }
