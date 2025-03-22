@@ -6,7 +6,6 @@
   height: 2px;
   border-radius: 1px;
   background: transparent;
-  mix-blend-mode: plus-lighter;
   animation: star_anti 100s linear infinite;
   box-shadow:
     114px 658px var(--bg-tertiary), 236px 768px var(--bg-tertiary), 1130px 1503px var(
@@ -149,7 +148,6 @@
   width: 3px;
   height: 3px;
   border-radius: 1.5px;
-  mix-blend-mode: plus-lighter;
   background: transparent;
   box-shadow:
     519px 875px var(--bg-tertiary), 1497px 751px var(--bg-tertiary), 1256px 88px var(
