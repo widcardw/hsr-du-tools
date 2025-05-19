@@ -42,21 +42,30 @@ def merge_equation():
 
             # jold = sorted(jold, key=lambda x: x['_id'])
             # json5.dump(jold, fout, ensure_ascii=False, indent=2)
+            print(len(jnew))
             for j in jnew:
                 if j['Name'] not in jold_id:
                     j['rel'] = []
                 else:
-                    j['rel'] = jold[jold_id_list.index(j['Name'])]['rel']
+                    print(j['Name'])
+                    correspond = None
+                    for k in jold:
+                        if k['Name'] == j['Name']:
+                            correspond = k
+                            break
+                    print(correspond)
+                    j['rel'] = correspond['rel']
                 del j['Story']
                 del j['Star']
                 j['Type'] = 'BuffType.Equation'
                 j['er'] = sum(j['Need'].values()) if sum(j['Need'].values()) != 10 else 8
                 j['Desc'] = j['Desc'][0]
+                # break
 
             jnew = sorted(jnew, key=lambda x: x['_id'])
             json5.dump(jnew, fout, ensure_ascii=False, indent=2)
 
 
 if __name__ == '__main__':
-    # merge_equation()
-    merge_blessings()
+    merge_equation()
+    # merge_blessings()
