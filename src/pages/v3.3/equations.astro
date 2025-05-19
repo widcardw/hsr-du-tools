@@ -1,0 +1,13 @@
+---
+import Layout from "./_ui/Layout3-3.astro";
+import { equations } from './_data/equations'
+import EquationCategory from "@/components/EquationCategory";
+import { sortAndSplitEquations } from "@/libs/search/sort";
+import { GAIN_MAP } from "./_data/gains";
+
+const sortedEquations = sortAndSplitEquations(equations);
+---
+
+<Layout title="方程 差分宇宙模拟工具">
+  {sortedEquations.map((i) => <EquationCategory equations={i} gain_map={GAIN_MAP} />)}
+</Layout>

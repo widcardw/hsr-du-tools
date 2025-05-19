@@ -10,7 +10,7 @@ def merge_blessings():
             jnew_id = set(map(lambda x: x['_id'], jnew))
             jold_id = set(map(lambda x: x['_id'], jold))
 
-            print(jold_id.difference(jnew_id))
+            print(jnew_id.difference(jold_id))
 
             for i in range(len(jold)):
                 new_desc = jnew[i]['Desc']  # 保证排好序
@@ -25,21 +25,38 @@ def merge_equation():
             jnew: list = json5.load(fnew)
             jold: list = json5.load(fold)
 
+            jold_id_list = list(map(lambda x: x['Name'], jold))
+
             jnew = sorted(jnew, key=lambda x: x['Name'])
             jold = sorted(jold, key=lambda x: x['Name'])
 
             jnew_id = set(map(lambda x: x['Name'], jnew))
             jold_id = set(map(lambda x: x['Name'], jold))
 
-            print(jold_id.difference(jnew_id))
+            print(jnew_id.difference(jold_id))
 
-            for i in range(len(jold)):
-                assert jold[i]['Name'] == jnew[i]['Name']
-                jold[i]['Desc'] = jnew[i]['Desc'][0]
-                jold[i]['_id'] = jnew[i]['_id']
+            # for i in range(len(jold)):
+            #     assert jold[i]['Name'] == jnew[i]['Name']
+            #     jold[i]['Desc'] = jnew[i]['Desc'][0]
+            #     jold[i]['_id'] = jnew[i]['_id']
 
-            jold = sorted(jold, key=lambda x: x['_id'])
-            json5.dump(jold, fout, ensure_ascii=False, indent=2)
+            # jold = sorted(jold, key=lambda x: x['_id'])
+            # json5.dump(jold, fout, ensure_ascii=False, indent=2)
+            for j in jnew:
+                if j['Name'] not in jold_id:
+                    j['rel'] = []
+                else:
+                    j['rel'] = jold[jold_id_list.index(j['Name'])]['rel']
+                del j['Story']
+                del j['Star']
+                j['Type'] = 'BuffType.Equation'
+                j['er'] = sum(j['Need'].values()) if sum(j['Need'].values()) != 10 else 8
+                j['Desc'] = j['Desc'][0]
+
+            jnew = sorted(jnew, key=lambda x: x['_id'])
+            json5.dump(jnew, fout, ensure_ascii=False, indent=2)
+
 
 if __name__ == '__main__':
-    merge_equation()
+    # merge_equation()
+    merge_blessings()

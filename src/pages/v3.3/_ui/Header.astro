@@ -1,0 +1,107 @@
+<header class="flex items-center justify-center w-full py-2 gap-2">
+  <a href="/v3.3" class="title-btn home" title="主页">
+    <div class="icon i-home"></div>
+    <span>主页</span>
+  </a>
+  <a href="/v3.3/blessings" class="title-btn blessings" title="祝福">
+    <div class="icon i-blessing light:invert"></div>
+    <span>祝福</span>
+  </a>
+  <a href="/v3.3/equations" class="title-btn equations" title="方程">
+    <div class="icon i-equation light:invert"></div>
+    <span>方程</span>
+  </a>
+  <a href="/v3.3/curios" class="title-btn curios" title="奇物">
+    <div class="icon i-curio light:invert"></div>
+    <span>奇物</span>
+  </a>
+  <a href="/v3.3/effects" class="title-btn effects" title="命途特性">
+    <div class="icon i-carbon-aperture"></div>
+    <span>特性</span>
+  </a>
+  <a href="/v3.3/titan" class="title-btn titan" title="金血祝颂">
+    <div class="icon i-carbon-bastion-host"></div>
+    <span>金血</span>
+  </a>
+  <!-- <a
+    href="/v3.3/recommendations"
+    class="title-btn recommendations"
+    title="推荐"
+  >
+    <div class="icon i-carbon-thumbs-up"></div>
+    <span>推荐</span>
+  </a> -->
+</header>
+
+<script is:inline>
+  // 获取当前页面路由，并使这个路由对应的按钮高亮
+  let currentPath = window.location.pathname.replace(/\/$/, '');
+  /** @type {NodeListOf<HTMLAnchorElement>} */
+  const buttons = document.querySelectorAll("a.title-btn");
+  for (const b of buttons) {
+    if (b.href.includes(currentPath)) {
+      b.classList.add("router-active");
+      break;
+    }
+  }
+</script>
+
+<style>
+  .title-btn {
+    @apply text-base;
+    @apply flex items-center gap-1;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0.25rem;
+    background: var(--bg-secondary);
+    color: var(--fg);
+    text-decoration: none;
+  }
+  .title-btn span {
+    @apply hidden sm:block;
+  }
+  .icon.light {
+    @apply block dark:hidden;
+  }
+  .icon.dark {
+    @apply block light:hidden;
+  }
+  .title-btn:hover {
+    background: var(--bg-secondary-hover);
+  }
+  .router-active {
+    background: var(--bg-secondary-hover);
+  }
+  .i-home {
+    background: url('/header/icon-du.webp') no-repeat center;
+    background-color: transparent;
+    background-size: 100% 100%;
+    height: 1em;
+    width: 1em;
+  }
+  .i-blessing {
+    background: url('/path/IconProfessionMemoryMiddle.webp') no-repeat center;
+    background-color: transparent;
+    background-size: 100% 100%;
+    height: 1em;
+    width: 1em;
+  }
+  .i-equation {
+    background: url('/header/icon-equation.png') no-repeat center;
+    background-color: transparent;
+    background-size: 100% 100%;
+    height: 1em;
+    width: 1em;
+  }
+  .i-curio {
+    background: url('/header/icon-curio.webp') no-repeat center;
+    background-color: transparent;
+    background-size: 100% 100%;
+    height: 1em;
+    width: 1em;
+  }
+
+
+</style>
