@@ -27,7 +27,7 @@ const TagSelectDialog: Component<{
   let _debounce: number | null = null
   const onSearchingChange = (v: string) => {
     if (_debounce) clearTimeout(_debounce)
-    _debounce = setTimeout(() => {
+    _debounce = window.setTimeout(() => {
       setSearchingValue(v)
     }, 800)
   }
