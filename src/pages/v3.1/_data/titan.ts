@@ -19,7 +19,7 @@ interface TitanType {
   _id: number
   /** 称呼 */
   Titan: string
-  /** 对应任务头像 */
+  /** 对应人物名称 */
   Avatar: string
   /** 图像路径 */
   Img: string

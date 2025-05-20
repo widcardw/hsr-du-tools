@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets'
+import { Fragment } from 'astro/jsx-runtime'
+import clsx from 'clsx'
+import { type TitanType, Env } from '../_data/titan'
+
+import '@/styles/blessing-bg.css'
+
+interface Props {
+  item: TitanType
+}
+
+const { item } = Astro.props
+---
+
+<div class="flex flex-col gap-4">
+  <Image
+    src={`/titan/${item.Img.replace('.png', '')}.webp`}
+    alt={item.Titan}
+    width="166"
+    height="208.8"
+    class={clsx("block mx-auto", 
+      item.env === Env.Day ? 'blessing-ultimate' : 'blessing-blue',
+      'rounded', 'border border-solid border-bg-secondary'
+    )}
+  />
+  <p class="font-bold text-center">{item.Avatar}{item.Titan}</p>
+  {
+    item.Blessings.map(({level, titan}) => (
+      <div class="bg-bg rounded border border-solid border-bg-secondary">
+        <div class="bg-bg-secondary p-2 md:px-4">{level}</div>
+        {titan.map(it => (
+          <div class="p-2 md:px-4">
+            <div class="font-bold">{it.Name}</div>
+            <div set:html={it.Desc} class="text-sm text-fg-secondary" />
+          </div>
+        ))}
+      </div>
+    ))
+  }
+</div>

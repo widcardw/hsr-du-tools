@@ -4,6 +4,11 @@ interface TitanBlessing {
   Extra: Array<number>
 }
 
+enum Env {
+  Day = 0,
+  Night = 1,
+}
+
 interface _TitanType {
   _id: number
   /** 称呼 */
@@ -13,6 +18,8 @@ interface _TitanType {
   /** 图像路径 */
   Img: string
   Blessings: Array<TitanBlessing>
+  /** 昼夜 */
+  env: Env
 }
 
 interface TitanType {
@@ -24,6 +31,8 @@ interface TitanType {
   /** 图像路径 */
   Img: string
   Blessings: Array<{ level: string; titan: TitanBlessing[] }>
+  /** 昼夜 */
+  env: Env
 }
 
 const TITAN: _TitanType[] = [
@@ -32,6 +41,7 @@ const TITAN: _TitanType[] = [
     Titan: '「万径之门」',
     Avatar: '缇宝',
     Img: 'IconRogueTournTitanAvatarlanos.png',
+    env: Env.Day,
     Blessings: [
       {
         Name: '万径相连',
@@ -75,6 +85,7 @@ const TITAN: _TitanType[] = [
     Titan: '「翻飞之币」',
     Avatar: '赛飞儿',
     Img: 'IconRogueTournTitanAvatarZagreus.png',
+    env: Env.Night,
     Blessings: [
       {
         Name: '捷足飞贼',
@@ -118,6 +129,7 @@ const TITAN: _TitanType[] = [
     Titan: '「天谴之矛」',
     Avatar: '万敌',
     Img: 'IconRogueTournTitanAvatarNikadory.png',
+    env: Env.Night,
     Blessings: [
       {
         Name: '沐血而冠',
@@ -161,6 +173,7 @@ const TITAN: _TitanType[] = [
     Titan: '「灰黯之手」',
     Avatar: '遐蝶',
     Img: 'IconRogueTournTitanAvatarXenatos.png',
+    env: Env.Night,
     Blessings: [
       {
         Name: '与死合掌',
@@ -204,6 +217,7 @@ const TITAN: _TitanType[] = [
     Titan: '「黄金之茧」',
     Avatar: '阿格莱雅',
     Img: 'IconRogueTournTitanAvatarMoneta.png',
+    env: Env.Day,
     Blessings: [
       {
         Name: '金织如梦',
@@ -247,6 +261,7 @@ const TITAN: _TitanType[] = [
     Titan: '「满溢之杯」',
     Avatar: '海瑟音',
     Img: 'IconRogueTournTitanAvatarPhageina.png',
+    env: Env.Day,
     Blessings: [
       {
         Name: '无休欢宴',
@@ -290,6 +305,7 @@ const TITAN: _TitanType[] = [
     Titan: '「晨昏之眼」',
     Avatar: '风堇',
     Img: 'IconRogueTournTitanAvatarAigle.png',
+    env: Env.Day,
     Blessings: [
       {
         Name: '虹的轻语',
@@ -333,6 +349,7 @@ const TITAN: _TitanType[] = [
     Titan: '「裂分之枝」',
     Avatar: '那刻夏',
     Img: 'IconRogueTournTitanAvatarCerces.png',
+    env: Env.Day,
     Blessings: [
       {
         Name: '诸因解明',
@@ -376,6 +393,7 @@ const TITAN: _TitanType[] = [
     Titan: '「全世之座」',
     Avatar: '白厄',
     Img: 'IconRogueTournTitanAvatarKephale.png',
+    env: Env.Day,
     Blessings: [
       {
         Name: '负世之剑',
@@ -419,6 +437,7 @@ const TITAN: _TitanType[] = [
     Titan: '「公正之秤」',
     Avatar: '刻律德菈',
     Img: 'IconRogueTournTitanAvatarTalentum.png',
+    env: Env.Night,
     Blessings: [
       {
         Name: '于火执棋',
@@ -462,6 +481,7 @@ const TITAN: _TitanType[] = [
     Titan: '「永夜之帷」',
     Avatar: '█ █ █',
     Img: 'IconRogueTournTitanAvatarOlonyx.png',
+    env: Env.Night,
     Blessings: [
       {
         Name: '长夜有梦',
@@ -505,6 +525,7 @@ const TITAN: _TitanType[] = [
     Titan: '「磐岩之脊」',
     Avatar: '荒笛',
     Img: 'IconRogueTournTitanAvatarGeoria.png',
+    env: Env.Night,
     Blessings: [
       {
         Name: '连山掣地',
@@ -577,6 +598,7 @@ for (const titan of TITAN) {
 export {
   levelSplitTitan as TITAN,
   type TitanBlessing,
-  type _TitanType,
+  // type _TitanType,
   type TitanType,
+  Env,
 }
