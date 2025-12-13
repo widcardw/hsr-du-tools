@@ -56,6 +56,7 @@ const Dialog: Component<{
         ref={(r) => setDialogRef(r)}
         onClick={closeOnClickOutSide}
         class={props.class}
+        closedby='any'
       >
         {props.children}
       </dialog>
